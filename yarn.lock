@@ -7881,7 +7881,7 @@ validate-npm-package-license@^3.0.1:
     spdx-correct "^3.0.0"
     spdx-expression-parse "^3.0.0"
 
-vant@^2.2.16:
+vant@^2.8.7:
   version "2.8.7"
   resolved "https://registry.npm.taobao.org/vant/download/vant-2.8.7.tgz#24220a8aa6919bf34b774c3b1c1d051543453770"
   integrity sha1-JCIKiqaRm/NLd0w7HB0FFUNFN3A=

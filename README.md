@@ -1,4 +1,4 @@
-# chat-wap
+# vant-template
 
 ## Project setup
 ```

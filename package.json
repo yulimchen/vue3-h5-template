@@ -1,5 +1,5 @@
 {
-  "name": "chat-wap",
+  "name": "vant-template",
   "version": "0.1.0",
   "private": true,
   "scripts": {
@@ -10,7 +10,7 @@
   "dependencies": {
     "core-js": "^3.4.3",
     "normalize.css": "^8.0.1",
-    "vant": "^2.2.16",
+    "vant": "^2.8.7",
     "vue": "^2.6.10"
   },
   "devDependencies": {
