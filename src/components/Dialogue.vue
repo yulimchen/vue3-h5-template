@@ -16,14 +16,7 @@
 </template>
 
 <script>
-import { Field, Cell, CellGroup, Button } from 'vant'
 export default {
-  components: {
-    [Field.name]: Field,
-    [Cell.name]: Cell,
-    [CellGroup.name]: CellGroup,
-    [Button.name]: Button
-  },
   data() {
     return {
       message: ''
