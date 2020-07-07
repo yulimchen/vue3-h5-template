@@ -5,6 +5,8 @@ import 'normalize.css'
 
 // 按需引入 vant-ui 组件
 import './plugins/vant'
+// 引入 svg 图标
+import './icons'
 
 Vue.config.productionTip = false
 

@@ -2,6 +2,10 @@
   <div id="app">
     <img alt="Vue logo" src="./assets/logo.png">
     <Dialogue />
+    <div>
+      <svg-icon icon-class="checkin" style="font-size: 50px; margin-top: 30px;" />
+      <div>SVG</div>
+    </div>
   </div>
 </template>
 
