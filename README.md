@@ -1,29 +1,27 @@
-# vant-template
+ **🌱基于 vue-cli4、vant，vw/vh 视口适配的移动端项目基础模板**
 
-## Project setup
-```
-yarn install
-```
+- [x] 首屏加载优化
+- [x] vw/vh 视口适配
+- [x] 支持 svg 图标自动注册组件
 
-### Compiles and hot-reloads for development
-```
-yarn run serve
-```
 
-### Compiles and minifies for production
-```
-yarn run build
-```
 
-### Run your tests
-```
-yarn run test
-```
+## 开发
 
-### Lints and fixes files
 ```
-yarn run lint
-```
+# 克隆项目
+git clone https://github.com/yulimchen/vant-template.git
 
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+# 进入项目目录
+cd vant-template
+
+# 安装依赖
+yarn
+# OR
+npm install
+
+# 启动服务
+yarn serve
+# OR
+npm run serve
+```
