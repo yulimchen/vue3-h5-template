@@ -9,6 +9,13 @@ function resolve(dir) {
 module.exports = {
   lintOnSave: true,
   productionSourceMap: false, // 去除生成环境.map文件
+  configureWebpack: {
+    resolve: {
+      alias: {
+        '@': resolve('src')
+      }
+    }
+  },
   css: {
     loaderOptions: {
       postcss: {
