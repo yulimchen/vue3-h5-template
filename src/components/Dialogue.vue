@@ -8,7 +8,9 @@
         type="textarea"
         placeholder="请输入留言"
       >
-        <van-button slot="button" size="small" type="warning">警告按钮</van-button>
+        <template #button>
+          <van-button size="small" type="warning">警告按钮</van-button>
+        </template>
       </van-field>
     </van-cell-group>
   </div>
@@ -16,6 +18,7 @@
 </template>
 
 <script>
+
 export default {
   data() {
     return {
