@@ -1,19 +1,21 @@
- **🌱基于 vue-cli4、vant，vw/vh 视口适配的移动端项目基础模板**
+ **🌱基于 vue3、vant3，vw/vh 视口适配的移动端项目基础模板**
 
-- [x] 首屏加载优化
-- [x] vw/vh 视口适配
+- [x] vue3✨
+- [x] vant3✨
 - [x] 支持 svg 图标自动注册组件
+- [x] vw/vh 视口适配
+- [x] 首屏加载动画
 
 
 
 ## 开发
 
-```
+```shell
 # 克隆项目
-git clone https://github.com/yulimchen/vant-template.git
+git clone https://github.com/yulimchen/vant3-h5-template.git
 
 # 进入项目目录
-cd vant-template
+cd vant3-h5-template
 
 # 安装依赖
 yarn
