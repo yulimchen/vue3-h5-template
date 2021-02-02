@@ -1,15 +1,36 @@
-import Vue from 'vue'
+import { createApp } from 'vue'
 import App from './App.vue'
 // normalize.css
 import 'normalize.css'
 
 // 按需引入 vant-ui 组件
-import './plugins/vant'
+// import './plugins/vant'
 // 引入 svg 图标
-import './icons'
+// import './icons'
 
-Vue.config.productionTip = false
+// vant
+import {
+  Field,
+  Cell,
+  CellGroup,
+  Button,
+  Icon
+} from 'vant'
 
-new Vue({
-  render: h => h(App)
-}).$mount('#app')
+// svg-icon
+import SvgIcon from '@/components/SvgIcon'
+
+const app = createApp(App)
+// vant
+app.use(Field)
+app.use(Cell)
+app.use(CellGroup)
+app.use(Button)
+app.use(Icon)
+// svg-icon
+app.component('svg-icon', SvgIcon)
+const req = require.context('@/icons/svg', false, /\.svg$/)
+const requireAll = requireContext => requireContext.keys().map(requireContext)
+requireAll(req)
+
+app.mount('#app')
