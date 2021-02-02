@@ -15,7 +15,7 @@
 git clone https://github.com/yulimchen/vue3-h5-template.git
 
 # 进入项目目录
-cd vant3-h5-template
+cd vue3-h5-template
 
 # 安装依赖
 yarn
