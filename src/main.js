@@ -1,4 +1,5 @@
 import { createApp } from 'vue'
+import router from './router'
 import App from './App.vue'
 
 // normalize.css
@@ -14,4 +15,4 @@ registerVantComp(app)
 import { registerSvgIconComp } from '@/plugins/registerSvgIcon'
 registerSvgIconComp(app)
 
-app.mount('#app')
+app.use(router).mount('#app')
