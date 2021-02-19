@@ -1,31 +1,31 @@
 <template>
-  <div>
+  <div class="demo-content">
     <img alt="Vue logo" src="~@/assets/logo.png">
     <Dialogue />
-    <div>
-      <svg-icon icon-class="checkin" style="font-size: 50px; margin-top: 30px;" />
+    <div class="demo-content">
+      <svg-icon icon-class="check-in" />
       <div>SVG</div>
     </div>
   </div>
 </template>
 
 <script>
-import Dialogue from '@/components/Dialogue'
+import Dialogue from './Dialogue'
 
 export default {
-  name: 'App',
+  name: 'Demo',
   components: {
     Dialogue
   }
 }
 </script>
 
-<style>
-#app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+<style lang="less" scoped>
+.demo-content {
   text-align: center;
-  color: #2c3e50;
+
+  .svg-icon {
+    font-size: 50px;
+  }
 }
 </style>

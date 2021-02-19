@@ -4,6 +4,8 @@ import App from './App.vue'
 
 // normalize.css
 import 'normalize.css'
+// 全局样式
+import '@/styles/index.less'
 
 const app = createApp(App)
 
