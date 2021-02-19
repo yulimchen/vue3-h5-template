@@ -32,4 +32,4 @@ npm run serve
 
 ## 截图
 
-![](medias/Snipaste_2021-02-10_16-55-20-1612947452040.png)
+![](docs/img/Snipaste_2021-02-10_16-55-20.png)
