@@ -81,12 +81,3 @@ export function isArray(arg) {
   }
   return Array.isArray(arg)
 }
-
-// 是否空字符串
-/**
- * @param {string} str
- * @returns {Boolean}
- */
-export function isEmptyInput(str) {
-  return str.trim().length > 0
-}

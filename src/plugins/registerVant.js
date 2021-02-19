@@ -3,7 +3,9 @@ import {
   Cell,
   CellGroup,
   Button,
-  Icon
+  Icon,
+  Tabbar,
+  TabbarItem
 } from 'vant'
 
 const componentList = [
@@ -11,7 +13,9 @@ const componentList = [
   Cell,
   CellGroup,
   Button,
-  Icon
+  Icon,
+  Tabbar,
+  TabbarItem
 ]
 
 export function registerVantComp(app) {
