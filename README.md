@@ -6,6 +6,21 @@
 - [x] vw/vh 视口适配
 - [x] 首屏加载动画
 - [x] 项目资源路径 alias 别名
+- [ ] axios 封装 (TODO)
+- [ ] vuex (TODO)
+
+
+
+## 在线预览Preview
+
+👓 [点击这里](https://yulimchen.github.io/vue3-h5-template/)（PC浏览器请切换手机端模式）
+
+
+
+
+## 截图
+
+![](docs/img/Snipaste_2021-02-10_16-55-20.png)
 
 
 
@@ -29,11 +44,6 @@ yarn serve
 npm run serve
 ```
 
-
-
-## 截图
-
-![](docs/img/Snipaste_2021-02-10_16-55-20.png)
 
 
 
