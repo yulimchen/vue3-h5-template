@@ -15,7 +15,7 @@
   </head>
   <body>
     <noscript>
-      <strong>We're sorry but vant-template doesn't work properly without JavaScript enabled. Please enable it to continue.</strong>
+      <strong>We're sorry but vue3-h5-template doesn't work properly without JavaScript enabled. Please enable it to continue.</strong>
     </noscript>
     <div id="app">
       <div class="__spinner-container">
@@ -23,5 +23,12 @@
       </div>
     </div>
     <!-- built files will be auto injected -->
+    <% if (NODE_ENV === 'development') { %>
+    <!-- console -->
+    <script src="//cdn.jsdelivr.net/npm/eruda"></script>
+    <script>
+      eruda.init();
+    </script>
+    <% } %>
   </body>
 </html>
