@@ -6,6 +6,7 @@
 - [x] vw/vh 视口适配
 - [x] 首屏加载动画
 - [x] 项目资源路径 alias 别名
+- [x] 开发环境调试面板
 - [ ] axios 封装 (TODO)
 - [ ] vuex (TODO)
 
@@ -87,5 +88,25 @@ const componentList = [
 
 ```Vue
 <svg-icon icon-class="check-in" />
+```
+
+
+
+### 调试面板 eruda
+
+![](docs/img/Snipaste_2021-02-20_15-13-20.png)
+
+为了方便移动端查看 log 信息和调试，开发环境引入了 eruda 调试面板的 cdn。如果你的开发环境不需要的话请在 `index.html`中删除以下代码：
+
+```html
+<!-- public/index.html -->
+
+<% if (NODE_ENV === 'development') { %>
+    <!-- console -->
+    <script src="//cdn.jsdelivr.net/npm/eruda"></script>
+    <script>
+      eruda.init();
+    </script>
+<% } %>
 ```
 
