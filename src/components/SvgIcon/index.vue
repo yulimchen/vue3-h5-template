@@ -1,5 +1,5 @@
 <template>
-  <div v-if="isExternal" :style="styleExternalIcon" class="svg-external-icon svg-icon" v-bind="$attrs" />
+  <div v-if="isExternalIcon" :style="styleExternalIcon" class="svg-external-icon svg-icon" v-bind="$attrs" />
   <svg v-else :class="svgClass" aria-hidden="true" v-bind="$attrs">
     <use :xlink:href="iconName" />
   </svg>
@@ -7,6 +7,7 @@
 
 <script>
 import { isExternal } from '@/utils/validate'
+import { computed } from 'vue'
 
 export default {
   name: 'SvgIcon',
@@ -20,25 +21,29 @@ export default {
       default: ''
     }
   },
-  computed: {
-    isExternal() {
-      return isExternal(this.iconClass)
-    },
-    iconName() {
-      return `#icon-${this.iconClass}`
-    },
-    svgClass() {
-      if (this.className) {
-        return 'svg-icon ' + this.className
+  setup(props) {
+    const { iconClass, className } = props
+    const isExternalIcon = computed(() => isExternal(iconClass))
+    const iconName = computed(() => `#icon-${iconClass}`)
+    const svgClass = computed(() => {
+      if (className) {
+        return 'svg-icon ' + className
       } else {
         return 'svg-icon'
       }
-    },
-    styleExternalIcon() {
+    })
+    const styleExternalIcon = computed(() => {
       return {
-        mask: `url(${this.iconClass}) no-repeat 50% 50%`,
-        '-webkit-mask': `url(${this.iconClass}) no-repeat 50% 50%`
+        mask: `url(${iconClass}) no-repeat 50% 50%`,
+        '-webkit-mask': `url(${iconClass}) no-repeat 50% 50%`
       }
+    })
+
+    return {
+      isExternalIcon,
+      iconName,
+      svgClass,
+      styleExternalIcon
     }
   }
 }
