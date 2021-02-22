@@ -21,7 +21,7 @@
 
 ## 截图
 
-![](docs/img/Snipaste_2021-02-10_16-55-20.png)
+![](docs/assets/img/Snipaste_2021-02-10_16-55-20.png)
 
 
 
@@ -94,7 +94,7 @@ const componentList = [
 
 ### 调试面板 eruda
 
-![](docs/img/Snipaste_2021-02-20_15-13-20.png)
+![](docs/assets/img/Snipaste_2021-02-20_15-13-20.png)
 
 为了方便移动端查看 log 信息和调试，开发环境引入了 eruda 调试面板的 cdn。如果你的开发环境不需要的话请在 `index.html`中删除以下代码：
 
