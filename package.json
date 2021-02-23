@@ -12,7 +12,8 @@
     "normalize.css": "^8.0.1",
     "vant": "^3.0.6",
     "vue": "^3.0.5",
-    "vue-router": "^4.0.3"
+    "vue-router": "^4.0.3",
+    "vuex": "^4.0.0"
   },
   "devDependencies": {
     "@vue/cli-plugin-babel": "~4.5.0",

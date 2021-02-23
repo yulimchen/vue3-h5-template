@@ -15,7 +15,8 @@
 
 <script>
 import Tabbar from '@/components/Tabbar'
-import { reactive } from 'vue'
+import { computed } from 'vue'
+import store from '@/store'
 
 export default {
   name: 'Layout',
@@ -23,7 +24,7 @@ export default {
     Tabbar
   },
   setup() {
-    const keepAliveRoutes = reactive(['Demo', 'About'])
+    const keepAliveRoutes = computed(() => store.getters.cachedViews)
 
     return {
       keepAliveRoutes
