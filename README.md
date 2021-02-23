@@ -1,14 +1,15 @@
- **🌱基于 vue3、vant3，vw/vh 视口适配，开箱即用的移动端项目基础模板**
+ **🌱基于 Vue3 全家桶、Vant3，vw/vh 视口适配，开箱即用的移动端项目基础模板**
 
-- [x] vue3✨
-- [x] vant3✨
-- [x] 支持 svg 图标自动注册组件✨
+- [x] Vue3✨
+- [x] Vant3✨
+- [x] 支持 SVG 图标自动注册组件✨
 - [x] vw/vh 视口适配
 - [x] 首屏加载动画
 - [x] 项目资源路径 alias 别名
 - [x] 开发环境调试面板
-- [ ] axios 封装 (TODO)
-- [ ] vuex (TODO)
+- [x] Vuex 集成
+- [x] Vue-router 集成
+- [ ] Axios 封装 (TODO)
 
 
 
