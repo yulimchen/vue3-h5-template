@@ -5,22 +5,31 @@ const routes = [
     path: '/',
     name: 'root',
     component: Layout,
-    redirect: 'demo',
+    redirect: 'Demo',
     children: [
       {
         path: '/demo',
-        name: 'demo',
-        component: () => import('@/views/demo')
+        name: 'Demo',
+        component: () => import('@/views/demo'),
+        meta: {
+          keepAlive: true
+        }
       },
       {
         path: '/tools',
-        name: 'tools',
-        component: () => import('@/views/tools')
+        name: 'Tools',
+        component: () => import('@/views/tools'),
+        meta: {
+          keepAlive: true
+        }
       },
       {
         path: '/about',
-        name: 'about',
-        component: () => import('@/views/about')
+        name: 'About',
+        component: () => import('@/views/about'),
+        meta: {
+          keepAlive: false
+        }
       }
     ]
   }
