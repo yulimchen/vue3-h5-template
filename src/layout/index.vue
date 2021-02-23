@@ -1,7 +1,11 @@
 <template>
   <div class="app-wrapper">
     <div class="app-wrapper__content">
-      <router-view />
+      <router-view v-slot="{ Component }">
+        <keep-alive :include="keepAliveRoutes">
+          <component :is="Component" />
+        </keep-alive>
+      </router-view>
     </div>
     <div class="app-wrapper__footer">
       <tabbar />
@@ -11,11 +15,19 @@
 
 <script>
 import Tabbar from '@/components/Tabbar'
+import { reactive } from 'vue'
 
 export default {
   name: 'Layout',
   components: {
     Tabbar
+  },
+  setup() {
+    const keepAliveRoutes = reactive(['Demo', 'About'])
+
+    return {
+      keepAliveRoutes
+    }
   }
 }
 </script>
