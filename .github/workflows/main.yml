@@ -22,17 +22,17 @@ jobs:
         uses: actions/checkout@master
 
       - name: Install and Build 🔧
-        run: |
-          yarn
-          yarn build
-      - name: Deploy 🚀
         uses: JamesIves/github-pages-deploy-action@master
-        with:
-          ACCESS_TOKEN: ${{ secrets.ACCESS_TOKEN }}
+        # 该步骤所需的环境变量
+        env:
+          ACCESS_TOKEN: ${{ secrets.ACTION_TOKEN }}
+          # 在部署前要checkout的基本分支，默认是master
+          BASE_BRANCH: master # The branch the action should deploy from.
           # 指定部署的分支，默认是 gh-pages 分支
-          BRANCH: gh-pages
+          BRANCH: gh-pages # The branch the action should deploy to.
           # 存储库中要部署的文件夹。
           # 该步骤会将项目中 FOLDER 指定文件夹下的文件推送到 BRANCH 分支，作为Github Pages 部署的内容。
           # Vue CLI默认打包到 dist 目录
-          FOLDER: dist
-          CLEAN: true
+          FOLDER: dist # The folder the action should deploy.
+          # 在向 BRANCH 分支推送代码前，可以指定构建脚本
+          BUILD_SCRIPT: npm install && npm run build # The build script the action should run prior to deploying.
