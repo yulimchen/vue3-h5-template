@@ -26,7 +26,7 @@ jobs:
           yarn
           yarn build
       - name: Deploy 🚀
-        uses: yulimchen/github-pages-deploy-action@master
+        uses: JamesIves/github-pages-deploy-action@master
         with:
           ACCESS_TOKEN: ${{ secrets.ACCESS_TOKEN }}
           # 指定部署的分支，默认是 gh-pages 分支
