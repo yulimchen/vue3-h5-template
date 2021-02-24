@@ -8,6 +8,7 @@ function resolve(dir) {
 
 module.exports = {
   lintOnSave: true,
+  publicPath: './',
   productionSourceMap: false, // 去除生成环境.map文件
   configureWebpack: {
     resolve: {
