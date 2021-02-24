@@ -93,6 +93,25 @@ const componentList = [
 
 
 
+### 路由缓存&命名注意⚠
+
+组件默认开启缓存，如某个组件需关闭缓存，在对应路由 routes meta 内的`noCache`字段赋值为`true`即可。
+
+```js
+{
+  path: '/about',
+  name: 'About',
+  component: () => import('@/views/about'),
+  meta: {
+    noCache: true
+  }
+},
+```
+
+> PS. 为了保证页面能被正确缓存，请确保**组件**的`name`值和对应路由的`name`命名完全相同。
+
+
+
 ### 调试面板 eruda
 
 ![](docs/assets/img/Snipaste_2021-02-20_15-13-20.png)
