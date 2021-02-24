@@ -1,9 +1,9 @@
 # 工作流名称，不设置的话默认取配置文件名
-name: GitHub Actions Build and Deploy
+name: Build and Deploy
 # 指定触发 workflow 的条件
 # 指定触发事件时，可以限定分支或标签
 # 当前是 只有 master分支上触发 push 事件时才执行工作流任务
-on:
+on: 
   push:
     branches:
       - master
@@ -21,7 +21,8 @@ jobs:
         # 拉取代码
         uses: actions/checkout@master
 
-      - name: Install and Build 🔧
+      - name: Build and Deploy
+        # 构建发布 Github pages
         uses: JamesIves/github-pages-deploy-action@master
         # 该步骤所需的环境变量
         env:
@@ -36,3 +37,4 @@ jobs:
           FOLDER: dist # The folder the action should deploy.
           # 在向 BRANCH 分支推送代码前，可以指定构建脚本
           BUILD_SCRIPT: npm install && npm run build # The build script the action should run prior to deploying.
+
