@@ -10,25 +10,19 @@ const routes = [
       {
         path: '/demo',
         name: 'Demo',
-        component: () => import('@/views/demo'),
-        meta: {
-          keepAlive: true
-        }
+        component: () => import('@/views/demo')
       },
       {
         path: '/tools',
         name: 'Tools',
-        component: () => import('@/views/tools'),
-        meta: {
-          keepAlive: true
-        }
+        component: () => import('@/views/tools')
       },
       {
         path: '/about',
         name: 'About',
         component: () => import('@/views/about'),
         meta: {
-          keepAlive: false
+          noCache: true
         }
       }
     ]

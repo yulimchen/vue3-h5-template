@@ -6,7 +6,7 @@ const mutations = {
   ADD_CACHED_VIEW: (state, view) => {
     // 不重复添加
     if (state.cachedViews.includes(view.name)) return
-    if (view?.meta?.keepAlive) {
+    if (!view?.meta?.noCache) {
       state.cachedViews.push(view.name)
     }
   },
