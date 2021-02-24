@@ -1,0 +1,38 @@
+# 工作流名称，不设置的话默认取配置文件名
+name: GitHub Actions Build and Deploy
+# 指定触发 workflow 的条件
+# 指定触发事件时，可以限定分支或标签
+# 当前是 只有 master分支上触发 push 事件时才执行工作流任务
+on:
+  push:
+    branches:
+      - master
+# 工作流执行的一个或多个任务
+jobs:
+  # 任务名称
+  build-and-deploy:
+    # 任务运行的容器类型（虚拟机环境）
+    runs-on: ubuntu-latest
+    # 任务执行的步骤
+    steps:
+      # 步骤名称
+      - name: Checkout 🛎️
+        # 使用的操作 actions，可以使用公共仓库，本地仓库，别人的仓库的action
+        # 拉取代码
+        uses: actions/checkout@master
+
+      - name: Install and Build 🔧
+        run: |
+          yarn
+          yarn build
+      - name: Deploy 🚀
+        uses: yulimchen/github-pages-deploy-action@master
+        with:
+          ACCESS_TOKEN: ${{ secrets.ACCESS_TOKEN }}
+          # 指定部署的分支，默认是 gh-pages 分支
+          BRANCH: gh-pages
+          # 存储库中要部署的文件夹。
+          # 该步骤会将项目中 FOLDER 指定文件夹下的文件推送到 BRANCH 分支，作为Github Pages 部署的内容。
+          # Vue CLI默认打包到 dist 目录
+          FOLDER: dist
+          CLEAN: true
