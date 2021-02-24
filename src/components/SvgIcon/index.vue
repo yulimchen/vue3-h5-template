@@ -22,20 +22,19 @@ export default {
     }
   },
   setup(props) {
-    const { iconClass, className } = props
-    const isExternalIcon = computed(() => isExternal(iconClass))
-    const iconName = computed(() => `#icon-${iconClass}`)
+    const isExternalIcon = computed(() => isExternal(props.iconClass))
+    const iconName = computed(() => `#icon-${props.iconClass}`)
     const svgClass = computed(() => {
-      if (className) {
-        return 'svg-icon ' + className
+      if (props.className) {
+        return 'svg-icon ' + props.className
       } else {
         return 'svg-icon'
       }
     })
     const styleExternalIcon = computed(() => {
       return {
-        mask: `url(${iconClass}) no-repeat 50% 50%`,
-        '-webkit-mask': `url(${iconClass}) no-repeat 50% 50%`
+        mask: `url(${props.iconClass}) no-repeat 50% 50%`,
+        '-webkit-mask': `url(${props.iconClass}) no-repeat 50% 50%`
       }
     })
 
