@@ -1,5 +1,6 @@
 {
-  "name": "vant-template",
+  "name": "vue3-h5-template",
+  "homepage": "https://yulimchen.github.io/vue3-h5-template/",
   "version": "0.1.0",
   "private": true,
   "scripts": {
