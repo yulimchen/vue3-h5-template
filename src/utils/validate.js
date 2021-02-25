@@ -1,4 +1,9 @@
 /**
+ * Created by PanJiaChen on 16/11/18.
+ * https://github.com/PanJiaChen/vue-element-admin/blob/master/src/utils/validate.js
+ */
+
+/**
  * @param {string} path
  * @returns {Boolean}
  */
