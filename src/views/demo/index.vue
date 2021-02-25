@@ -28,7 +28,7 @@ export default {
       '✔ Vue3✨',
       '✔ Vant3✨',
       '✔ 支持 SVG 图标自动注册组件✨',
-      '✔ vw/vh 视口适配',
+      '✔ vw 视口适配',
       '✔ 首屏加载动画',
       '✔ 项目资源路径 alias 别名',
       '✔ 开发环境调试面板',
@@ -65,6 +65,7 @@ export default {
 
     h3 {
       margin: 6px 0;
+      font-size: 18px;
     }
 
     > a {
@@ -79,6 +80,7 @@ export default {
   }
 
   &__desc {
+    font-size: 14px;
     padding: 2px 10px;
     border-radius: 4px;
     background-color: #eee;
