@@ -9,7 +9,7 @@ function resolve(dir) {
 module.exports = {
   lintOnSave: true,
   publicPath: './',
-  productionSourceMap: false, // 去除生成环境.map文件
+  productionSourceMap: false, // 去除生产环境.map文件
   configureWebpack: {
     resolve: {
       alias: {
@@ -23,7 +23,7 @@ module.exports = {
         plugins: [
           autoprefixer(),
           pxtoviewport({
-            viewportWidth: 375
+            viewportWidth: 375 // 根据设计稿设定
           })
         ]
       }
