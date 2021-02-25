@@ -1,3 +1,4 @@
+'use strict'
 const autoprefixer = require('autoprefixer')
 const pxtoviewport = require('postcss-px-to-viewport')
 
@@ -6,11 +7,15 @@ function resolve(dir) {
   return path.join(__dirname, dir)
 }
 
+const defaultSettings = require('./src/settings.js')
+const name = defaultSettings.title || 'Vue3 H5 Template'
+
 module.exports = {
   lintOnSave: true,
   publicPath: './',
   productionSourceMap: false, // 去除生产环境.map文件
   configureWebpack: {
+    name: name, // name 字段将插值到 index.html 中
     resolve: {
       alias: {
         '@': resolve('src')

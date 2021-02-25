@@ -50,10 +50,11 @@ npm run serve
 
 ## 文档引导
 
-- [按需引入 vant 组件](#vant)
-- [SVG 图标使用](#svg)
-- [路由缓存&命名注意⚠](#router)
-- [调试面板 eruda](#console)
+> - [按需引入 vant 组件](#vant)
+> - [SVG 图标使用](#svg)
+> - [路由缓存&命名注意⚠](#router)
+> - [调试面板 eruda](#console)
+>
 
 
 
