@@ -20,28 +20,28 @@ import { ref, reactive } from 'vue'
 
 export default {
   name: 'Tabbar',
-  setup(props, context) {
+  setup(props) {
     const active = ref(0)
     const tabbarData = reactive([
       {
         icon: 'wap-home-o',
         title: '主页',
         to: {
-          name: 'demo'
+          name: 'Demo'
         }
       },
       {
         icon: 'gem-o',
         title: '工具',
         to: {
-          name: 'tools'
+          name: 'Tools'
         }
       },
       {
         icon: 'user-o',
         title: '关于',
         to: {
-          name: 'about'
+          name: 'About'
         }
       }
     ])
