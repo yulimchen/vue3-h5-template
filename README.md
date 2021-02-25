@@ -50,9 +50,14 @@ npm run serve
 
 ## 文档引导
 
-[TOC]
+- [按需引入 vant 组件](#vant)
+- [SVG 图标使用](#svg)
+- [路由缓存&命名注意⚠](#router)
+- [调试面板 eruda](#console)
 
-### - 按需引入 vant 组件
+
+
+### - <span id="vant">按需引入 vant 组件</span>
 
 全量引入组件库太过臃肿，这里进行了按需引入，需要增加组件的话在`registerVant.js`中添加即可。
 
@@ -77,7 +82,7 @@ const componentList = [
 
 
 
-### - SVG 图标使用
+### - <span id="svg">SVG 图标使用</span>
 
 这里用了花裤衩大佬的 svg 解决方案，有兴趣详细了解可以点击[文章](https://juejin.cn/post/6844903517564436493)。
 
@@ -94,7 +99,7 @@ const componentList = [
 
 
 
-### - 路由缓存&命名注意⚠
+### - <span id="router">路由缓存&命名注意⚠</span>
 
 组件默认开启缓存，如某个组件需关闭缓存，在对应路由 routes meta 内的`noCache`字段赋值为`true`即可。
 
@@ -113,7 +118,7 @@ const componentList = [
 
 
 
-### - 调试面板 eruda
+### - <span id="console">调试面板 eruda</span>
 
 ![](docs/assets/img/Snipaste_2021-02-20_15-13-20.png)
 
