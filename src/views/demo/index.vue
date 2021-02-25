@@ -65,6 +65,7 @@ export default {
 
     h3 {
       margin: 6px 0;
+      font-size: 18px;
     }
 
     > a {
@@ -79,6 +80,7 @@ export default {
   }
 
   &__desc {
+    font-size: 14px;
     padding: 2px 10px;
     border-radius: 4px;
     background-color: #eee;

@@ -8,17 +8,17 @@ const routes = [
     redirect: 'Demo',
     children: [
       {
-        path: '/demo',
+        path: 'demo',
         name: 'Demo',
         component: () => import('@/views/demo')
       },
       {
-        path: '/tools',
+        path: 'tools',
         name: 'Tools',
         component: () => import('@/views/tools')
       },
       {
-        path: '/about',
+        path: 'about',
         name: 'About',
         component: () => import('@/views/about'),
         meta: {
