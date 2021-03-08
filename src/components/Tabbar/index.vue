@@ -3,12 +3,13 @@
     v-model="active"
     fixed
     :placeholder="true"
+    :route="true"
   >
     <van-tabbar-item
       v-for="(item, index) in tabbarData"
       :key="index"
       :icon="item.icon"
-      :to="item.to.name"
+      :to="item.to"
     >
       {{ item.title }}
     </van-tabbar-item>

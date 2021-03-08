@@ -4,6 +4,7 @@
 - [x] Vant3✨
 - [x] 支持 SVG 图标自动注册组件✨
 - [x] vw 视口适配
+- [x] ESLint
 - [x] 首屏加载动画
 - [x] 项目资源路径 alias 别名
 - [x] 开发环境调试面板
@@ -136,6 +137,13 @@ const componentList = [
     </script>
 <% } %>
 ```
+
+
+
+### - <span id="page-title">动态设置页面标题</span>
+
+
+
 
 
 

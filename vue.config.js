@@ -51,5 +51,8 @@ module.exports = {
         symbolId: 'icon-[name]'
       })
       .end()
+  },
+  devServer: {
+    before: require('./mock/mock-server.js')
   }
 }
