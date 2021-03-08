@@ -4,13 +4,14 @@
 - [x] Vant3✨
 - [x] 支持 SVG 图标自动注册组件✨
 - [x] vw 视口适配
+- [x] Axios 封装
+- [x] 开发环境 Mock 数据
 - [x] ESLint
 - [x] 首屏加载动画
 - [x] 项目资源路径 alias 别名
 - [x] 开发环境调试面板
 - [x] Vuex 集成
 - [x] Vue-router 集成
-- [ ] Axios 封装 (TODO)
 
 
 
@@ -23,7 +24,7 @@
 
 ## 截图
 
-![](docs/assets/img/Snipaste_2021-02-10_16-55-20.png)
+![](docs/assets/img/截屏2021-03-08 22.54.56.png)
 
 
 
@@ -122,7 +123,7 @@ const componentList = [
 
 ### - <span id="console">调试面板 eruda</span>
 
-![](docs/assets/img/Snipaste_2021-02-20_15-13-20.png)
+![](docs/assets/img/截屏2021-03-08 22.55.14.png)
 
 为了方便移动端查看 log 信息和调试，开发环境引入了 eruda 调试面板的 cdn。如果你的开发环境不需要的话请在 `index.html`中删除以下代码：
 

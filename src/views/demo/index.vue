@@ -29,12 +29,13 @@ export default {
       '✔ Vant3✨',
       '✔ 支持 SVG 图标自动注册组件✨',
       '✔ vw 视口适配',
+      '✔ Axios 封装',
+      '✔ 开发环境 Mock 数据',
       '✔ 首屏加载动画',
       '✔ 项目资源路径 alias 别名',
       '✔ 开发环境调试面板',
       '✔ Vuex 集成',
-      '✔ Vue-router 集成',
-      '💭 Axios 封装 (TODO)'
+      '✔ Vue-router 集成'
     ])
 
     return {
