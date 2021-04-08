@@ -56,6 +56,7 @@ npm run serve
 > - [SVG 图标使用](#svg)
 > - [路由缓存&命名注意⚠](#router)
 > - [调试面板 eruda](#console)
+> - [动态设置页面标题](#page-title)
 >
 
 
@@ -143,7 +144,37 @@ const componentList = [
 
 ### - <span id="page-title">动态设置页面标题</span>
 
+在路由全局前置守卫中：
 
+```js
+// src/router/index.js
+// ...
+router.beforeEach((to, from, next) => {
+  // ...
+  // 设置页面 title
+  setPageTitle(to.meta.title)
+  next()
+})
+```
+
+具体实现方法见文件 `src/utils/set-page-title.js` 。
+
+
+
+### - <span id="mock">开发环境Mock</span>
+
+> 本项目 Mock 是在本地开启 server，如果开发环境不需要 mock 数据，请在 `vue.config.js` 中注释 `before` 字段 ，并重启项目。
+
+```js
+// vue.config.js
+module.exports = {
+  // ...
+  devServer: {
+    // 删除或注释 before 键值即可
+    before: require('./mock/mock-server.js')
+  }
+}
+```
 
 
 
