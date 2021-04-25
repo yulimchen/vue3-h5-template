@@ -26,6 +26,7 @@ jobs:
         uses: JamesIves/github-pages-deploy-action@4.1.1
         with:
           branch: gh-pages
+          folder: dist
         # 该步骤所需的环境变量
         env:
           ACCESS_TOKEN: ${{ secrets.ACTION_TOKEN }}
