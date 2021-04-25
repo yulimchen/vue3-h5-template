@@ -126,18 +126,13 @@ const componentList = [
 
 ![](docs/assets/img/截屏2021-03-08_22.55.14.png)
 
-为了方便移动端查看 log 信息和调试，开发环境引入了 eruda 调试面板的 cdn。如果你的开发环境不需要的话请在 `index.html`中删除以下代码：
+为了方便移动端查看 log 信息和调试，开发环境引入了 eruda 调试面板的 cdn。如果你的开发环境不需要的话请在 `.env.development` 中修改值：
 
 ```html
-<!-- public/index.html -->
+# .env.development
 
-<% if (NODE_ENV === 'development') { %>
-    <!-- console -->
-    <script src="//cdn.jsdelivr.net/npm/eruda"></script>
-    <script>
-      eruda.init();
-    </script>
-<% } %>
+# 开发环境启用 eruda 调试台。若不启用，将 true 修改为 false 或其他任意值即可
+VUE_APP_ENABLE_ERUDA = true
 ```
 
 
