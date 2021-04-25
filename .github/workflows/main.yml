@@ -23,7 +23,7 @@ jobs:
 
       - name: Build and Deploy
         # 构建发布 Github pages
-        uses: JamesIves/github-pages-deploy-action@4.1.1
+        uses: JamesIves/github-pages-deploy-action@master
         # 该步骤所需的环境变量
         env:
           ACCESS_TOKEN: ${{ secrets.ACTION_TOKEN }}
