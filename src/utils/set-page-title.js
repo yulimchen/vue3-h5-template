@@ -1,8 +1,9 @@
 import defaultSettings from '@/settings'
 
-const title = defaultSettings.title || 'Vue3 H5 Template'
+const title = defaultSettings.title || ''
 
 export default function setPageTitle(pageTitle) {
+  if (!title && !pageTitle) return
   // 设置页面 title
-  window.document.title = pageTitle ? `${pageTitle} | ${title}` : `${title}`
+  window.document.title = title ? `${pageTitle} | ${title}` : `${pageTitle}`
 }
