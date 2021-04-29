@@ -8,7 +8,7 @@
     "dev": "vue-cli-service serve --open",
     "start": "vue-cli-service serve --open",
     "build": "vue-cli-service build",
-    "lint": "vue-cli-service lint"
+    "lint": "vue-cli-service lint --fix"
   },
   "dependencies": {
     "axios": "^0.21.1",
