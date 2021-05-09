@@ -1,9 +1,9 @@
 <template>
   <div class="app-wrapper">
     <div class="app-wrapper__content">
-      <router-view v-slot="{ Component }">
+      <router-view v-slot="{ Component, route }">>
         <keep-alive :include="keepAliveRoutes">
-          <component :is="Component" />
+          <component :is="Component" :key="route.name" />
         </keep-alive>
       </router-view>
     </div>
