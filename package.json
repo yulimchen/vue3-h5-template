@@ -2,7 +2,14 @@
   "name": "vue3-h5-template",
   "homepage": "https://yulimchen.github.io/vue3-h5-template/",
   "version": "0.1.0",
-  "private": true,
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/yulimchen/vue3-h5-template.git"
+  },
+  "bugs": {
+    "url": "https://github.com/yulimchen/vue3-h5-template/issues"
+  },
   "scripts": {
     "serve": "vue-cli-service serve",
     "dev": "vue-cli-service serve --open",
