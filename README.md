@@ -57,7 +57,7 @@ npm run serve
 > - [路由缓存&命名注意⚠](#router)
 > - [调试面板 eruda](#console)
 > - [动态设置页面标题](#page-title)
->
+> - [vw视口适配](#viewport)
 
 
 
@@ -126,7 +126,7 @@ const componentList = [
 
 ![](docs/assets/img/截屏2021-03-08_22.55.14.png)
 
-为了方便移动端查看 log 信息和调试，开发环境引入了 eruda 调试面板的 cdn。如果你的开发环境不需要的话请在 `.env.development` 中修改值：
+为了方便移动端查看 log 信息和调试，开发环境引入了 eruda 调试面板的 cdn。如果你的开发环境不需要的话请在 `.env.development` 中修改值，并重启本地服务
 
 ```html
 # .env.development
@@ -173,9 +173,42 @@ module.exports = {
 
 
 
+### - <span id="viewport">vw视口适配</span>
+
+使用 `postcss-px-to-viewport` 进行视口适配，相关配置见项目根目录下 `vue.config.js`，如修改内容，需修改后重启项目。
+
+```js
+// vue.config.js
+module.exports = {
+  // ...
+  css: {
+    loaderOptions: {
+      postcss: {
+        plugins: [
+          autoprefixer(),
+          pxtoviewport({
+            viewportWidth: 375, // 根据设计稿设定
+            minPixelValue: 1, // 最小的转换数值
+            unitPrecision: 2 // 转化精度，转换后保留位数
+          })
+        ]
+      }
+    }
+  },
+}
+```
+
+
+
 
 ## 鸣谢
 
  [vue-element-admin](https://github.com/PanJiaChen/vue-element-admin) 
 
  [vant-demo](https://github.com/youzan/vant-demo) 
+
+
+
+## License
+
+[MIT license](https://github.com/yulimchen/vue3-h5-template/blob/master/LICENSE).
