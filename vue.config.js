@@ -28,7 +28,9 @@ module.exports = {
         plugins: [
           autoprefixer(),
           pxtoviewport({
-            viewportWidth: 375 // 根据设计稿设定
+            viewportWidth: 375, // 根据设计稿设定
+            minPixelValue: 1, // 最小的转换数值
+            unitPrecision: 2 // 转化精度，转换后保留位数
           })
         ]
       }
