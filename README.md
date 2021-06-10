@@ -179,3 +179,9 @@ module.exports = {
  [vue-element-admin](https://github.com/PanJiaChen/vue-element-admin) 
 
  [vant-demo](https://github.com/youzan/vant-demo) 
+
+
+
+## License
+
+[MIT license](https://github.com/yulimchen/vue3-h5-template/blob/master/LICENSE).
