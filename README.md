@@ -13,6 +13,11 @@
 - [x] Vuex 集成
 - [x] Vue-router 集成
 
+- TODO:
+
+- [ ] gzip
+- [ ] CDN
+
 
 
 ## 在线预览Preview
