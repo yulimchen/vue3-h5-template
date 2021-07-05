@@ -1,6 +1,7 @@
 'use strict'
 const autoprefixer = require('autoprefixer')
 const pxtoviewport = require('postcss-px-to-viewport')
+const cdnDependencies = require('./dependencies-cdn')
 
 const path = require('path')
 function resolve(dir) {
@@ -10,17 +11,34 @@ function resolve(dir) {
 const defaultSettings = require('./src/settings.js')
 const name = defaultSettings.title || 'Vue3 H5 Template'
 
+// 设置不参与构建的库
+const externals = {}
+cdnDependencies.forEach(pkg => { externals[pkg.name] = pkg.library })
+
+// 引入文件的 cdn 链接
+const cdn = {
+  css: cdnDependencies.map(e => e.css).filter(e => e),
+  js: cdnDependencies.map(e => e.js).filter(e => e)
+}
+
 module.exports = {
   lintOnSave: true,
   publicPath: './',
   productionSourceMap: false, // 去除生产环境.map文件
-  configureWebpack: {
-    name: name, // name 字段将插值到 index.html 中
-    resolve: {
-      alias: {
-        '@': resolve('src')
+  configureWebpack: (config) => {
+    const configNew = {
+      name: name, // 设置 html 标题名
+      resolve: {
+        // 设置 alias
+        alias: {
+          '@': resolve('src')
+        }
       }
     }
+    if (process.env.NODE_ENV === 'production') {
+      configNew.externals = externals
+    }
+    return configNew
   },
   css: {
     loaderOptions: {
@@ -37,6 +55,17 @@ module.exports = {
     }
   },
   chainWebpack: (config) => {
+    /**
+     * 添加 CDN 参数到 htmlWebpackPlugin 配置中
+     */
+    const targetHtmlPluginNames = ['html']
+    targetHtmlPluginNames.forEach((name) => {
+      config.plugin(name).tap(options => {
+        options[0].cdn = process.env.NODE_ENV === 'production' ? cdn : []
+        return options
+      })
+    })
+
     // 设置 svg-sprite-loader
     config.module
       .rule('svg')
