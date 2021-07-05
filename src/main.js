@@ -4,7 +4,7 @@ import store from './store'
 import App from './App.vue'
 
 // normalize.css
-import 'normalize.css'
+import 'normalize.css/normalize.css'
 // 全局样式
 import '@/styles/index.less'
 
