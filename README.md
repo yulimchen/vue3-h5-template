@@ -5,18 +5,16 @@
 - [x] 支持 SVG 图标自动注册组件✨
 - [x] vw 视口适配
 - [x] Axios 封装
-- [x] 开发环境 Mock 数据
+- [x] 生产环境 CDN 依赖
 - [x] ESLint
 - [x] 首屏加载动画
 - [x] 项目资源路径 alias 别名
 - [x] 开发环境调试面板
 - [x] Vuex 集成
 - [x] Vue-router 集成
-
+- [x] 开发环境 Mock 数据
 - TODO:
-
 - [ ] gzip
-- [ ] CDN
 
 
 
