@@ -2,6 +2,7 @@
 const autoprefixer = require('autoprefixer')
 const pxtoviewport = require('postcss-px-to-viewport')
 const cdnDependencies = require('./dependencies-cdn')
+const CompressionWebpackPlugin = require('compression-webpack-plugin')
 
 const path = require('path')
 function resolve(dir) {
@@ -37,6 +38,16 @@ module.exports = {
     }
     if (process.env.NODE_ENV === 'production') {
       configNew.externals = externals
+      configNew.plugins = [
+        // gzip
+        new CompressionWebpackPlugin({
+          filename: '[path].gz[query]',
+          test: new RegExp('\\.(' + ['js', 'css'].join('|') + ')$'),
+          threshold: 10240,
+          minRatio: 0.8,
+          deleteOriginalAssets: false
+        })
+      ]
     }
     return configNew
   },
@@ -55,9 +66,7 @@ module.exports = {
     }
   },
   chainWebpack: (config) => {
-    /**
-     * 添加 CDN 参数到 htmlWebpackPlugin 配置中
-     */
+    // 添加 CDN 参数到 htmlWebpackPlugin 配置中
     const targetHtmlPluginNames = ['html']
     targetHtmlPluginNames.forEach((name) => {
       config.plugin(name).tap(options => {
