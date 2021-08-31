@@ -37,7 +37,6 @@ module.exports = {
       }
     }
     if (process.env.NODE_ENV === 'production') {
-      configNew.externals = externals
       configNew.plugins = [
         // gzip
         new CompressionWebpackPlugin({
@@ -66,14 +65,18 @@ module.exports = {
     }
   },
   chainWebpack: (config) => {
-    // 添加 CDN 参数到 htmlWebpackPlugin 配置中
-    const targetHtmlPluginNames = ['html']
-    targetHtmlPluginNames.forEach((name) => {
-      config.plugin(name).tap(options => {
-        options[0].cdn = process.env.NODE_ENV === 'production' ? cdn : []
-        return options
+    // CDN
+    if (process.env.NODE_ENV === 'production' && process.env.VUE_APP_CDN_DEPS !== 'false') {
+      config.externals(externals)
+      // 添加 CDN 参数到 htmlWebpackPlugin 配置中
+      const targetHtmlPluginNames = ['html']
+      targetHtmlPluginNames.forEach((name) => {
+        config.plugin(name).tap(options => {
+          options[0].cdn = process.env.NODE_ENV === 'production' ? cdn : []
+          return options
+        })
       })
-    })
+    }
 
     // 设置 svg-sprite-loader
     config.module
