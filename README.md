@@ -60,6 +60,7 @@ npm run serve
 > - [调试面板 eruda](#console)
 > - [动态设置页面标题](#page-title)
 > - [vw视口适配](#viewport)
+> - [CDN加载依赖](#CDN)
 
 
 
@@ -199,6 +200,16 @@ module.exports = {
   },
 }
 ```
+
+
+
+### - <span id="CDN">CDN生产环境依赖</span>
+
+本模板生产环境默认 CDN 加载依赖，依赖加载源见根目录 `dependencies-cdn.js` 文件。
+
+**❗ PS.为避免打包后出现不可预估问题，请注意确保生产和开发环境的依赖版本一致！**
+
+> 如需关闭 CDN 依赖，在根目录生产环境变量文件 `.env.production` 中修改 `VUE_APP_CDN_DEPS` 的值为 `false` ，重新打包即可。
 
 
 
