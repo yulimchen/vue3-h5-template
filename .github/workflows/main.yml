@@ -36,5 +36,5 @@ jobs:
           # Vue CLI默认打包到 dist 目录
           FOLDER: dist # The folder the action should deploy.
           # 在向 BRANCH 分支推送代码前，可以指定构建脚本
-          BUILD_SCRIPT: npm install && npm run build # The build script the action should run prior to deploying.
+          BUILD_SCRIPT: yarn && yarn build # The build script the action should run prior to deploying.
 
