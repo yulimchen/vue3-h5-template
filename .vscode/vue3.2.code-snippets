@@ -1,0 +1,18 @@
+{
+  "Vue3.2+快速生成模板": {
+    "prefix": ["<", "Vue3.2+"],
+    "body": [
+      "<script setup lang='ts'>",
+      "$1",
+      "</script>\n",
+      "<template>",
+      "\t<div>",
+      "\t\t$2",
+      "\t</div>",
+      "</template>\n",
+      "<style scoped>\n",
+      "</style>",
+    ],
+    "description": "Vue3.2+"
+  }
+}
