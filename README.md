@@ -91,18 +91,20 @@ const componentList = [
 
 ### - <span id="svg">SVG 图标使用</span>
 
-这里用了花裤衩大佬的 svg 解决方案，有兴趣详细了解可以点击[文章](https://juejin.cn/post/6844903517564436493)。
 
-> 1. 将 svg 图标文件放在`src/icons/svg`目录下
-> 2. 在项目中直接使用`<svg-icon icon-class="svg图标文件命名" />`即可
+> 1. 将 svg 图标文件放在 `src/icons/svg` 目录下
+> 2. 在项目中直接使用 `<svg-icon name="svg图标文件命名" />` 即可
 
 例如：
 
-本项目`src/icons/svg`中放了个叫`check-in.svg`的图标文件，然后在组件`icon-class`属性中填入文件的命名即可，So easy~
+本项目 `src/icons/svg` 中放了个叫 `check-in.svg` 的图标文件，然后在组件 `icon-class` 属性中填入文件的命名即可，So easy~
+
 
 ```Vue
-<svg-icon icon-class="check-in" />
+<svg-icon name="check-in" />
 ```
+
+> 项目中使用了 `unplugin-vue-components` 自动引入组件，所以 `main.ts` 中无需注册全局图标组件。
 
 
 
