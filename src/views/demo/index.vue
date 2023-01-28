@@ -2,9 +2,9 @@
 import { reactive } from "vue";
 
 const contentList = reactive([
-  "✔ Vue3✨",
-  "✔ Vant4 组件库✨",
-  "✔ 支持 SVG 图标自动注册组件✨",
+  "✔ Vue3 + Vite4 ⚡",
+  "✔ Vant4 组件库 ✨",
+  "✔ 支持 SVG 图标自动注册组件",
   "✔ vw 视口适配",
   "✔ Axios 封装",
   "✔ 生产环境 CDN 依赖",

@@ -16,6 +16,7 @@ export default defineConfig({
     Components({
       resolvers: [VantResolver()]
     }),
+    // svg icon
     createSvgIconsPlugin({
       // 指定图标文件夹
       iconDirs: [path.resolve(process.cwd(), "src/icons/svg")],
