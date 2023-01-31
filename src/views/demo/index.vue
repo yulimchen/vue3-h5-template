@@ -20,7 +20,7 @@ const contentList = reactive([
 
 <template>
   <div class="demo-content">
-    <img class="logo" alt="Vue logo" src="~@/assets/logo_vue3.png" />
+    <img class="logo" alt="Vue logo" src="~@/assets/logo_vue3_ts.png" />
     <div class="demo-content__title">
       <a href="https://github.com/yulimchen/vue3-h5-template" target="_blank">
         <svg-icon name="github" />
