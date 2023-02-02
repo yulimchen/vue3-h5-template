@@ -6,6 +6,8 @@ import type {
   AxiosError
 } from "axios";
 import { showFailToast } from "vant";
+import { ContentTypeEnum, ResultEnum } from "@/enums/requestEnum";
+import NProgress from "./progress";
 
 /**
  * @description 创建请求实例
@@ -16,6 +18,7 @@ const createService = () => {
   // 请求拦截器
   service.interceptors.request.use(
     config => {
+      NProgress.start();
       // 发送请求前，可在此携带 token
       // if (token) {
       //   config.headers['token'] = token
@@ -30,18 +33,24 @@ const createService = () => {
   // 响应拦截器
   service.interceptors.response.use(
     (response: AxiosResponse) => {
-      const { code, message, data } = response.data;
-      // 根据自定义错误码判断请求是否成功
-      if (code === 0) {
-        // 将组件用的数据返回
-        return data;
+      NProgress.done();
+      // 与后端协定的返回字段
+      const { code, message, result } = response.data;
+      // 判断请求是否成功
+      const isSuccess =
+        result &&
+        Reflect.has(response.data, "code") &&
+        code === ResultEnum.SUCCESS;
+      if (isSuccess) {
+        return result;
       } else {
-        // 处理业务错误
+        // 处理请求错误
         showFailToast(message);
         return Promise.reject(new Error(message));
       }
     },
     (error: AxiosError) => {
+      NProgress.done();
       // 处理 HTTP 网络错误
       let message = "";
       // HTTP 状态码
@@ -97,10 +106,10 @@ const createService = () => {
  * @param url 请求 api 地址
  */
 const createRequestFn = (service: AxiosInstance, url: string) => {
-  return function (config: AxiosRequestConfig) {
+  return (config: AxiosRequestConfig) => {
     const configDefault = {
       headers: {
-        "Content-Type": "application/x-www-form-urlencoded; charset=UTF-8"
+        "Content-Type": ContentTypeEnum.FORM_URLENCODED
       },
       timeout: 0,
       baseURL: url,

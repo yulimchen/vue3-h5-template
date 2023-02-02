@@ -1,17 +1,21 @@
 <script setup lang="ts">
-import { getList } from "@/api/mock";
+import { getListApi } from "@/api/mock";
+import { reactive } from "vue";
 
-const handleClick = () => {
-  console.log(123);
-  getList().then(res => {
-    console.log(res);
-  });
+let showList = reactive([]);
+
+const handleSuccessReq = async () => {
+  const { list } = await getListApi();
+  showList.push(...list);
 };
 </script>
 
 <template>
-  <div>
-    <van-button type="primary" @click="handleClick">主要按钮</van-button>
+  <div style="padding-top: 20px">
+    <van-button type="primary" @click="handleSuccessReq">成功请求</van-button>
+    <div>
+      {{ showList }}
+    </div>
   </div>
 </template>
 

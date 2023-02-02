@@ -6,12 +6,14 @@ import Components from "unplugin-vue-components/vite";
 import { VantResolver } from "unplugin-vue-components/resolvers";
 import { createSvgIconsPlugin } from "vite-plugin-svg-icons";
 import path from "path";
+import mockDevServerPlugin from "vite-plugin-mock-dev-server";
 
 // https://vitejs.dev/config/
 export default defineConfig({
   plugins: [
     vue(),
     vueJsx(),
+    mockDevServerPlugin(),
     // vant 组件自动按需引入
     Components({
       resolvers: [VantResolver()]
@@ -27,6 +29,14 @@ export default defineConfig({
   resolve: {
     alias: {
       "@": fileURLToPath(new URL("./src", import.meta.url))
+    }
+  },
+  server: {
+    // 仅在 proxy 中配置的 代理前缀， mock-dev-server 才会拦截并mock
+    proxy: {
+      "^/dev-api": {
+        target: ""
+      }
     }
   }
 });

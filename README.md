@@ -1,8 +1,8 @@
- **🌱基于 Vue3 全家桶、Vant3，vw 视口适配，开箱即用的移动端项目基础模板**
+ **🌱基于 Vue3 全家桶、TypeScript、Vite 构建工具，开箱即用的移动端项目基础模板**
 
-- [x] Vue3✨
-- [x] Vant3✨
-- [x] 支持 SVG 图标自动注册组件✨
+- [x] Vue3 + Vite4 ⚡
+- [x] Vant4 组件库 ✨
+- [x] 支持 SVG 图标自动注册组件
 - [x] vw 视口适配
 - [x] Axios 封装
 - [x] 生产环境 CDN 依赖
@@ -32,6 +32,8 @@
 
 ## 运行项目
 
+注意：要求 Node 版本 16+，可使用 [nvm](https://github.com/nvm-sh/nvm#installing-and-updating) 进行本地 Node 版本管理。
+
 ```shell
 # 克隆项目
 git clone https://github.com/yulimchen/vue3-h5-template.git
@@ -40,14 +42,10 @@ git clone https://github.com/yulimchen/vue3-h5-template.git
 cd vue3-h5-template
 
 # 安装依赖
-yarn
-# OR
-npm install
+pnpm install
 
 # 启动服务
-yarn serve
-# OR
-npm run serve
+pnpm dev
 ```
 
 
