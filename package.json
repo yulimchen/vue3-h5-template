@@ -1,7 +1,7 @@
 {
   "name": "vue3-h5-template",
   "homepage": "https://yulimchen.github.io/vue3-h5-template/",
-  "version": "0.1.0",
+  "version": "0.5.0",
   "license": "MIT",
   "repository": {
     "type": "git",
@@ -9,6 +9,9 @@
   },
   "bugs": {
     "url": "https://github.com/yulimchen/vue3-h5-template/issues"
+  },
+  "engines": {
+    "node": ">= 16"
   },
   "scripts": {
     "dev": "vite --host",
