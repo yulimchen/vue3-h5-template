@@ -32,7 +32,7 @@ export default defineConfig({
     }
   },
   server: {
-    // 仅在 proxy 中配置的 代理前缀， mock-dev-server 才会拦截并mock
+    // 仅在 proxy 中配置的代理前缀， mock-dev-server 才会拦截并mock
     proxy: {
       "^/dev-api": {
         target: ""
