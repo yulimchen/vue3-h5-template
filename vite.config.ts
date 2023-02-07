@@ -8,6 +8,7 @@ import { createSvgIconsPlugin } from "vite-plugin-svg-icons";
 import path from "path";
 import mockDevServerPlugin from "vite-plugin-mock-dev-server";
 import vueSetupExtend from "vite-plugin-vue-setup-extend";
+import viteCompression from "vite-plugin-compression";
 
 // https://vitejs.dev/config/
 export default defineConfig({
@@ -27,7 +28,9 @@ export default defineConfig({
       symbolId: "icon-[dir]-[name]"
     }),
     // 允许 setup 语法糖上添加组件名属性
-    vueSetupExtend()
+    vueSetupExtend(),
+    // 生成环境 gzip 压缩资源
+    viteCompression()
   ],
   resolve: {
     alias: {
@@ -40,6 +43,15 @@ export default defineConfig({
     proxy: {
       "^/dev-api": {
         target: ""
+      }
+    }
+  },
+  build: {
+    rollupOptions: {
+      output: {
+        chunkFileNames: "static/js/[name]-[hash].js",
+        entryFileNames: "static/js/[name]-[hash].js",
+        assetFileNames: "static/[ext]/[name]-[hash].[ext]"
       }
     }
   }

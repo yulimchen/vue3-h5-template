@@ -27,6 +27,7 @@ specifiers:
   unplugin-vue-components: ^0.22.12
   vant: ^4.0.9
   vite: ^4.0.0
+  vite-plugin-compression: ^0.5.1
   vite-plugin-mock-dev-server: ^0.3.16
   vite-plugin-svg-icons: ^2.0.1
   vite-plugin-vue-setup-extend: ^0.4.0
@@ -66,6 +67,7 @@ devDependencies:
   typescript: 4.7.4
   unplugin-vue-components: 0.22.12_vue@3.2.45
   vite: 4.0.4_dprl76twtlijnqpm3fdjsbkzqm
+  vite-plugin-compression: 0.5.1_vite@4.0.4
   vite-plugin-mock-dev-server: 0.3.16_vite@4.0.4
   vite-plugin-svg-icons: 2.0.1_vite@4.0.4
   vite-plugin-vue-setup-extend: 0.4.0_vite@4.0.4
@@ -4160,6 +4162,19 @@ packages:
   /vary/1.1.2:
     resolution: {integrity: sha512-BNGbWLfd0eUPabhkXUVm0j8uuvREyTh5ovRa/dyow/BqAbZJyC+5fU+IzQOzmAKzYqYRAISoRhdQr3eIZ/PXqg==}
     engines: {node: '>= 0.8'}
+    dev: true
+
+  /vite-plugin-compression/0.5.1_vite@4.0.4:
+    resolution: {integrity: sha512-5QJKBDc+gNYVqL/skgFAP81Yuzo9R+EAf19d+EtsMF/i8kFUpNi3J/H01QD3Oo8zBQn+NzoCIFkpPLynoOzaJg==}
+    peerDependencies:
+      vite: '>=2.0.0'
+    dependencies:
+      chalk: 4.1.2
+      debug: 4.3.4
+      fs-extra: 10.1.0
+      vite: 4.0.4_dprl76twtlijnqpm3fdjsbkzqm
+    transitivePeerDependencies:
+      - supports-color
     dev: true
 
   /vite-plugin-mock-dev-server/0.3.16_vite@4.0.4:
