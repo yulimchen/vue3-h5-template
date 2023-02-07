@@ -1,4 +1,4 @@
-<script setup lang="ts">
+<script setup lang="ts" name="Tools">
 import { getListApi, getListApiError } from "@/api/mock";
 import { reactive } from "vue";
 import { showFailToast, showSuccessToast } from "vant";

@@ -7,11 +7,11 @@ const routes: Array<RouteRecordRaw> = [
     path: "/",
     name: "root",
     component: Layout,
-    redirect: "demo",
+    redirect: "Demo",
     children: [
       {
         path: "demo",
-        name: "demo",
+        name: "Demo",
         component: Demo,
         meta: {
           title: "主页"
@@ -19,7 +19,7 @@ const routes: Array<RouteRecordRaw> = [
       },
       {
         path: "tools",
-        name: "tools",
+        name: "Tools",
         component: () => import("@/views/tools/index.vue"),
         meta: {
           title: "工具"
@@ -27,7 +27,7 @@ const routes: Array<RouteRecordRaw> = [
       },
       {
         path: "about",
-        name: "about",
+        name: "About",
         component: () => import("@/views/about/index.vue"),
         meta: {
           title: "关于",

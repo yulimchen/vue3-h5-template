@@ -7,6 +7,7 @@ import { VantResolver } from "unplugin-vue-components/resolvers";
 import { createSvgIconsPlugin } from "vite-plugin-svg-icons";
 import path from "path";
 import mockDevServerPlugin from "vite-plugin-mock-dev-server";
+import vueSetupExtend from "vite-plugin-vue-setup-extend";
 
 // https://vitejs.dev/config/
 export default defineConfig({
@@ -24,7 +25,9 @@ export default defineConfig({
       iconDirs: [path.resolve(process.cwd(), "src/icons/svg")],
       // 指定 symbolId 格式
       symbolId: "icon-[dir]-[name]"
-    })
+    }),
+    // 允许 setup 语法糖上添加组件名属性
+    vueSetupExtend()
   ],
   resolve: {
     alias: {
@@ -32,7 +35,8 @@ export default defineConfig({
     }
   },
   server: {
-    // 仅在 proxy 中配置的代理前缀， mock-dev-server 才会拦截并mock
+    // 仅在 proxy 中配置的代理前缀， mock-dev-server 才会拦截并 mock
+    // doc: https://github.com/pengzhanbo/vite-plugin-mock-dev-server
     proxy: {
       "^/dev-api": {
         target: ""
