@@ -1,4 +1,4 @@
- **🌱基于 Vue3 全家桶、TypeScript、Vite 构建工具，开箱即用的移动端项目基础模板**
+ **🌱 基于 Vue3 全家桶、TypeScript、Vite 构建工具，开箱即用的移动端项目基础模板**
 
 - [x] ⚡ Vue3 + Vite4
 - [x] 🍕 TypeScript
@@ -27,7 +27,7 @@
 
 ## 截图
 
-![](docs/assets/img/截屏2021-03-08_22.54.56.png)
+![](docs/assets/img/Snipaste_2023-02-07_22-01-10.png)
 
 
 
@@ -129,7 +129,7 @@ const routes: Array<RouteRecordRaw> = [
 ```vue
 <!-- src/views/about/index.vue -->
 <script setup lang="ts" name="About">
-	// 使用了 `vite-plugin-vue-setup-extend` 插件，可在 setup 语法糖标签上添加 name 属性为组件名
+	// 使用了 `vite-plugin-vue-setup-extend` 插件，可在 `setup` 语法糖标签上添加 `name` 属性为组件命名
 </script>
 
 <template>
@@ -141,7 +141,7 @@ const routes: Array<RouteRecordRaw> = [
 
 ### - <span id="console">调试面板 eruda</span>
 
-![](docs/assets/img/截屏2021-03-08_22.55.14.png)
+![](docs/assets/img/Snipaste_2023-02-07_21-57-33.png)
 
 为了方便移动端查看 log 信息和调试，开发环境引入了 eruda 调试面板的 cdn。如果你的开发环境不需要的话请在 `.env.development` 中修改值
 
