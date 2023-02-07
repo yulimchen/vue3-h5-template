@@ -11,10 +11,13 @@ import vueSetupExtend from "vite-plugin-vue-setup-extend";
 import viteCompression from "vite-plugin-compression";
 import { createHtmlPlugin } from "vite-plugin-html";
 
+// 当前工作目录路径
+const root: string = process.cwd();
+
 // https://vitejs.dev/config/
 export default defineConfig(({ mode }) => {
   // 环境变量
-  const env = loadEnv(mode, process.cwd(), "");
+  const env = loadEnv(mode, root, "");
   return {
     plugins: [
       vue(),
@@ -27,7 +30,7 @@ export default defineConfig(({ mode }) => {
       // svg icon
       createSvgIconsPlugin({
         // 指定图标文件夹
-        iconDirs: [path.resolve(process.cwd(), "src/icons/svg")],
+        iconDirs: [path.resolve(root, "src/icons/svg")],
         // 指定 symbolId 格式
         symbolId: "icon-[dir]-[name]"
       }),

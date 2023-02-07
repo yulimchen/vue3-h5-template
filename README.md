@@ -1,19 +1,20 @@
  **🌱基于 Vue3 全家桶、TypeScript、Vite 构建工具，开箱即用的移动端项目基础模板**
 
-- [x] Vue3 + Vite4 ⚡
-- [x] Vant4 组件库 ✨
+- [x] ⚡ Vue3 + Vite4
+- [x] 🍕 TypeScript
+- [x] ✨ Vant4 组件库
+- [x] 🍍 Pinia 集成
+- [x] Vue-router 4
 - [x] 支持 SVG 图标自动注册组件
 - [x] vw 视口适配
 - [x] Axios 封装
-- [x] 生产环境 CDN 依赖
 - [x] 打包资源 gzip 压缩
+- [x] 开发环境支持 Mock 数据
 - [x] ESLint
 - [x] 首屏加载动画
-- [x] 项目资源路径 alias 别名
 - [x] 开发环境调试面板
-- [x] Vuex 集成
-- [x] Vue-router 集成
-- [x] 开发环境 Mock 数据
+- [ ] TODO: 动态设置页面标题
+- [ ] TODO: 生产环境 CDN 依赖
 
 
 
@@ -32,7 +33,7 @@
 
 ## 运行项目
 
-注意：要求 Node 版本 16+，可使用 [nvm](https://github.com/nvm-sh/nvm#installing-and-updating) 进行本地 Node 版本管理。
+注意：要求 Node 版本 16+，可使用 [nvm](https://github.com/nvm-sh/nvm#installing-and-updating) 进行本地 Node 版本管理，同时建议使用 [pnpm](https://pnpm.io/zh/installation) 包管理器。
 
 ```shell
 # 克隆项目
@@ -64,26 +65,7 @@ pnpm dev
 
 ### - <span id="vant">按需引入 vant 组件</span>
 
-全量引入组件库太过臃肿，这里进行了按需引入，需要增加组件的话在`registerVant.js`中添加即可。
-
-```js
-// src/plugins/registerVant.js
-
-// 下面示例增加 Tabbar、TabbarItem 这两个组件
-import {
-  // ...
-  Tabbar,
-  TabbarItem
-} from 'vant'
-
-const componentList = [
-  // ...
-  Tabbar,
-  TabbarItem
-]
-
-// ...
-```
+全量引入组件库太过臃肿，项目中使用 `unplugin-vue-components` 插件进行按需自动引入组件，可通过[官方文档](https://vant-ui.github.io/vant/#/zh-CN/quickstart#2.-pei-zhi-cha-jian)了解更多。
 
 
 
@@ -95,7 +77,7 @@ const componentList = [
 
 例如：
 
-本项目 `src/icons/svg` 中放了个叫 `check-in.svg` 的图标文件，然后在组件 `icon-class` 属性中填入文件的命名即可，So easy~
+本项目 `src/icons/svg` 中放了个叫 `check-in.svg` 的图标文件，然后在组件 `name` 属性中填入文件的命名即可，So easy~
 
 
 ```Vue
@@ -108,20 +90,36 @@ const componentList = [
 
 ### - <span id="router">路由缓存&命名注意⚠</span>
 
-组件默认开启缓存，如某个组件需关闭缓存，在对应路由 routes meta 内的`noCache`字段赋值为`true`即可。
+组件默认开启缓存，如某个组件需关闭缓存，在对应路由 `meta` 内的 `noCache` 字段赋值为 `true` 即可。
 
-```js
-{
-  path: '/about',
-  name: 'About',
-  component: () => import('@/views/about'),
-  meta: {
-    noCache: true
-  }
-},
+```typescript
+// src/router/routes.ts
+const routes: Array<RouteRecordRaw> = [
+    // ...
+    {
+        path: "about",
+        name: "About",
+        component: () => import("@/views/about/index.vue"),
+        meta: {
+            title: "关于",
+            noCache: true
+        }
+    }
+];
 ```
 
-> PS. 为了保证页面能被正确缓存，请确保**组件**的`name`值和对应路由的`name`命名完全相同。
+ 为了保证页面能被正确缓存，请确保**组件**的 `name` 值和对应路由的 `name` 命名完全相同。
+
+```vue
+<!-- src/views/about/index.vue -->
+<script setup lang="ts" name="About">
+	// 使用了 `vite-plugin-vue-setup-extend` 插件，可在 setup 语法糖标签上添加 name 属性为组件名
+</script>
+
+<template>
+  <div>about</div>
+</template>
+```
 
 
 
@@ -129,18 +127,18 @@ const componentList = [
 
 ![](docs/assets/img/截屏2021-03-08_22.55.14.png)
 
-为了方便移动端查看 log 信息和调试，开发环境引入了 eruda 调试面板的 cdn。如果你的开发环境不需要的话请在 `.env.development` 中修改值，并重启本地服务
+为了方便移动端查看 log 信息和调试，开发环境引入了 eruda 调试面板的 cdn。如果你的开发环境不需要的话请在 `.env.development` 中修改值
 
 ```html
 # .env.development
 
-# 开发环境启用 eruda 调试台。若不启用，将 true 修改为 false 或其他任意值即可
-VUE_APP_ENABLE_ERUDA = true
+# 开发环境启用 cdn eruda 调试工具。若不启用，将 true 修改为 false 或其他任意值即可
+VITE_ENABLE_ERUDA = "true"
 ```
 
 
 
-### - <span id="page-title">动态设置页面标题</span>
+### - <span id="page-title">动态设置页面标题(TODO)</span>
 
 在路由全局前置守卫中：
 
@@ -159,51 +157,36 @@ router.beforeEach((to, from, next) => {
 
 
 
-### - <span id="mock">开发环境Mock</span>
+### - <span id="mock">开发环境 Mock</span>
 
-> 本项目 Mock 是在本地开启 server，如果开发环境不需要 mock 数据，请在 `vue.config.js` 中注释 `before` 字段 ，并重启项目。
-
-```js
-// vue.config.js
-module.exports = {
-  // ...
-  devServer: {
-    // 删除或注释 before 键值即可
-    before: require('./mock/mock-server.js')
-  }
-}
-```
+> 本项目开发环境支持 mock 请求数据，在 `mock` 目录中可配置接口和数据，具体见[文档](https://github.com/pengzhanbo/vite-plugin-mock-dev-server/blob/main/README.zh-CN.md)。
 
 
 
 ### - <span id="viewport">vw视口适配</span>
 
-使用 `postcss-px-to-viewport` 进行视口适配，相关配置见项目根目录下 `vue.config.js`，如修改内容，需修改后重启项目。
+使用 `cnjm-postcss-px-to-viewport` 进行视口适配，相关配置见项目根目录下 `postcss.config.js`。
 
 ```js
-// vue.config.js
+// postcss.config.js
 module.exports = {
-  // ...
-  css: {
-    loaderOptions: {
-      postcss: {
-        plugins: [
-          autoprefixer(),
-          pxtoviewport({
-            viewportWidth: 375, // 根据设计稿设定
-            minPixelValue: 1, // 最小的转换数值
-            unitPrecision: 2 // 转化精度，转换后保留位数
-          })
-        ]
-      }
+  plugins: {
+    // 使用 cnjm-postcss-px-to-viewport 规避 postcss.plugin was deprecated 警告
+    "cnjm-postcss-px-to-viewport": {
+      viewportWidth: 375, // 根据设计稿设定
+      minPixelValue: 1, // 最小的转换数值
+      unitPrecision: 2 // 转化精度，转换后保留位数
+    },
+    autoprefixer: {
+      overrideBrowserslist: ["Android >= 4.0", "iOS >= 7"]
     }
-  },
-}
+  }
+};
 ```
 
 
 
-### - <span id="CDN">CDN生产环境依赖</span>
+### - <span id="CDN">CDN生产环境依赖(TODO)</span>
 
 本模板生产环境默认 CDN 加载依赖，依赖加载源见根目录 `dependencies-cdn.js` 文件。
 
@@ -219,6 +202,10 @@ module.exports = {
  [vue-element-admin](https://github.com/PanJiaChen/vue-element-admin) 
 
  [vant-demo](https://github.com/youzan/vant-demo) 
+
+ [vue-pure-admin](https://github.com/xiaoxian521/vue-pure-admin)
+
+ [vue-vben-admin](https://github.com/vbenjs/vue-vben-admin)
 
 
 
