@@ -49,6 +49,22 @@ pnpm install
 pnpm dev
 ```
 
+如果你需要的是基于 `vue-cli(webpack)` 或者 `JavaScript` 构建的 H5 项目模板，可切换到 [vue-cli](https://github.com/yulimchen/vue3-h5-template/tree/vue-cli) 分支进行开发
+
+```shell
+# 克隆项目
+git clone -b vue-cli https://github.com/yulimchen/vue3-h5-template.git
+
+# 进入项目目录
+cd vue3-h5-template
+
+# 安装依赖
+yarn
+
+# 启动服务
+yarn serve
+```
+
 
 
 ## 文档引导
