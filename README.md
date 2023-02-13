@@ -13,7 +13,6 @@
 - [x] ESLint
 - [x] 首屏加载动画
 - [x] 开发环境调试面板
-- [ ] TODO: 动态设置页面标题
 - [ ] TODO: 生产环境 CDN 依赖
 
 
@@ -154,22 +153,22 @@ VITE_ENABLE_ERUDA = "true"
 
 
 
-### - <span id="page-title">动态设置页面标题(TODO)</span>
+### - <span id="page-title">动态设置页面标题</span>
 
 在路由全局前置守卫中：
 
 ```js
-// src/router/index.js
+// src/router/index.ts
 // ...
-router.beforeEach((to, from, next) => {
+router.beforeEach((to: toRouteType, from, next) => {
   // ...
-  // 设置页面 title
-  setPageTitle(to.meta.title)
-  next()
-})
+  // 页面 title
+  setPageTitle(to.meta.title);
+  next();
+});
 ```
 
-具体实现方法见文件 `src/utils/set-page-title.js` 。
+具体实现方法见文件 `src/utils/set-page-title.ts` 。
 
 
 
