@@ -51,7 +51,7 @@
     "prettier": "^2.7.1",
     "typescript": "~4.7.4",
     "unplugin-vue-components": "^0.22.12",
-    "vite": "^4.0.0",
+    "vite": "^4.1.2",
     "vite-plugin-compression": "^0.5.1",
     "vite-plugin-html": "^3.2.0",
     "vite-plugin-mock-dev-server": "^0.3.16",
