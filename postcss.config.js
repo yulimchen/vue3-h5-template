@@ -1,6 +1,6 @@
 module.exports = {
   plugins: {
-    // 使用 cnjm-postcss-px-to-viewport 规避 postcss.plugin was deprecated 警告
+    // 使用 postcss-mobile-to-multi-displays 做 vw 适配，限制最大宽度，兼容桌面端
     "postcss-mobile-to-multi-displays": {
       rootClass: "app-wrapper", // 视图的根选择器名称
       viewportWidth: 375, // 根据设计稿设定

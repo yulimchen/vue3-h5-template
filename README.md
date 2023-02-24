@@ -180,16 +180,16 @@ router.beforeEach((to: toRouteType, from, next) => {
 
 ### - <span id="viewport">vw视口适配</span>
 
-使用 `cnjm-postcss-px-to-viewport` 进行视口适配，相关配置见项目根目录下 `postcss.config.js`。
+使用 `postcss-mobile-to-multi-displays` 进行视口适配，相关配置见项目根目录下 `postcss.config.js`。
 
 ```js
 // postcss.config.js
 module.exports = {
   plugins: {
-    // 使用 cnjm-postcss-px-to-viewport 规避 postcss.plugin was deprecated 警告
-    "cnjm-postcss-px-to-viewport": {
+    // 使用 postcss-mobile-to-multi-displays 做 vw 适配，限制最大宽度，兼容桌面端
+    "postcss-mobile-to-multi-displays": {
+      rootClass: "app-wrapper", // 视图的根选择器名称
       viewportWidth: 375, // 根据设计稿设定
-      minPixelValue: 1, // 最小的转换数值
       unitPrecision: 2 // 转化精度，转换后保留位数
     },
     autoprefixer: {
@@ -197,6 +197,7 @@ module.exports = {
     }
   }
 };
+
 ```
 
 
