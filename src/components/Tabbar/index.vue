@@ -1,5 +1,11 @@
 <template>
-  <van-tabbar v-model="active" fixed :placeholder="true" :route="true">
+  <van-tabbar
+    class="tabbar"
+    v-model="active"
+    :placeholder="true"
+    :route="true"
+    fixed
+  >
     <van-tabbar-item
       v-for="(item, index) in tabbarData"
       :key="index"
@@ -39,3 +45,14 @@ const tabbarData = reactive([
   }
 ]);
 </script>
+
+<style scoped>
+.tabbar {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  /* 形成包含块，使得 fided 定位的子元素 tabbar 的百分百宽度能够基于这个元素 */
+  transform: rotate(0);
+}
+</style>
