@@ -3,7 +3,8 @@
 - [x] ⚡ Vue3 + Vite4
 - [x] 🍕 TypeScript
 - [x] ✨ Vant4 组件库
-- [x] 🍍 Pinia 集成
+- [x] 🌀 Tailwindcss 原子类框架
+- [x] 🍍 Pinia 状态管理
 - [x] Vue-router 4
 - [x] 支持 SVG 图标自动注册组件
 - [x] vw 视口适配
@@ -70,11 +71,12 @@ yarn serve
 
 > - [按需引入 vant 组件](#vant)
 > - [SVG 图标使用](#svg)
-> - [路由缓存&命名注意⚠](#router)
+> - [路由缓存 & 命名注意 ⚠](#router)
 > - [调试面板 eruda](#console)
 > - [动态设置页面标题](#page-title)
-> - [vw视口适配](#viewport)
-> - [CDN加载依赖](#CDN)
+> - [vw 视口适配](#viewport)
+> - [tailwindcss 原子类框架](#tailwindcss)
+> - [CDN 加载依赖](#CDN)
 
 
 
@@ -103,7 +105,7 @@ yarn serve
 
 
 
-### - <span id="router">路由缓存&命名注意⚠</span>
+### - <span id="router">路由缓存 & 命名注意 ⚠</span>
 
 组件默认开启缓存，如某个组件需关闭缓存，在对应路由 `meta` 内的 `noCache` 字段赋值为 `true` 即可。
 
@@ -178,7 +180,7 @@ router.beforeEach((to: toRouteType, from, next) => {
 
 
 
-### - <span id="viewport">vw视口适配</span>
+### - <span id="viewport">vw 视口适配</span>
 
 使用 `postcss-mobile-forever` 进行视口适配，相关配置见项目根目录下 `postcss.config.js`。
 
@@ -207,7 +209,16 @@ module.exports = {
 
 
 
-### - <span id="CDN">CDN生产环境依赖(TODO)</span>
+### - <span id="tailwindcss">Tailwindcss 原子类框架</span>
+
+`Tailwindcss` 从 `3.0` 版本开始支持 `JIT` 模式，打包代码不再臃肿，结合 `vite` 使用非常香~ 如果你还没使用过类似的框架，tailwindcss 首页的[示例](https://tailwindcss.com/)非常直观。
+
+官方文档：https://tailwindcss.com/docs/padding
+
+
+
+
+### - <span id="CDN">CDN 生产环境依赖(TODO)</span>
 
 本模板生产环境默认 CDN 加载依赖，依赖加载源见根目录 `dependencies-cdn.js` 文件。
 
