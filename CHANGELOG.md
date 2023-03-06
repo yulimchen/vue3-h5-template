@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.5.2](https://github.com/yulimchen/vue3-h5-template/compare/v0.5.1...v0.5.2) (2023-03-06)
+
+
+### Features
+
+* 支持 `tailwindcss` & 重构页面样式 ([982f81b](https://github.com/yulimchen/vue3-h5-template/commit/982f81bc6e9f36da2d48f136eb5986b3f6f1310b))
+
 ### 0.5.1 (2023-02-20)
 
 
