@@ -27,7 +27,7 @@
 
 ## 截图
 
-![](docs/assets/img/Snipaste_2023-02-07_22-01-10.png)
+![](docs/assets/img/Snipaste_2023-03-06_23-56-20.png)
 
 
 
