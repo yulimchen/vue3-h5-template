@@ -75,7 +75,8 @@ yarn serve
 > - [调试面板 eruda](#console)
 > - [动态设置页面标题](#page-title)
 > - [vw 视口适配](#viewport)
-> - [tailwindcss 原子类框架](#tailwindcss)
+> - [Tailwindcss 原子类框架](#tailwindcss)
+> - [Git 提交信息规范](#git)
 > - [CDN 加载依赖](#CDN)
 
 
@@ -211,10 +212,38 @@ module.exports = {
 
 ### - <span id="tailwindcss">Tailwindcss 原子类框架</span>
 
-`Tailwindcss` 从 `3.0` 版本开始支持 `JIT` 模式，打包代码不再臃肿，结合 `vite` 使用非常香~ 如果你还没使用过类似的框架，tailwindcss 首页的[示例](https://tailwindcss.com/)非常直观。
+Tailwindcss 从 3.0 版本开始默认使用 `JIT` 模式，打包代码不再臃肿，结合 `vite` 使用非常香~ 如果你还没使用过类似的框架，Tailwindcss 首页的[示例](https://tailwindcss.com/)非常直观。
 
 官方文档：https://tailwindcss.com/docs/padding
 
+
+
+### - <span id="git">Git 提交信息规范</span>
+
+项目使用 `husky` 规范 Git 提交信息，遵循社区主流的 [Angular](https://github.com/conventional-changelog/conventional-changelog/tree/master/packages/conventional-changelog-angular) 规范。
+
+```shell
+feat 增加新功能
+fix 修复问题/BUG
+style 代码风格相关无影响运行结果的
+perf 优化/性能提升
+refactor 重构
+revert 撤销修改
+test 测试相关
+docs 文档/注释
+chore 依赖更新/脚手架配置修改等
+workflow 工作流改进
+ci 持续集成
+types 类型定义文件更改
+wip 开发中
+```
+
+```shell
+// 格式
+<type>(<scope>): <subject>
+// 示例
+feat(layout): 布局完成
+```
 
 
 
