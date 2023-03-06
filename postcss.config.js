@@ -1,5 +1,6 @@
 module.exports = {
   plugins: {
+    tailwindcss: {},
     // 使用 postcss-mobile-to-multi-displays 做 vw 适配，限制最大宽度，兼容桌面端
     "postcss-mobile-forever": {
       rootSelector: "#app", // 视图的根选择器名称

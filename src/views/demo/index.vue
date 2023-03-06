@@ -19,17 +19,27 @@ const contentList = reactive([
 </script>
 
 <template>
-  <div class="demo-content">
-    <img class="logo" alt="Vue logo" src="~@/assets/logo_vue3_ts.png" />
-    <div class="demo-content__title">
-      <a href="https://github.com/yulimchen/vue3-h5-template" target="_blank">
-        <svg-icon name="github" />
-        <h3>Vue3-h5-template</h3>
-        <svg-icon class="link-icon" name="link" />
+  <div class="demo-content px-[12px]">
+    <img
+      class="block w-[120px] mx-auto mb-[20px] pt-[30px]"
+      alt="Vue logo"
+      src="~@/assets/logo_vue3_ts.png"
+    />
+    <div class="pl-[12px] border-l-[3px] border-[color:#41b883]">
+      <a
+        class="flex items-center"
+        href="https://github.com/yulimchen/vue3-h5-template"
+        target="_blank"
+      >
+        <svg-icon class="text-[20px] mr-[8px]" name="github" />
+        <h3 class="font-bold text-[18px] my-[4px]">Vue3-h5-template</h3>
+        <svg-icon class="text-[12px] ml-[5px]" name="link" />
       </a>
     </div>
-    <div class="demo-content__desc">
-      <p>
+    <div
+      class="text-[14px] py-[2px] px-[10px] rounded-[4px] bg-[#eee] mt-[14px]"
+    >
+      <p class="my-[14px] leading-[24px]">
         🌱 基于 Vue3 全家桶、TypeScript、Vite 构建工具，开箱即用的 H5
         移动端项目基础模板
       </p>
@@ -40,52 +50,3 @@ const contentList = reactive([
     </div>
   </div>
 </template>
-
-<style lang="less" scoped>
-.demo-content {
-  padding: 0 12px;
-
-  .logo {
-    display: block;
-    width: 120px;
-    margin: 30px auto 20px;
-  }
-
-  &__title {
-    border-left: 3px solid #41b883;
-    padding-left: 12px;
-
-    .svg-icon {
-      font-size: 20px;
-      margin-right: 8px;
-    }
-
-    h3 {
-      margin: 6px 0;
-      font-size: 18px;
-    }
-
-    > a {
-      display: flex;
-      align-items: center;
-
-      .link-icon {
-        font-size: 12px;
-        margin-left: 5px;
-      }
-    }
-  }
-
-  &__desc {
-    font-size: 14px;
-    padding: 2px 10px;
-    border-radius: 4px;
-    background-color: #eee;
-    margin-top: 14px;
-
-    p {
-      line-height: 24px;
-    }
-  }
-}
-</style>

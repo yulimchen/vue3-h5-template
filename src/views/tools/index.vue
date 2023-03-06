@@ -23,46 +23,20 @@ const handleErrorReq = () => {
 </script>
 
 <template>
-  <div class="tools-content">
-    <div class="tools-content__title">
-      <h3>Mock</h3>
+  <div class="tools-content pt-[20px] px-[12px]">
+    <div class="pl-[12px] border-l-[3px] border-[color:#41b883] mb-[12px]">
+      <h3 class="font-bold text-[18px] my-[4px]">Mock</h3>
     </div>
     <van-space>
       <van-button type="success" @click="handleSuccessReq">成功请求</van-button>
       <van-button type="danger" @click="handleErrorReq">失败请求</van-button>
     </van-space>
-    <div class="tools-content__desc">
-      <p>
+    <div
+      class="text-[14px] py-[2px] px-[10px] rounded-[4px] bg-[#eee] mt-[14px]"
+    >
+      <p class="my-[14px] leading-[24px]">
         {{ showList }}
       </p>
     </div>
   </div>
 </template>
-
-<style lang="less" scoped>
-.tools-content {
-  padding: 20px 12px 0;
-
-  &__title {
-    border-left: 3px solid #41b883;
-    padding-left: 12px;
-
-    h3 {
-      margin: 12px 0;
-      font-size: 18px;
-    }
-  }
-
-  &__desc {
-    font-size: 14px;
-    padding: 2px 10px;
-    border-radius: 4px;
-    background-color: #eee;
-    margin-top: 14px;
-
-    p {
-      line-height: 24px;
-    }
-  }
-}
-</style>
