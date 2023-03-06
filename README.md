@@ -222,7 +222,7 @@ Tailwindcss 从 3.0 版本开始默认使用 `JIT` 模式，打包代码不再�
 
 项目使用 `husky` 规范 Git 提交信息，遵循社区主流的 [Angular](https://github.com/conventional-changelog/conventional-changelog/tree/master/packages/conventional-changelog-angular) 规范。
 
-```shell
+```
 feat 增加新功能
 fix 修复问题/BUG
 style 代码风格相关无影响运行结果的
@@ -238,7 +238,7 @@ types 类型定义文件更改
 wip 开发中
 ```
 
-```shell
+```
 // 格式
 <type>(<scope>): <subject>
 // 示例
