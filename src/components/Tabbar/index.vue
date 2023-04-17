@@ -52,7 +52,7 @@ const tabbarData = reactive([
   bottom: 0;
   left: 0;
   width: 100%;
-  /* 形成包含块，使得 fided 定位的子元素 tabbar 的百分百宽度能够基于这个元素 */
+  /* 形成包含块，使得 fixed 定位的子元素 tabbar 的百分百宽度能够基于这个元素 */
   transform: rotate(0);
 }
 </style>

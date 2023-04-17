@@ -13,6 +13,7 @@ specifiers:
   '@vue/tsconfig': ^0.1.3
   autoprefixer: ^10.4.13
   axios: ^1.2.6
+  cnjm-postcss-px-to-viewport: ^1.0.0
   commitlint: ^17.4.4
   eslint: ^8.22.0
   eslint-plugin-vue: ^9.3.0
@@ -24,7 +25,6 @@ specifiers:
   nprogress: ^0.2.0
   pinia: ^2.0.28
   postcss: ^8.4.21
-  postcss-mobile-forever: ^2.3.1
   prettier: ^2.7.1
   tailwindcss: ^3.2.7
   typescript: ~4.7.4
@@ -62,6 +62,7 @@ devDependencies:
   '@vue/eslint-config-typescript': 11.0.2_wycau32jkxyinnbmfjphfkrt2y
   '@vue/tsconfig': 0.1.3_@types+node@18.11.18
   autoprefixer: 10.4.13_postcss@8.4.21
+  cnjm-postcss-px-to-viewport: 1.0.0_postcss@8.4.21
   commitlint: 17.4.4
   eslint: 8.32.0
   eslint-plugin-vue: 9.9.0_eslint@8.32.0
@@ -70,7 +71,6 @@ devDependencies:
   mockjs: 1.1.0
   npm-run-all: 4.1.5
   postcss: 8.4.21
-  postcss-mobile-forever: 2.3.1_postcss@8.4.21
   prettier: 2.8.3
   tailwindcss: 3.2.7_postcss@8.4.21
   typescript: 4.7.4
@@ -1726,6 +1726,15 @@ packages:
     engines: {node: '>=0.8'}
     dev: true
 
+  /cnjm-postcss-px-to-viewport/1.0.0_postcss@8.4.21:
+    resolution: {integrity: sha512-vokFS5qvl7JG/W79JYGZgA19LiVvDzQ5aSIQvnZiZAK2lumP+MP8WCs2AU/fK1aSIBpVmqgRpU4m27RBJ2F7rw==}
+    peerDependencies:
+      postcss: ^8.4.14
+    dependencies:
+      object-assign: 4.1.1
+      postcss: 8.4.21
+    dev: true
+
   /co-body/6.1.0:
     resolution: {integrity: sha512-m7pOT6CdLN7FuXUcpuz/8lfQ/L77x8SchHCF4G0RBTJO20Wzmhn5Sp4/5WsKy8OSpifBSUrmg83qEqaDHdyFuQ==}
     dependencies:
@@ -2721,7 +2730,7 @@ packages:
     resolution: {integrity: sha512-oRXApq54ETRj4eMiFzGnHWGy+zo5raudjuxN0b8H7s/RU2oW0Wvsx9O0ACRN/kRq9E8Vu/ReskGB5o3ji+FzHQ==}
     engines: {node: '>=12'}
     dependencies:
-      graceful-fs: 4.2.10
+      graceful-fs: 4.2.11
       jsonfile: 6.1.0
       universalify: 2.0.0
     dev: true
@@ -2730,7 +2739,7 @@ packages:
     resolution: {integrity: sha512-0rcTq621PD5jM/e0a3EJoGC/1TC5ZBCERW82LQuwfGnCa1V8w7dpYH1yNu+SLb6E5dkeCBzKEyLGlFrnr+dUyw==}
     engines: {node: '>=14.14'}
     dependencies:
-      graceful-fs: 4.2.10
+      graceful-fs: 4.2.11
       jsonfile: 6.1.0
       universalify: 2.0.0
     dev: true
@@ -2882,8 +2891,8 @@ packages:
       get-intrinsic: 1.2.0
     dev: true
 
-  /graceful-fs/4.2.10:
-    resolution: {integrity: sha512-9ByhssR2fPVsNZj478qUUbKfmL0+t5BDVyjShtyZZLiK7ZDAArFFfopyOTj0M05wE2tJPisA4iTnnXl2YoPvOA==}
+  /graceful-fs/4.2.11:
+    resolution: {integrity: sha512-RbJ5/jmFcNNCcDV5o9eTnBLJ/HszWV0P73bc+Ff4nS/rJj+YaS6IGyiOL0VoBYX+l1Wrl3k63h/KrH+nhJ0XvQ==}
     dev: true
 
   /grapheme-splitter/1.0.4:
@@ -3465,7 +3474,7 @@ packages:
     dependencies:
       universalify: 2.0.0
     optionalDependencies:
-      graceful-fs: 4.2.10
+      graceful-fs: 4.2.11
     dev: true
 
   /jsonparse/1.3.1:
@@ -3507,7 +3516,7 @@ packages:
       tslib: 2.4.1
     optionalDependencies:
       errno: 0.1.8
-      graceful-fs: 4.2.10
+      graceful-fs: 4.2.11
       image-size: 0.5.5
       make-dir: 2.1.0
       mime: 1.6.0
@@ -3538,7 +3547,7 @@ packages:
     resolution: {integrity: sha512-Kx8hMakjX03tiGTLAIdJ+lL0htKnXjEZN6hk/tozf/WOuYGdZBJrZ+rCJRbVCugsjB3jMLn9746NsQIf5VjBMw==}
     engines: {node: '>=4'}
     dependencies:
-      graceful-fs: 4.2.10
+      graceful-fs: 4.2.11
       parse-json: 4.0.0
       pify: 3.0.0
       strip-bom: 3.0.0
@@ -4267,14 +4276,6 @@ packages:
       lilconfig: 2.1.0
       postcss: 8.4.21
       yaml: 1.10.2
-    dev: true
-
-  /postcss-mobile-forever/2.3.1_postcss@8.4.21:
-    resolution: {integrity: sha512-4aow0YDVOXVNacPPh4XJwOq5z6Zvx8ij7wlNPYKQH0d4N9bjoxKC8e8hXlN2vetriezZL32Y9ypbtbtcdMJlqQ==}
-    peerDependencies:
-      postcss: ^8.0.0
-    dependencies:
-      postcss: 8.4.21
     dev: true
 
   /postcss-nested/6.0.0_postcss@8.4.21:
