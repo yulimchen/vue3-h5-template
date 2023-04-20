@@ -2,6 +2,15 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.5.3](https://github.com/yulimchen/vue3-h5-template/compare/v0.5.2...v0.5.3) (2023-04-20)
+
+
+### Bug Fixes
+
+* **http:** 修复请求参数污染默认参数问题(fix [#28](https://github.com/yulimchen/vue3-h5-template/issues/28)) ([8795d91](https://github.com/yulimchen/vue3-h5-template/commit/8795d9138e9f42c52558804fc50d2aa8f06dad69))
+* **Tabbar:** 底栏样式调整 ([fedb12d](https://github.com/yulimchen/vue3-h5-template/commit/fedb12d137005e17707444c5af41e9d296916da1))
+* 修复 `postcss-mobile-forever` 插件导致颜色转换错误 (fix [#26](https://github.com/yulimchen/vue3-h5-template/issues/26)) ([5890ba1](https://github.com/yulimchen/vue3-h5-template/commit/5890ba11f441599976ba1f36008e5655fc558fd8))
+
 ### [0.5.2](https://github.com/yulimchen/vue3-h5-template/compare/v0.5.1...v0.5.2) (2023-03-06)
 
 
