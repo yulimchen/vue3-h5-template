@@ -2,6 +2,18 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.5.4](https://github.com/yulimchen/vue3-h5-template/compare/v0.5.3...v0.5.4) (2023-04-25)
+
+
+### 🚀 Chore | 构建/工程依赖/工具
+
+* 添加 `standard-version` 管理版本 ([40aee75](https://github.com/yulimchen/vue3-h5-template/commit/40aee757f7364da04437b55861c585b999495abd))
+
+
+### ✨ Features | 新功能
+
+* **layout:** 支持深/浅色模式切换 ([5178735](https://github.com/yulimchen/vue3-h5-template/commit/51787354cf25fe173d4b122b517a6738fdc56693))
+
 ### [0.5.3](https://github.com/yulimchen/vue3-h5-template/compare/v0.5.2...v0.5.3) (2023-04-20)
 
 
