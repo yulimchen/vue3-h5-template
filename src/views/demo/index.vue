@@ -38,7 +38,7 @@ const contentList = reactive([
       </a>
     </div>
     <div
-      class="text-[14px] py-[2px] px-[10px] rounded-[4px] bg-[#eee] mt-[14px]"
+      class="text-[14px] py-[2px] px-[10px] rounded-[4px] bg-[var(--color-block-background)] mt-[14px]"
     >
       <p class="my-[14px] leading-[24px]">
         🌱 基于 Vue3 全家桶、TypeScript、Vite 构建工具，开箱即用的 H5
