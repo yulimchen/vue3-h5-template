@@ -1,4 +1,8 @@
-<img src="src/assets/logo_melomini.png" alt="logo_melomini" style="zoom:50%;" />
+
+
+<div align="center">
+	<img src="src/assets/logo_melomini.png" alt="logo_melomini" style="width:20%;" />
+</div>
 
 <div align="center">
 	<a href="https://github.com/yulimchen/vue3-h5-template/blob/master/LICENSE">
@@ -14,7 +18,6 @@
     <img src="https://img.shields.io/github/forks/yulimchen/vue3-h5-template?style=flat-square" alt="GitHub forks">
   </a>
 </div>
-
 
 
 <h1 align="center">Vue3 h5 template</h1>
