@@ -7,6 +7,7 @@ const contentList = reactive([
   "✔ ✨ Vant4 组件库",
   "✔ 🌀 Tailwindcss 原子类框架",
   "✔ 🍍 Pinia 状态管理",
+  "✔ 🌓 支持深色模式",
   "✔ Vue-router 4",
   "✔ 支持 SVG 图标自动注册组件",
   "✔ vw 视口适配",
@@ -24,7 +25,7 @@ const contentList = reactive([
     <img
       class="block w-[120px] mx-auto mb-[20px] pt-[30px]"
       alt="Vue logo"
-      src="~@/assets/logo_vue3_ts.png"
+      src="~@/assets/logo_melomini.png"
     />
     <div class="pl-[12px] border-l-[3px] border-[color:#41b883]">
       <a

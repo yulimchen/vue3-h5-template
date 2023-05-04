@@ -1,10 +1,32 @@
- **🌱 基于 Vue3 全家桶、TypeScript、Vite 构建工具，开箱即用的移动端项目基础模板**
+<img src="src/assets/logo_melomini.png" alt="logo_melomini" style="zoom:50%;" />
+
+<div align="center">
+	<a href="https://github.com/yulimchen/vue3-h5-template/blob/master/LICENSE">
+    <img src="https://img.shields.io/github/license/yulimchen/vue3-h5-template.svg?style=flat-square" alt="license">
+  </a>
+  <a href="https://github.com/yulimchen/vue3-h5-template/releases">
+    <img src="https://img.shields.io/github/release/yulimchen/vue3-h5-template.svg?style=flat-square" alt="GitHub release">
+  </a>
+  <a href="https://github.com/yulimchen/vue3-h5-template">
+    <img src="https://img.shields.io/github/stars/yulimchen/vue3-h5-template?style=flat-square" alt="GitHub stars">
+  </a>
+  <a href="https://github.com/yulimchen/vue3-h5-template">
+    <img src="https://img.shields.io/github/forks/yulimchen/vue3-h5-template?style=flat-square" alt="GitHub forks">
+  </a>
+</div>
+
+
+
+<h1 align="center">Vue3 h5 template</h1>
+
+**🌱 基于 Vue3 全家桶、TypeScript、Vite 构建工具，开箱即用的移动端项目基础模板**
 
 - [x] ⚡ Vue3 + Vite4
 - [x] 🍕 TypeScript
 - [x] ✨ Vant4 组件库
 - [x] 🌀 Tailwindcss 原子类框架
 - [x] 🍍 Pinia 状态管理
+- [x] 🌓 支持深色模式
 - [x] Vue-router 4
 - [x] 支持 SVG 图标自动注册组件
 - [x] vw 视口适配
@@ -27,7 +49,7 @@
 
 ## 截图
 
-![](docs/assets/img/Snipaste_2023-03-06_23-56-20.png)
+![](docs/assets/img/Snipaste_2023-05-04_21-52-10.png)
 
 
 
@@ -143,7 +165,7 @@ const routes: Array<RouteRecordRaw> = [
 
 ### - <span id="console">调试面板 eruda</span>
 
-![](docs/assets/img/Snipaste_2023-02-07_21-57-33.png)
+![](docs/assets/img/Snipaste_2023-05-04_21-58-28.png)
 
 为了方便移动端查看 log 信息和调试，开发环境引入了 eruda 调试面板的 cdn。如果你的开发环境不需要的话请在 `.env.development` 中修改值
 
