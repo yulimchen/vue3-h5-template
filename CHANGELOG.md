@@ -2,6 +2,19 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.5.5](https://github.com/yulimchen/vue3-h5-template/compare/v0.5.4...v0.5.5) (2023-06-30)
+
+
+### ✏️ Documentation | 文档
+
+* 文档更新 ([2663c8d](https://github.com/yulimchen/vue3-h5-template/commit/2663c8d2d5f1b7df92f38456e70a6dc60557e1cf))
+* 文档更新 ([b89ce58](https://github.com/yulimchen/vue3-h5-template/commit/b89ce58729fcb7c90b6b295cbb90181e66f5c576))
+
+
+### 🚀 Chore | 构建/工程依赖/工具
+
+* **deps:** 部分依赖更新 ([5af0f5c](https://github.com/yulimchen/vue3-h5-template/commit/5af0f5c7466d5986a4a91cc07164c567dd082914))
+
 ### [0.5.4](https://github.com/yulimchen/vue3-h5-template/compare/v0.5.3...v0.5.4) (2023-04-25)
 
 
