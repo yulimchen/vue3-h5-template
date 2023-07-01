@@ -2,6 +2,18 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.5.6](https://github.com/yulimchen/vue3-h5-template/compare/v0.5.5...v0.5.6) (2023-07-01)
+
+
+### 💄 Styles | 风格
+
+* **layout:** 修复大小写警告 ([53b1557](https://github.com/yulimchen/vue3-h5-template/commit/53b15578a55eccbae73377f27f7696b97087cf43))
+
+
+### ✨ Features | 新功能
+
+* 黑暗模式支持缓存 ([b398939](https://github.com/yulimchen/vue3-h5-template/commit/b398939ab7ba0c6b50ffb3a6b4f38ebc0512dc56))
+
 ### [0.5.5](https://github.com/yulimchen/vue3-h5-template/compare/v0.5.4...v0.5.5) (2023-06-30)
 
 
