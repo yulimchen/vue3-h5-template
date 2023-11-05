@@ -26,6 +26,7 @@ export default defineConfig(({ mode }) => {
       mockDevServerPlugin(),
       // vant 组件自动按需引入
       Components({
+        dts: "src/typings/components.d.ts",
         resolvers: [VantResolver()]
       }),
       // svg icon
