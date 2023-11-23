@@ -9,6 +9,7 @@
     "lint": "eslint . --ext .vue,.js,.jsx,.cjs,.mjs --fix --ignore-path .gitignore"
   },
   "dependencies": {
+    "normalize.css": "^8.0.1",
     "pinia": "^2.1.7",
     "vant": "^4.7.3",
     "vue": "^3.3.4",
@@ -21,6 +22,7 @@
     "@vitejs/plugin-vue-jsx": "^3.0.2",
     "@vue/eslint-config-prettier": "^8.0.0",
     "autoprefixer": "^10.4.16",
+    "cnjm-postcss-px-to-viewport": "^1.0.0",
     "eslint": "^8.52.0",
     "eslint-plugin-prettier": "^5.0.1",
     "eslint-plugin-vue": "^9.18.1",
@@ -29,6 +31,7 @@
     "tailwindcss": "^3.3.5",
     "unplugin-vue-components": "^0.25.2",
     "vite": "^4.4.11",
+    "vite-plugin-vue-setup-extend": "^0.4.0",
     "vue-eslint-parser": "^9.3.2"
   }
 }

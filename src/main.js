@@ -1,8 +1,7 @@
-import "./assets/main.css";
-
 import { createApp } from "vue";
 import { createPinia } from "pinia";
-
+// normalize.css
+import "normalize.css/normalize.css";
 // tailwindcss
 import "./styles/tailwind.css";
 

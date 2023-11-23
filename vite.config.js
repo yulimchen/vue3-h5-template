@@ -1,26 +1,36 @@
 import { fileURLToPath, URL } from "node:url";
-
-import { defineConfig } from "vite";
+import vueSetupExtend from "vite-plugin-vue-setup-extend";
+import { defineConfig, loadEnv } from "vite";
 import vue from "@vitejs/plugin-vue";
 import vueJsx from "@vitejs/plugin-vue-jsx";
 import Components from "unplugin-vue-components/vite";
 import { VantResolver } from "@vant/auto-import-resolver";
 
+// 当前工作目录路径
+const root = process.cwd();
+
 // https://vitejs.dev/config/
-export default defineConfig({
-  plugins: [
-    vue(),
-    vueJsx(),
-    Components({
-      resolvers: [VantResolver()]
-    })
-  ],
-  resolve: {
-    alias: {
-      "@": fileURLToPath(new URL("./src", import.meta.url))
+export default defineConfig(({ mode }) => {
+  // 环境变量
+  const env = loadEnv(mode, root, "");
+  return {
+    base: env.VITE_BASE_URL || "/",
+    plugins: [
+      vue(),
+      vueJsx(),
+      Components({
+        resolvers: [VantResolver()]
+      }),
+      // 允许 setup 语法糖上添加组件名属性
+      vueSetupExtend()
+    ],
+    resolve: {
+      alias: {
+        "@": fileURLToPath(new URL("./src", import.meta.url))
+      }
+    },
+    server: {
+      host: true
     }
-  },
-  server: {
-    host: true
-  }
+  };
 });
