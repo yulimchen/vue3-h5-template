@@ -4,6 +4,8 @@ import { createPinia } from "pinia";
 import "normalize.css/normalize.css";
 // tailwindcss
 import "./styles/tailwind.css";
+// svg icon
+import "virtual:svg-icons-register";
 
 import App from "./App.vue";
 import router from "./router";

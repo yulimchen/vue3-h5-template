@@ -5,6 +5,8 @@ import vue from "@vitejs/plugin-vue";
 import vueJsx from "@vitejs/plugin-vue-jsx";
 import Components from "unplugin-vue-components/vite";
 import { VantResolver } from "@vant/auto-import-resolver";
+import { createSvgIconsPlugin } from "vite-plugin-svg-icons";
+import path from "path";
 
 // 当前工作目录路径
 const root = process.cwd();
@@ -22,7 +24,14 @@ export default defineConfig(({ mode }) => {
         resolvers: [VantResolver()]
       }),
       // 允许 setup 语法糖上添加组件名属性
-      vueSetupExtend()
+      vueSetupExtend(),
+      // svg icon
+      createSvgIconsPlugin({
+        // 指定图标文件夹
+        iconDirs: [path.resolve(root, "src/icons/svg")],
+        // 指定 symbolId 格式
+        symbolId: "icon-[dir]-[name]"
+      })
     ],
     resolve: {
       alias: {
