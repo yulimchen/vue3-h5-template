@@ -1,13 +1,61 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
-    <meta charset="UTF-8">
-    <link rel="icon" href="/favicon.ico">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Vite App</title>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta
+      name="viewport"
+      content="width=device-width,initial-scale=1.0,user-scalable=no"
+    />
+    <link rel="icon" href="/favicon.ico" />
+    <title>vue3-h5-template</title>
   </head>
   <body>
-    <div id="app"></div>
+    <div id="app">
+      <style>
+        html,
+        body,
+        #app {
+          height: 100%;
+          margin: 0px;
+          padding: 0px;
+          width: 100%;
+        }
+        .__spinner-container {
+          height: 100%;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          justify-content: center;
+        }
+        .__spinner {
+          position: relative;
+          width: 68px;
+          height: 68px;
+          background-color: #41b883;
+          animation: cube-shadow-spinner 1.8s cubic-bezier(0.75, 0, 0.5, 1)
+            infinite;
+        }
+        @keyframes cube-shadow-spinner {
+          50% {
+            border-radius: 50%;
+            transform: scale(0.5) rotate(360deg);
+          }
+          100% {
+            transform: scale(1) rotate(720deg);
+          }
+        }
+      </style>
+      <div class="__spinner-container">
+        <div class="__spinner"></div>
+      </div>
+    </div>
     <script type="module" src="/src/main.js"></script>
+    <% if (ENABLE_ERUDA === "true") { %>
+    <script src="//cdn.jsdelivr.net/npm/eruda"></script>
+    <script>
+      eruda.init();
+    </script>
+    <% } %>
   </body>
 </html>
