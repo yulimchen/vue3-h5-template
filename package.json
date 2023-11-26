@@ -1,7 +1,17 @@
 {
-  "name": "vue3-h5-template-js",
-  "version": "0.0.0",
-  "private": true,
+  "name": "vue3-h5-template",
+  "version": "0.5.0",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/yulimchen/vue3-h5-template.git"
+  },
+  "bugs": {
+    "url": "https://github.com/yulimchen/vue3-h5-template/issues"
+  },
+  "engines": {
+    "node": ">= 16"
+  },
   "scripts": {
     "dev": "vite",
     "build": "vite build",

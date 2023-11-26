@@ -22,10 +22,9 @@
 
 <h1 align="center">Vue3 h5 template</h1>
 
-**🌱 基于 Vue3 全家桶、TypeScript、Vite 构建工具，开箱即用的移动端项目基础模板**
+**🌱 基于 Vue3 全家桶、JavaScript、Vite 构建工具，开箱即用的移动端项目基础模板**
 
 - [x] ⚡ Vue3 + Vite4
-- [x] 🍕 TypeScript
 - [x] ✨ Vant4 组件库
 - [x] 🌀 Tailwindcss 原子类框架
 - [x] 🍍 Pinia 状态管理
@@ -58,11 +57,11 @@
 
 ## 运行项目
 
-注意：要求 Node 版本 16+，可使用 [nvm](https://github.com/nvm-sh/nvm#installing-and-updating) 进行本地 Node 版本管理，同时建议使用 [pnpm](https://pnpm.io/zh/installation) 包管理器。
+注意：本项目为 JS 分支版本，要求 Node 版本 16+，可使用 [nvm](https://github.com/nvm-sh/nvm#installing-and-updating) 进行本地 Node 版本管理，同时建议使用 [pnpm](https://pnpm.io/zh/installation) 包管理器。
 
 ```shell
 # 克隆项目
-git clone https://github.com/yulimchen/vue3-h5-template.git
+git clone -b js-version https://github.com/yulimchen/vue3-h5-template.git
 
 # 进入项目目录
 cd vue3-h5-template
@@ -72,22 +71,6 @@ pnpm install
 
 # 启动服务
 pnpm dev
-```
-
-如果你需要的是基于 `vue-cli(webpack)` 或者 `JavaScript` 构建的 H5 项目模板，可切换到 [vue-cli](https://github.com/yulimchen/vue3-h5-template/tree/vue-cli) 分支进行开发
-
-```shell
-# 克隆项目
-git clone -b vue-cli https://github.com/yulimchen/vue3-h5-template.git
-
-# 进入项目目录
-cd vue3-h5-template
-
-# 安装依赖
-yarn
-
-# 启动服务
-yarn serve
 ```
 
 
@@ -127,7 +110,7 @@ yarn serve
 <svg-icon name="check-in" />
 ```
 
-> 项目中使用了 `unplugin-vue-components` 自动引入组件，所以 `main.ts` 中无需注册全局图标组件。
+> 项目中使用了 `unplugin-vue-components` 自动引入组件，所以 `main.js` 中无需注册全局图标组件。
 
 
 
@@ -135,9 +118,9 @@ yarn serve
 
 组件默认开启缓存，如某个组件需关闭缓存，在对应路由 `meta` 内的 `noCache` 字段赋值为 `true` 即可。
 
-```typescript
-// src/router/routes.ts
-const routes: Array<RouteRecordRaw> = [
+```javascript
+// src/router/routes.js
+const routes = [
     // ...
     {
         path: "about",
@@ -155,7 +138,7 @@ const routes: Array<RouteRecordRaw> = [
 
 ```vue
 <!-- src/views/about/index.vue -->
-<script setup lang="ts" name="About">
+<script setup name="About">
 	// 使用了 `vite-plugin-vue-setup-extend` 插件，可在 `setup` 语法糖标签上添加 `name` 属性为组件命名
 </script>
 
@@ -186,9 +169,9 @@ VITE_ENABLE_ERUDA = "true"
 在路由全局前置守卫中：
 
 ```js
-// src/router/index.ts
+// src/router/index.js
 // ...
-router.beforeEach((to: toRouteType, from, next) => {
+router.beforeEach((to, from, next) => {
   // ...
   // 页面 title
   setPageTitle(to.meta.title);
@@ -196,7 +179,7 @@ router.beforeEach((to: toRouteType, from, next) => {
 });
 ```
 
-具体实现方法见文件 `src/utils/set-page-title.ts` 。
+具体实现方法见文件 `src/utils/set-page-title.js` 。
 
 
 

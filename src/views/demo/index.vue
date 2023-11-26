@@ -3,7 +3,6 @@ import { reactive } from "vue";
 
 const contentList = reactive([
   "✔ ⚡ Vue3 + Vite4",
-  "✔ 🍕 TypeScript",
   "✔ ✨ Vant4 组件库",
   "✔ 🌀 Tailwindcss 原子类框架",
   "✔ 🍍 Pinia 状态管理",
