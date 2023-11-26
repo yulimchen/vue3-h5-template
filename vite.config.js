@@ -7,6 +7,7 @@ import Components from "unplugin-vue-components/vite";
 import { VantResolver } from "@vant/auto-import-resolver";
 import { createSvgIconsPlugin } from "vite-plugin-svg-icons";
 import path from "path";
+import mockDevServerPlugin from "vite-plugin-mock-dev-server";
 
 // 当前工作目录路径
 const root = process.cwd();
@@ -31,7 +32,8 @@ export default defineConfig(({ mode }) => {
         iconDirs: [path.resolve(root, "src/icons/svg")],
         // 指定 symbolId 格式
         symbolId: "icon-[dir]-[name]"
-      })
+      }),
+      mockDevServerPlugin()
     ],
     resolve: {
       alias: {
@@ -39,7 +41,23 @@ export default defineConfig(({ mode }) => {
       }
     },
     server: {
-      host: true
+      host: true,
+      // 仅在 proxy 中配置的代理前缀， mock-dev-server 才会拦截并 mock
+      // doc: https://github.com/pengzhanbo/vite-plugin-mock-dev-server
+      proxy: {
+        "^/dev-api": {
+          target: ""
+        }
+      }
+    },
+    build: {
+      rollupOptions: {
+        output: {
+          chunkFileNames: "static/js/[name]-[hash].js",
+          entryFileNames: "static/js/[name]-[hash].js",
+          assetFileNames: "static/[ext]/[name]-[hash].[ext]"
+        }
+      }
     }
   };
 });
