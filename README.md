@@ -22,7 +22,7 @@
 
 <h1 align="center">Vue3 h5 template</h1>
 
-**🌱 基于 Vue3 全家桶、TypeScript、Vite 构建工具，开箱即用的移动端项目基础模板**
+**🌱 基于 Vue3 全家桶、TS/JS、Vite 构建工具，开箱即用的移动端项目基础模板**
 
 - [x] ⚡ Vue3 + Vite4
 - [x] 🍕 TypeScript
@@ -41,7 +41,7 @@
 - [x] 开发环境调试面板
 - [ ] TODO: 生产环境 CDN 依赖
 
-
+**主分支默认 TypeScript，如果你希望使用的是 JavaScript 语言，请切换 [js-version](https://github.com/yulimchen/vue3-h5-template/tree/js-version) 分支进行开发**
 
 ## 在线预览Preview
 
@@ -74,20 +74,14 @@ pnpm install
 pnpm dev
 ```
 
-如果你需要的是基于 `vue-cli(webpack)` 或者 `JavaScript` 构建的 H5 项目模板，可切换到 [vue-cli](https://github.com/yulimchen/vue3-h5-template/tree/vue-cli) 分支进行开发
+如果你需要的是基于 `JavaScript` 构建的 H5 项目模板，可切换到 [js-version](https://github.com/yulimchen/vue3-h5-template/tree/js-version) 分支进行开发
 
 ```shell
 # 克隆项目
-git clone -b vue-cli https://github.com/yulimchen/vue3-h5-template.git
+git clone -b js-version https://github.com/yulimchen/vue3-h5-template.git
 
-# 进入项目目录
+# 同上进入目录&安装依赖等
 cd vue3-h5-template
-
-# 安装依赖
-yarn
-
-# 启动服务
-yarn serve
 ```
 
 
