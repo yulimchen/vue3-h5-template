@@ -8,6 +8,7 @@ import { VantResolver } from "@vant/auto-import-resolver";
 import { createSvgIconsPlugin } from "vite-plugin-svg-icons";
 import path from "path";
 import mockDevServerPlugin from "vite-plugin-mock-dev-server";
+import viteCompression from "vite-plugin-compression";
 
 // 当前工作目录路径
 const root = process.cwd();
@@ -33,7 +34,9 @@ export default defineConfig(({ mode }) => {
         // 指定 symbolId 格式
         symbolId: "icon-[dir]-[name]"
       }),
-      mockDevServerPlugin()
+      mockDevServerPlugin(),
+      // 生产环境 gzip 压缩资源
+      viteCompression()
     ],
     resolve: {
       alias: {
