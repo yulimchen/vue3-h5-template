@@ -39,7 +39,7 @@
 - [x] ESLint
 - [x] 首屏加载动画
 - [x] 开发环境调试面板
-- [ ] TODO: 生产环境 CDN 依赖
+- [x] 生产环境 CDN 依赖
 
 **主分支默认 TypeScript，如果你希望使用的是 JavaScript 语言，请切换 [js-version](https://github.com/yulimchen/vue3-h5-template/tree/js-version) 分支进行开发**
 
@@ -260,13 +260,9 @@ feat(layout): 布局完成
 
 
 
-### - <span id="CDN">CDN 生产环境依赖(TODO)</span>
+### - <span id="CDN">CDN 生产环境依赖</span>
 
-本模板生产环境默认 CDN 加载依赖，依赖加载源见根目录 `dependencies-cdn.js` 文件。
-
-**❗ PS.为避免打包后出现不可预估问题，请注意确保生产和开发环境的依赖版本一致！**
-
-> 如需关闭 CDN 依赖，在根目录生产环境变量文件 `.env.production` 中修改 `VUE_APP_CDN_DEPS` 的值为 `false` ，重新打包即可。
+本模板生产环境默认不开启 CDN 加载依赖，如需开启生产环境加载 CDN 依赖，在根目录生产环境变量文件 `.env.production` 中修改 `VITE_CDN_DEPS` 的值为 `true` 重新打包即可。
 
 
 

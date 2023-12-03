@@ -10,6 +10,7 @@ import mockDevServerPlugin from "vite-plugin-mock-dev-server";
 import vueSetupExtend from "vite-plugin-vue-setup-extend";
 import viteCompression from "vite-plugin-compression";
 import { createHtmlPlugin } from "vite-plugin-html";
+import { enableCDN } from "./build/cdn";
 
 // 当前工作目录路径
 const root: string = process.cwd();
@@ -47,7 +48,9 @@ export default defineConfig(({ mode }) => {
             ENABLE_ERUDA: env.VITE_ENABLE_ERUDA || "false"
           }
         }
-      })
+      }),
+      // 生产环境默认不启用 CDN 加速
+      enableCDN(env.VITE_CDN_DEPS)
     ],
     resolve: {
       alias: {
