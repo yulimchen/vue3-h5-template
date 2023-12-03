@@ -2,6 +2,30 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.5.7](https://github.com/yulimchen/vue3-h5-template/compare/v0.5.6...v0.5.7) (2023-12-03)
+
+
+### 🐛 Bug Fixes | Bug 修复
+
+* **router:** 默认根路径重定向大小写修复 ([ca8fa2d](https://github.com/yulimchen/vue3-h5-template/commit/ca8fa2d8da8e0bd43485aa510ee798ac01b4a65a))
+* 修复打包报错 ([9306f02](https://github.com/yulimchen/vue3-h5-template/commit/9306f025d6eee0f182b0a1ad4f6ad7e97a5cdfc2))
+
+
+### 🚀 Chore | 构建/工程依赖/工具
+
+* 依赖升级 ([47196f8](https://github.com/yulimchen/vue3-h5-template/commit/47196f8e7f820caf8815998fb69032e6df58b893))
+* 增加类型声明目录 ([2dc302b](https://github.com/yulimchen/vue3-h5-template/commit/2dc302b146567697225a4c40b1f50bcda7f42e87))
+
+
+### ✏️ Documentation | 文档
+
+* 文档更新 `js-version` 分支说明 ([db939f0](https://github.com/yulimchen/vue3-h5-template/commit/db939f01917c458276d94d5c220e9a70318cd3a8))
+
+
+### ✨ Features | 新功能
+
+* 支持生产环境打包 `cdn` 加速 ([93bbe72](https://github.com/yulimchen/vue3-h5-template/commit/93bbe723af5a54b0b11bf908b8366ca62267d0c9))
+
 ### [0.5.6](https://github.com/yulimchen/vue3-h5-template/compare/v0.5.5...v0.5.6) (2023-07-01)
 
 
