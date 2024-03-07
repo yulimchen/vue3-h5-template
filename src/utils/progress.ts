@@ -13,7 +13,7 @@ NProgress.configure({
   // 初始化时的最小百分比
   minimum: 0.3,
   // 加载条的父元素
-  parent: "#app"
+  parent: "body"
 });
 
 export default NProgress;
