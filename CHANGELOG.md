@@ -2,6 +2,18 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.5.8](https://github.com/yulimchen/vue3-h5-template/compare/v0.5.7...v0.5.8) (2024-03-07)
+
+
+### 🚀 Chore | 构建/工程依赖/工具
+
+* 调整 `tsconfig` 配置 ([24eceb3](https://github.com/yulimchen/vue3-h5-template/commit/24eceb3d9fa5cdabc18b57e71521a8802125a69a))
+
+
+### 🐛 Bug Fixes | Bug 修复
+
+* 修复进度条设置父元素导致的样式问题 (fix [#52](https://github.com/yulimchen/vue3-h5-template/issues/52)) ([08310ca](https://github.com/yulimchen/vue3-h5-template/commit/08310ca1f8346939a448e8978c18ec9944660684))
+
 ### [0.5.7](https://github.com/yulimchen/vue3-h5-template/compare/v0.5.6...v0.5.7) (2023-12-03)
 
 
