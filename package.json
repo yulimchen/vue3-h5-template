@@ -25,11 +25,13 @@
   },
   "dependencies": {
     "axios": "^1.5.1",
+    "js-cookie": "^3.0.5",
     "normalize.css": "^8.0.1",
     "nprogress": "^0.2.0",
     "pinia": "^2.1.7",
     "vant": "^4.7.2",
     "vue": "^3.3.6",
+    "vue-i18n": "9",
     "vue-router": "^4.2.5"
   },
   "devDependencies": {

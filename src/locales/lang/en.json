@@ -1,0 +1,34 @@
+{
+  "demo": {
+    "description": "Basic template for an H5 mobile project, based on Vue 3 ecosystem, TypeScript, and Vite build tool, ready to use.",
+    "tabbar": {
+      "home": "Home",
+      "tools": "Tools",
+      "about": "About"
+    },
+    "details": {
+      "vue3": "Vue3 + Vite4",
+      "typescript": "TypeScript",
+      "vant": "Vant4 component library",
+      "tailwindcss": "Tailwind CSS utility framework",
+      "pinia": "Pinia state management",
+      "darkmode": "Dark mode support",
+      "i18n": "Internationalization (i18n) support",
+      "router": "Vue Router 4",
+      "icon": "Automatic registration of SVG icon components",
+      "vw": "Viewport units (vw) adaptation",
+      "axios": "Axios wrapper",
+      "gzip": "Gzip compression for bundled resources",
+      "mock": "Mock data support in development environment",
+      "eslint": "ESLint",
+      "loading": "First screen loading animation",
+      "eruda": "Development environment debugging panel"
+      }
+  },
+  "tools": {
+    "successBtn": "Successful Request",
+    "errorBtn": "Failed Request",
+    "reqOK": "Request Successful",
+    "reqErr": "Request Failed"
+  }
+}

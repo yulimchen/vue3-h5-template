@@ -12,27 +12,29 @@
 </template>
 
 <script setup lang="ts">
-import { ref, reactive } from "vue";
+import { ref, reactive, computed } from "vue";
+import { $t } from "@/locales";
 
 const active = ref(0);
+// 使用 computed 保持视图实时更新
 const tabbarData = reactive([
   {
     icon: "wap-home-o",
-    title: "主页",
+    title: computed(() => $t("demo.tabbar.home")),
     to: {
       name: "Demo"
     }
   },
   {
     icon: "gem-o",
-    title: "工具",
+    title: computed(() => $t("demo.tabbar.tools")),
     to: {
       name: "Tools"
     }
   },
   {
     icon: "user-o",
-    title: "关于",
+    title: computed(() => $t("demo.tabbar.about")),
     to: {
       name: "About"
     }

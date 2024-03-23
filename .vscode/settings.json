@@ -1,0 +1,8 @@
+{
+  "i18n-ally.localesPaths": ["src/locales/lang"],
+  "i18n-ally.displayLanguage": "zh-CN",
+  "i18n-ally.enabledParsers": ["ts", "json"],
+  "i18n-ally.enabledFrameworks": ["vue"],
+  "i18n-ally.editor.preferEditor": true,
+  "i18n-ally.keystyle": "nested"
+}

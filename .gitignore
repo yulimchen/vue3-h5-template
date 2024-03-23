@@ -21,6 +21,7 @@ coverage
 .vscode/*
 !.vscode/extensions.json
 !.vscode/vue3.2.code-snippets
+!.vscode/settings.json
 .idea
 *.suo
 *.ntvs*

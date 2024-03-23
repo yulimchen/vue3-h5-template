@@ -1,23 +1,32 @@
 <script setup lang="ts" name="Demo">
-import { reactive } from "vue";
+import { ref, watch } from "vue";
+import { $t, $locale } from "@/locales";
 
-const contentList = reactive([
-  "✔ ⚡ Vue3 + Vite4",
-  "✔ 🍕 TypeScript",
-  "✔ ✨ Vant4 组件库",
-  "✔ 🌀 Tailwindcss 原子类框架",
-  "✔ 🍍 Pinia 状态管理",
-  "✔ 🌓 支持深色模式",
-  "✔ Vue-router 4",
-  "✔ 支持 SVG 图标自动注册组件",
-  "✔ vw 视口适配",
-  "✔ Axios 封装",
-  "✔ 打包资源 gzip 压缩",
-  "✔ 开发环境支持 Mock 数据",
-  "✔ ESLint",
-  "✔ 首屏加载动画",
-  "✔ 开发环境调试面板"
-]);
+const list = ref<string[]>([]);
+
+const updateList = () => {
+  list.value = [
+    `✔ ⚡ ${$t("demo.details.vue3")}`,
+    `✔ 🍕 ${$t("demo.details.typescript")}`,
+    `✔ ✨ ${$t("demo.details.vant")}`,
+    `✔ 🌀 ${$t("demo.details.tailwindcss")}`,
+    `✔ 🍍 ${$t("demo.details.pinia")}`,
+    `✔ 🌓 ${$t("demo.details.darkmode")}`,
+    `✔ 🧀 ${$t("demo.details.i18n")}`,
+    `✔ ${$t("demo.details.router")}`,
+    `✔ ${$t("demo.details.icon")}`,
+    `✔ ${$t("demo.details.vw")}`,
+    `✔ ${$t("demo.details.axios")}`,
+    `✔ ${$t("demo.details.gzip")}`,
+    `✔ ${$t("demo.details.mock")}`,
+    `✔ ${$t("demo.details.eslint")}`,
+    `✔ ${$t("demo.details.loading")}`,
+    `✔ ${$t("demo.details.eruda")}`
+  ];
+};
+updateList();
+// 监听语言变化，更新列表
+watch(() => $locale.value, updateList);
 </script>
 
 <template>
@@ -41,14 +50,11 @@ const contentList = reactive([
     <div
       class="text-[14px] py-[2px] px-[10px] rounded-[4px] bg-[var(--color-block-background)] mt-[14px]"
     >
-      <p class="my-[14px] leading-[24px]">
-        🌱 基于 Vue3 全家桶、TypeScript、Vite 构建工具，开箱即用的 H5
-        移动端项目基础模板
-      </p>
+      <p class="my-[14px] leading-[24px]">🌱 {{ $t("demo.description") }}</p>
     </div>
 
     <div class="demo-main">
-      <van-cell v-for="(item, idx) in contentList" :key="idx" :title="item" />
+      <van-cell v-for="(item, idx) in list" :key="idx" :title="item" />
     </div>
   </div>
 </template>
