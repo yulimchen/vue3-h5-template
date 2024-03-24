@@ -30,6 +30,7 @@
 - [x] 🌀 Tailwindcss 原子类框架
 - [x] 🍍 Pinia 状态管理
 - [x] 🌓 支持深色模式
+- [x] 🧀 支持 i18n
 - [x] Vue-router 4
 - [x] 支持 SVG 图标自动注册组件
 - [x] vw 视口适配
@@ -41,7 +42,7 @@
 - [x] 开发环境调试面板
 - [x] 生产环境 CDN 依赖
 
-**主分支默认 TypeScript，如果你希望使用的是 JavaScript 语言，请切换 [js-version](https://github.com/yulimchen/vue3-h5-template/tree/js-version) 分支进行开发**
+**当前为 i18n 分支，如不需要国际化功能，可切换到 [master](https://github.com/yulimchen/vue3-h5-template/tree/master) 主分支。**
 
 ## 在线预览Preview
 
@@ -52,17 +53,17 @@
 
 ## 截图
 
-![](docs/assets/img/Snipaste_2023-05-04_21-52-10.png)
+![](docs/assets/img/Kapture 2024-03-24 at 11.31.46.gif)
 
 
 
 ## 运行项目
 
-注意：要求 Node 版本 16+，可使用 [nvm](https://github.com/nvm-sh/nvm#installing-and-updating) 进行本地 Node 版本管理，同时建议使用 [pnpm](https://pnpm.io/zh/installation) 包管理器。
+注意：要求 Node 版本 16+，可使用 [nvm](https://github.com/nvm-sh/nvm#installing-and-updating) 进行本地 Node 版本管理，同时建议使用 [pnpm](https://pnpm.io/zh/installation) 包管理器。**当前为 i18n 分支，可选择 clone 分支进行开发。**
 
 ```shell
 # 克隆项目
-git clone https://github.com/yulimchen/vue3-h5-template.git
+git clone -b i18n https://github.com/yulimchen/vue3-h5-template.git
 
 # 进入项目目录
 cd vue3-h5-template
@@ -72,16 +73,6 @@ pnpm install
 
 # 启动服务
 pnpm dev
-```
-
-如果你需要的是基于 `JavaScript` 构建的 H5 项目模板，可切换到 [js-version](https://github.com/yulimchen/vue3-h5-template/tree/js-version) 分支进行开发
-
-```shell
-# 克隆项目
-git clone -b js-version https://github.com/yulimchen/vue3-h5-template.git
-
-# 同上进入目录&安装依赖等
-cd vue3-h5-template
 ```
 
 
