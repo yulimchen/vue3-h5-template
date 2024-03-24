@@ -53,7 +53,7 @@
 
 ## 截图
 
-![](https://raw.githubusercontent.com/yulimchen/vue3-h5-template/i18n/docs/assets/img/Kapture%202024-03-24%20at%2011.31.46.gif)
+![](docs/assets/img/Kapture_2024-03-24_at_11.51.48.gif)
 
 
 
