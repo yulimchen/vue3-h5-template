@@ -1,4 +1,4 @@
-module.exports = {
+export default {
   ignores: [commit => commit.includes("init")],
   extends: ["@commitlint/config-conventional"],
   rules: {

@@ -1,4 +1,4 @@
-module.exports = {
+export default {
   plugins: {
     tailwindcss: {},
     // 使用 cnjm-postcss-px-to-viewport 规避 postcss.plugin was deprecated 警告
