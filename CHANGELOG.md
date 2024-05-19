@@ -2,6 +2,32 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.5.9](https://github.com/yulimchen/vue3-h5-template/compare/v0.5.8...v0.5.9) (2024-05-19)
+
+
+### ✏️ Documentation | 文档
+
+* 文档更新 ([cf25514](https://github.com/yulimchen/vue3-h5-template/commit/cf255144f178882ff1be5de04edcd1e7c9bd1771))
+* 文档更新 `i18n` 分支说明 ([9348d53](https://github.com/yulimchen/vue3-h5-template/commit/9348d53648654ee188819fba07e24596e64dc62d))
+
+
+### 🐛 Bug Fixes | Bug 修复
+
+* 升级 eslint9 相关配置 ([b28c5a7](https://github.com/yulimchen/vue3-h5-template/commit/b28c5a7ced4f5ae9430eb46c7cf601948a964648))
+
+
+### ♻️ Code Refactoring | 代码重构
+
+* 配置文件改为 ESM ([5353749](https://github.com/yulimchen/vue3-h5-template/commit/535374918cc30faec750c14c7effe795f960ebd3))
+
+
+### 🚀 Chore | 构建/工程依赖/工具
+
+* **deps:** 依赖升级 ([9288363](https://github.com/yulimchen/vue3-h5-template/commit/9288363a402d91e1b3041990dbaa24d7a2490101))
+* VSCode 推荐扩展更新 ([1f60a68](https://github.com/yulimchen/vue3-h5-template/commit/1f60a68cca429e69172309c41e7a0f79d3fa4cfe))
+* 格式化代码 ([306dc0d](https://github.com/yulimchen/vue3-h5-template/commit/306dc0daf5c1d2cb3c2d3c504509c304824dc31c))
+* 编辑器环境 TypeScript 配置 ([a28e1e4](https://github.com/yulimchen/vue3-h5-template/commit/a28e1e48837cfdaadbfeca9ec456a1e3349a4950))
+
 ### [0.5.8](https://github.com/yulimchen/vue3-h5-template/compare/v0.5.7...v0.5.8) (2024-03-07)
 
 
