@@ -13,13 +13,15 @@
   "engines": {
     "node": ">= 16"
   },
+  "type": "module",
   "scripts": {
     "dev": "vite",
     "build": "run-p type-check build-only",
     "preview": "vite preview",
     "build-only": "vite build",
     "type-check": "vue-tsc --noEmit",
-    "lint": "eslint . --ext .vue,.js,.jsx,.cjs,.mjs,.ts,.tsx,.cts,.mts --fix --ignore-path .gitignore",
+    "lint:eslint": "eslint . --fix",
+    "lint:prettier": "prettier --write  \"src/**/*.{js,ts,json,tsx,css,less,scss,vue,html,md}\"",
     "release": "standard-version",
     "prepare": "husky install"
   },
@@ -78,7 +80,10 @@
     "peerDependencyRules": {
       "ignoreMissing": [
         "rollup"
-      ]
+      ],
+      "allowedVersions": {
+        "eslint": "9"
+      }
     }
   }
 }

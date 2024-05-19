@@ -49,7 +49,8 @@ class Http {
       (response: AxiosResponse) => {
         NProgress.done();
         // 与后端协定的返回字段
-        const { code, message, result } = response.data;
+        const { code, result } = response.data;
+        // const { message } = response.data;
         // 判断请求是否成功
         const isSuccess =
           result &&
