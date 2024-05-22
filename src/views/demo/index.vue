@@ -10,7 +10,7 @@ const contentList = reactive([
   "✔ 🌓 支持深色模式",
   "✔ Vue-router 4",
   "✔ 支持 SVG 图标自动注册组件",
-  "✔ vw 视口适配",
+  "✔ vmin 视口适配",
   "✔ Axios 封装",
   "✔ 打包资源 gzip 压缩",
   "✔ 开发环境支持 Mock 数据",

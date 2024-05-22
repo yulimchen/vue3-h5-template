@@ -33,7 +33,7 @@
 - [x] 🧀 支持 i18n
 - [x] Vue-router 4
 - [x] 支持 SVG 图标自动注册组件
-- [x] vw 视口适配
+- [x] vmin 视口适配
 - [x] Axios 封装
 - [x] 打包资源 gzip 压缩
 - [x] 开发环境支持 Mock 数据
