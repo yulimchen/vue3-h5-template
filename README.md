@@ -24,7 +24,7 @@
 
 **🌱 基于 Vue3 全家桶、JavaScript、Vite 构建工具，开箱即用的移动端项目基础模板**
 
-- [x] ⚡ Vue3 + Vite4
+- [x] ⚡ Vue3 + Vite5
 - [x] ✨ Vant4 组件库
 - [x] 🌀 Tailwindcss 原子类框架
 - [x] 🍍 Pinia 状态管理
@@ -57,7 +57,7 @@
 
 ## 运行项目
 
-注意：本项目为 JS 分支版本，要求 Node 版本 16+，可使用 [nvm](https://github.com/nvm-sh/nvm#installing-and-updating) 进行本地 Node 版本管理，同时建议使用 [pnpm](https://pnpm.io/zh/installation) 包管理器。
+注意：本项目为 JS 分支版本，要求 Node 版本 18+，可使用 [nvm](https://github.com/nvm-sh/nvm#installing-and-updating) 进行本地 Node 版本管理，同时建议使用 [pnpm](https://pnpm.io/zh/installation) 包管理器。
 
 ```shell
 # 克隆项目
