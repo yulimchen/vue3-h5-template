@@ -1,6 +1,0 @@
-node_modules
-.vscode
-.idea
-dist
-/public
-.eslintrc.js
