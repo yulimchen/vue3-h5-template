@@ -28,11 +28,11 @@
 - [x] 🍕 TypeScript
 - [x] ✨ Vant4 组件库
 - [x] 🌀 Tailwindcss 原子类框架
+- [x] 👏 集成多种图标方案
 - [x] 🍍 Pinia 状态管理
 - [x] 🌓 支持深色模式
 - [x] 🧀 支持 i18n
 - [x] Vue-router 4
-- [x] 支持 SVG 图标自动注册组件
 - [x] vmin 视口适配
 - [x] Axios 封装
 - [x] 打包资源 gzip 压缩
@@ -103,7 +103,7 @@ cd vue3-h5-template
 ## 文档引导
 
 > - [按需引入 vant 组件](#vant)
-> - [SVG 图标使用](#svg)
+> - [图标使用](#icon)
 > - [路由缓存 & 命名注意 ⚠](#router)
 > - [调试面板 eruda](#console)
 > - [动态设置页面标题](#page-title)
@@ -120,7 +120,57 @@ cd vue3-h5-template
 
 
 
-### - <span id="svg">SVG 图标使用</span>
+### - <span id="icon">图标使用</span>
+
+① **Iconify 图标（推荐）**
+
+Iconify 拥有图标数量超过 20 万的图标库，同时文档比较友好，本项目基于 `Iconify for Vue` 稍微进行了封装。
+
+使用方法 ⑴：
+
+![Snipaste_2024-06-27_00-00-17](/Users/tiga/Desktop/code/vue3-h5-template/docs/assets/img/Snipaste_2024-06-27_00-00-17.png)
+
+基于 Iconify [图标集网站](https://icon-sets.iconify.design/)获取到你想要的图标名称后填入 `i-icon` 组件的 `icon` 属性即可。
+
+```vue
+<i-icon icon="fa6-solid:heart" />
+```
+
+配合 VS Code [编辑器扩展](https://marketplace.visualstudio.com/items?itemName=antfu.iconify)可在编码时实时预览图标！
+
+![Snipaste_2024-06-27_00-43-17](/Users/tiga/Desktop/code/vue3-h5-template/docs/assets/img/Snipaste_2024-06-27_00-44-55.png)
+
+注意，方法 ⑴ 是通过 Iconify API 按需请求获取图标，如果你的项目仅在内网环境部署，可通过👇🏻方法 ⑵ 离线使用图标。
+
+使用方法 ⑵ ：
+
+基于 Iconify [图标集网站](https://icon-sets.iconify.design/)搜索到你想要的图标，安装图标对应的图标集依赖包。
+
+```shell
+pnpm i -D @iconify-icons/fa6-solid
+```
+
+*依赖包名规则：@iconify-icons/[图标集]*
+
+![Snipaste_2024-06-27_00-07-10](/Users/tiga/Desktop/code/vue3-h5-template/docs/assets/img/Snipaste_2024-06-27_00-07-10.png)
+
+引入你想要的图标 data，赋值给 `i-icon` 组件的 `icon` 属性即可。
+
+*图标路径规则：@iconify-icons/[图标集]/[图标名]*
+
+```ts
+import Fa6SolidHeart from "@iconify-icons/fa6-solid/heart";
+```
+
+```vue
+<i-icon :icon="Fa6SolidHeart" />
+```
+
+案例代码可参考本项目的 `tools` [页面](https://github.com/yulimchen/vue3-h5-template/blob/master/src/views/tools/index.vue)，想对强大的 Iconify 了解更多？请戳 👉 https://iconify.design/docs/
+
+
+
+② 本地 SVG 文件图标
 
 
 > 1. 将 svg 图标文件放在 `src/icons/svg` 目录下
