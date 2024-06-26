@@ -2,6 +2,7 @@
   "recommendations": [
     "Vue.volar",
     "bradlc.vscode-tailwindcss",
-    "mikestead.dotenv"
+    "mikestead.dotenv",
+    "antfu.iconify"
   ]
 }
