@@ -128,7 +128,7 @@ Iconify 拥有图标数量超过 20 万的图标库，同时文档比较友好�
 
 使用方法 ⑴：
 
-![Snipaste_2024-06-27_00-00-17](/Users/tiga/Desktop/code/vue3-h5-template/docs/assets/img/Snipaste_2024-06-27_00-00-17.png)
+![Snipaste_2024-06-27_00-00-17](docs/assets/img/Snipaste_2024-06-27_00-00-17.png)
 
 基于 Iconify [图标集网站](https://icon-sets.iconify.design/)获取到你想要的图标名称后填入 `i-icon` 组件的 `icon` 属性即可。
 
@@ -138,7 +138,7 @@ Iconify 拥有图标数量超过 20 万的图标库，同时文档比较友好�
 
 配合 VS Code [编辑器扩展](https://marketplace.visualstudio.com/items?itemName=antfu.iconify)可在编码时实时预览图标！
 
-![Snipaste_2024-06-27_00-43-17](/Users/tiga/Desktop/code/vue3-h5-template/docs/assets/img/Snipaste_2024-06-27_00-44-55.png)
+![Snipaste_2024-06-27_00-43-17](docs/assets/img/Snipaste_2024-06-27_00-44-55.png)
 
 注意，方法 ⑴ 是通过 Iconify API 按需请求获取图标，如果你的项目仅在内网环境部署，可通过👇🏻方法 ⑵ 离线使用图标。
 
@@ -152,7 +152,7 @@ pnpm i -D @iconify-icons/fa6-solid
 
 *依赖包名规则：@iconify-icons/[图标集]*
 
-![Snipaste_2024-06-27_00-07-10](/Users/tiga/Desktop/code/vue3-h5-template/docs/assets/img/Snipaste_2024-06-27_00-07-10.png)
+![Snipaste_2024-06-27_00-07-10](docs/assets/img/Snipaste_2024-06-27_00-07-10.png)
 
 引入你想要的图标 data，赋值给 `i-icon` 组件的 `icon` 属性即可。
 
