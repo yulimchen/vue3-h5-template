@@ -2,6 +2,33 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [0.6.0](https://github.com/yulimchen/vue3-h5-template/compare/v0.5.9...v0.6.0) (2024-06-27)
+
+
+### ♻️ Code Refactoring | 代码重构
+
+* 移除 CJS 配置 ([6754982](https://github.com/yulimchen/vue3-h5-template/commit/6754982edc374aeda9ac57e99698ef67b5be6397))
+
+
+### ✨ Features | 新功能
+
+* 集成 iconify 图标 ([d1c2611](https://github.com/yulimchen/vue3-h5-template/commit/d1c2611fc9a66fef5eef3d86a28ca32750ac8e7f))
+
+
+### 🚀 Chore | 构建/工程依赖/工具
+
+* 增加 `Iconify` 编辑器扩展推荐 ([747f504](https://github.com/yulimchen/vue3-h5-template/commit/747f504a0288ef1f12f1c054a0bd56488a4133ba))
+* 调整视口适配转换为 vmin 单位 ([bb4ae78](https://github.com/yulimchen/vue3-h5-template/commit/bb4ae785e4857af6e164637b5b2fd44f9339efe7))
+
+
+### ✏️ Documentation | 文档
+
+* 修复文档图片路径 ([b22620d](https://github.com/yulimchen/vue3-h5-template/commit/b22620d50adec2e0cf3438e086c899474fa0bf30))
+* 文档更新 ([9beee9b](https://github.com/yulimchen/vue3-h5-template/commit/9beee9bc2d6aa592f46ffef5a829fdecfc8a34db))
+* 文档更新 ([9c53935](https://github.com/yulimchen/vue3-h5-template/commit/9c539350d6a079adec2ec6cc066867d413195311))
+* 文档更新 ([2461454](https://github.com/yulimchen/vue3-h5-template/commit/24614543b8cdd5727681f81b3a49c9251fd132a0))
+* 版权信息更新 ([b7fc912](https://github.com/yulimchen/vue3-h5-template/commit/b7fc912ad6acb18c131ff1d4cc3465377383419e))
+
 ### [0.5.9](https://github.com/yulimchen/vue3-h5-template/compare/v0.5.8...v0.5.9) (2024-05-19)
 
 
