@@ -341,6 +341,8 @@ feat(layout): 布局完成
 
  [vue-vben-admin](https://github.com/vbenjs/vue-vben-admin)
 
+Font Awesome Solid 图标由 [Dave Gandy](https://github.com/FortAwesome/Font-Awesome) 创作，基于 [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/) 许可发布。
+
 
 
 ## License
