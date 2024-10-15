@@ -1,7 +1,8 @@
 import { useDarkModeStoreHook } from "@/store/modules/darkMode";
+import { toRefs } from "vue";
 
 export function useDarkMode() {
-  return useDarkModeStoreHook().darkMode;
+  return toRefs(useDarkModeStoreHook()).darkMode;
 }
 
 export function useToggleDarkMode(event?: TouchEvent | MouseEvent) {

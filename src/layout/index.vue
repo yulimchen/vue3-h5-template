@@ -8,11 +8,13 @@ import { computed } from "vue";
 const cachedViews = computed(() => {
   return useCachedViewStoreHook().cachedViewList;
 });
+
+const isDarkMode = useDarkMode();
 </script>
 
 <template>
   <div class="app-wrapper">
-    <van-config-provider :theme="useDarkMode() ? 'dark' : 'light'">
+    <van-config-provider :theme="isDarkMode ? 'dark' : 'light'">
       <nav-bar />
       <router-view v-slot="{ Component }">
         <keep-alive :include="cachedViews">
