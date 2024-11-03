@@ -213,8 +213,11 @@ const routes: Array<RouteRecordRaw> = [
 
 ```vue
 <!-- src/views/about/index.vue -->
-<script setup lang="ts" name="About">
-	// 使用了 `vite-plugin-vue-setup-extend` 插件，可在 `setup` 语法糖标签上添加 `name` 属性为组件命名
+<script setup lang="ts">
+// Vue3.3+ defineOptions 宏
+defineOptions({
+  name: "About"
+});
 </script>
 
 <template>

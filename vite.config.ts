@@ -7,7 +7,6 @@ import { VantResolver } from "unplugin-vue-components/resolvers";
 import { createSvgIconsPlugin } from "vite-plugin-svg-icons";
 import path from "path";
 import mockDevServerPlugin from "vite-plugin-mock-dev-server";
-import vueSetupExtend from "vite-plugin-vue-setup-extend";
 import viteCompression from "vite-plugin-compression";
 import { createHtmlPlugin } from "vite-plugin-html";
 import { enableCDN } from "./build/cdn";
@@ -37,8 +36,6 @@ export default defineConfig(({ mode }) => {
         // 指定 symbolId 格式
         symbolId: "icon-[dir]-[name]"
       }),
-      // 允许 setup 语法糖上添加组件名属性
-      vueSetupExtend(),
       // 生产环境 gzip 压缩资源
       viteCompression(),
       // 注入模板数据

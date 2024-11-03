@@ -1,5 +1,9 @@
-<script setup lang="ts" name="Demo">
+<script setup lang="ts">
 import { reactive } from "vue";
+
+defineOptions({
+  name: "Demo"
+});
 
 const contentList = reactive([
   "✔ ⚡ Vue3 + Vite5",

@@ -75,7 +75,6 @@
     "vite-plugin-html": "^3.2.2",
     "vite-plugin-mock-dev-server": "^1.5.0",
     "vite-plugin-svg-icons": "^2.0.1",
-    "vite-plugin-vue-setup-extend": "^0.4.0",
     "vue-eslint-parser": "^9.4.2",
     "vue-tsc": "^2.0.19"
   },

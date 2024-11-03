@@ -1,4 +1,4 @@
-<script setup lang="ts" name="Tools">
+<script setup lang="ts">
 import { getListApi, getListApiError } from "@/api/mock";
 import { reactive } from "vue";
 import { showFailToast, showSuccessToast } from "vant";
@@ -9,6 +9,10 @@ import Fa6SolidBaby from "@iconify-icons/fa6-solid/baby";
 import Fa6SolidBasketball from "@iconify-icons/fa6-solid/basketball";
 import Fa6SolidBurger from "@iconify-icons/fa6-solid/burger";
 import Fa6SolidChessKnight from "@iconify-icons/fa6-solid/chess-knight";
+
+defineOptions({
+  name: "Tools"
+});
 
 const showList: string[] = reactive([]);
 

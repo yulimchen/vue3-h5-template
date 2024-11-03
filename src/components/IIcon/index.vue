@@ -1,6 +1,10 @@
-<script setup lang="ts" name="IIcon">
+<script setup lang="ts">
 import { Icon as IconifyIconComp } from "@iconify/vue";
 import type { IconifyIcon } from "@iconify/vue";
+
+defineOptions({
+  name: "IIcon"
+});
 
 const props = defineProps<{
   icon: string | IconifyIcon;
