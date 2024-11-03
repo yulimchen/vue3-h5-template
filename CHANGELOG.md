@@ -2,6 +2,23 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.6.1](https://github.com/yulimchen/vue3-h5-template/compare/v0.6.0...v0.6.1) (2024-11-03)
+
+
+### ✨ Features | 新功能
+
+* 增加主题切换动画 ([930637d](https://github.com/yulimchen/vue3-h5-template/commit/930637dec8df057cd27f0a6eeb6970a3a6310a36))
+
+
+### ♻️ Code Refactoring | 代码重构
+
+* 使用 `defineOptions` 特性 ([33bc52a](https://github.com/yulimchen/vue3-h5-template/commit/33bc52ac227248332f0ca8c782ddc697aa1ce1a9))
+
+
+### 🚀 Chore | 构建/工程依赖/工具
+
+* **deps:** 依赖升级 ([cdbf143](https://github.com/yulimchen/vue3-h5-template/commit/cdbf143ec1f1424a708a2eb0c20b8a11bb3fdf1f))
+
 ## [0.6.0](https://github.com/yulimchen/vue3-h5-template/compare/v0.5.9...v0.6.0) (2024-06-27)
 
 
