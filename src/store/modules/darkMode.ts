@@ -1,16 +1,7 @@
 import { defineStore } from "pinia";
 import { store } from "@/store";
 import { nextTick } from "vue";
-
-const darkModeKey = "__dark_mode__";
-const isDarkMode = () => {
-  const darkMode = window.localStorage.getItem(darkModeKey);
-  if (darkMode) {
-    return darkMode === "true";
-  } else {
-    return window.matchMedia("(prefers-color-scheme: dark)").matches;
-  }
-};
+import { isDarkMode, updateDarkMode } from "@/utils/darkMode";
 
 export const useDarkModeStore = defineStore({
   id: "dark-mode",
@@ -25,13 +16,7 @@ export const useDarkModeStore = defineStore({
 
       const toggle = () => {
         this.darkMode = !this.darkMode;
-        if (this.darkMode) {
-          document.documentElement.classList.add("dark");
-          window.localStorage.setItem(darkModeKey, "true");
-        } else {
-          document.documentElement.classList.remove("dark");
-          window.localStorage.setItem(darkModeKey, "false");
-        }
+        updateDarkMode(this.darkMode);
       };
 
       if (!isAppearanceTransition) {

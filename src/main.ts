@@ -8,9 +8,11 @@ import "./styles/index.less";
 import "./styles/tailwind.css";
 // svg icon
 import "virtual:svg-icons-register";
-
+import { initializeDarkMode } from "@/utils/darkMode";
 import App from "./App.vue";
 import router from "./router";
+
+initializeDarkMode();
 
 const app = createApp(App);
 app.use(store);
