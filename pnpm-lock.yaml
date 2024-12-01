@@ -11,6 +11,9 @@ importers:
       axios:
         specifier: ^1.7.7
         version: 1.7.7
+      clsx:
+        specifier: ^2.1.1
+        version: 2.1.1
       normalize.css:
         specifier: ^8.0.1
         version: 8.0.1
@@ -20,6 +23,9 @@ importers:
       pinia:
         specifier: ^2.2.5
         version: 2.2.5(typescript@5.6.3)(vue@3.5.12(typescript@5.6.3))
+      tailwind-merge:
+        specifier: ^2.5.4
+        version: 2.5.4
       vant:
         specifier: ^4.9.8
         version: 4.9.8(vue@3.5.12(typescript@5.6.3))
@@ -1212,6 +1218,10 @@ packages:
   clone@2.1.2:
     resolution: {integrity: sha512-3Pe/CF1Nn94hyhIYpjtiLhdCoEoz0DqQ+988E9gmeEdQZlojxnOb74wctFyuwWQHzqyf9X7C7MG8juUpqBJT8w==}
     engines: {node: '>=0.8'}
+
+  clsx@2.1.1:
+    resolution: {integrity: sha512-eYm0QWBtUrBWZWG0d386OGAw16Z995PiOVo2B7bjWSbHedGl5e0ZWaq65kOGgUSNesEIDkB9ISbTg/JK9dhCZA==}
+    engines: {node: '>=6'}
 
   cnjm-postcss-px-to-viewport@1.0.1:
     resolution: {integrity: sha512-0Gi8ECxoHZygnC9IS3J3IbNwP16CdZiS1Sj6JT6Di2qnduz3eNIfZ/zXVSqia5Kw85a4PAUXmOqTQmQY0UYYMQ==}
@@ -3355,6 +3365,9 @@ packages:
     resolution: {integrity: sha512-vrozgXDQwYO72vHjUb/HnFbQx1exDjoKzqx23aXEg2a9VIg2TSFZ8FmeZpTjUCFMYw7mpX4BE2SFu8wI7asYsw==}
     engines: {node: ^14.18.0 || >=16.0.0}
 
+  tailwind-merge@2.5.4:
+    resolution: {integrity: sha512-0q8cfZHMu9nuYP/b5Shb7Y7Sh1B7Nnl5GqNr1U+n2p6+mybvRtayrQ+0042Z5byvTA8ihjlP8Odo8/VnHbZu4Q==}
+
   tailwindcss@3.4.14:
     resolution: {integrity: sha512-IcSvOcTRcUtQQ7ILQL5quRDg7Xs93PdJEk1ZLbhhvJc7uj/OAhYOnruEiwnGgBvUtaUAJ8/mhSw1o8L2jCiENA==}
     engines: {node: '>=14.0.0'}
@@ -4887,6 +4900,8 @@ snapshots:
       wrap-ansi: 7.0.0
 
   clone@2.1.2: {}
+
+  clsx@2.1.1: {}
 
   cnjm-postcss-px-to-viewport@1.0.1(postcss@8.4.47):
     dependencies:
@@ -7202,6 +7217,8 @@ snapshots:
     dependencies:
       '@pkgr/core': 0.1.1
       tslib: 2.8.1
+
+  tailwind-merge@2.5.4: {}
 
   tailwindcss@3.4.14:
     dependencies:

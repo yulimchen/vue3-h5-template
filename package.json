@@ -28,9 +28,11 @@
   },
   "dependencies": {
     "axios": "^1.7.7",
+    "clsx": "^2.1.1",
     "normalize.css": "^8.0.1",
     "nprogress": "^0.2.0",
     "pinia": "^2.2.5",
+    "tailwind-merge": "^2.5.4",
     "vant": "^4.9.8",
     "vue": "^3.5.12",
     "vue-router": "^4.4.5"
