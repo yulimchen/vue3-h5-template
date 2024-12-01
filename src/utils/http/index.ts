@@ -4,7 +4,7 @@ import Axios, {
   type AxiosResponse,
   type AxiosRequestConfig
 } from "axios";
-import { ContentTypeEnum, ResultEnum } from "@/enums/requestEnum";
+import { ContentTypeEnum, ResultEnum } from "@/enums/request-enum";
 import NProgress from "../progress";
 import { showFailToast } from "vant";
 import "vant/es/toast/style";

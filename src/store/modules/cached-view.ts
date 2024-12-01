@@ -18,7 +18,9 @@ export const useCachedViewStore = defineStore({
     },
     delCachedView(view: toRouteType) {
       const index = this.cachedViewList.indexOf(view.name as string);
-      index > -1 && this.cachedViewList.splice(index, 1);
+      if (index > -1) {
+        this.cachedViewList.splice(index, 1);
+      }
     },
     delAllCachedViews() {
       this.cachedViewList = [] as string[];

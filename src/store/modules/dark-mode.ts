@@ -1,7 +1,7 @@
 import { defineStore } from "pinia";
 import { store } from "@/store";
 import { nextTick } from "vue";
-import { isDarkMode, updateDarkMode } from "@/utils/darkMode";
+import { isDarkMode, updateDarkMode } from "@/utils/dark-mode";
 
 export const useDarkModeStore = defineStore({
   id: "dark-mode",
