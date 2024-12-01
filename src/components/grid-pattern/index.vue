@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { useId } from "@/hooks/useId";
+import { useId } from "@/composables/useId";
 
 defineOptions({
   name: "GridPattern"

@@ -1,5 +1,8 @@
 <script setup lang="ts">
-import { useDarkMode, useToggleDarkMode } from "@/hooks/useToggleDarkMode";
+import {
+  useDarkMode,
+  useToggleDarkMode
+} from "@/composables/useToggleDarkMode";
 
 const onClickRight = (event: TouchEvent | MouseEvent) => {
   useToggleDarkMode(event);

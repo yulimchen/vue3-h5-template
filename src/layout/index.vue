@@ -2,7 +2,7 @@
 import tabbar from "@/components/tabbar/index.vue";
 import NavBar from "@/components/nav-bar/index.vue";
 import { useCachedViewStoreHook } from "@/store/modules/cached-view";
-import { useDarkMode } from "@/hooks/useToggleDarkMode";
+import { useDarkMode } from "@/composables/useToggleDarkMode";
 import { computed } from "vue";
 
 const cachedViews = computed(() => {
