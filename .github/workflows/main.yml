@@ -16,17 +16,19 @@ jobs:
       - name: Setup node
         uses: actions/setup-node@v4
         with:
-          node-version: "18"
+          node-version: 18
           registry-url: https://registry.npmjs.com/
 
       - name: Setup pnpm
         uses: pnpm/action-setup@v3
         with:
           version: 9
+          run_install: false
 
       - name: Deploy 🔧
         run: |
           pnpm install --no-frozen-lockfile
+          sed -i "s#VITE_PUBLIC_PATH = /#VITE_PUBLIC_PATH = /vue3-h5-template/#g" $(pwd)/.env.production
           pnpm build
 
       - name: Deploy 🚀
