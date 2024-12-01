@@ -1,8 +1,9 @@
 
 
 <div align="center">
-	<img src="src/assets/logo_melomini.png" alt="logo_melomini" style="width:20%;" />
+	<img src="docs/assets/img/banner.jpg" alt="banner" />
 </div>
+
 
 <div align="center">
 	<a href="https://github.com/yulimchen/vue3-h5-template/blob/master/LICENSE">
@@ -20,7 +21,7 @@
 </div>
 
 
-<h1 align="center">Vue3 h5 template</h1>
+<h1 align="center">Vue3 H5 Template</h1>
 
 **🌱 基于 Vue3 全家桶、TS/JS、Vite 构建工具，开箱即用的移动端项目基础模板**
 
@@ -46,16 +47,11 @@
 
 **主分支默认 TypeScript，如果你希望使用的是 JavaScript 语言，请切换 [js-version](https://github.com/yulimchen/vue3-h5-template/tree/js-version) 分支进行开发**
 
-## 在线预览Preview
+
+
+## 在线预览 Preview
 
 👓 [点击这里](https://yulimchen.github.io/vue3-h5-template/)（PC浏览器请切换手机端模式）
-
-
-
-
-## 截图
-
-![](docs/assets/img/Snipaste_2023-05-04_21-52-10.png)
 
 
 
@@ -114,13 +110,13 @@ cd vue3-h5-template
 
 
 
-### - <span id="vant">按需引入 vant 组件</span>
+### <span id="vant">按需引入 vant 组件</span>
 
 全量引入组件库太过臃肿，项目中使用 `unplugin-vue-components` 插件进行按需自动引入组件，可通过[官方文档](https://vant-ui.github.io/vant/#/zh-CN/quickstart#2.-pei-zhi-cha-jian)了解更多。
 
 
 
-### - <span id="icon">图标使用</span>
+### <span id="icon">图标使用</span>
 
 ① **Iconify 图标（推荐）**
 
@@ -189,7 +185,7 @@ import Fa6SolidHeart from "@iconify-icons/fa6-solid/heart";
 
 
 
-### - <span id="router">路由缓存 & 命名注意 ⚠</span>
+### <span id="router">路由缓存 & 命名注意 ⚠</span>
 
 组件默认开启缓存，如某个组件需关闭缓存，在对应路由 `meta` 内的 `noCache` 字段赋值为 `true` 即可。
 
@@ -227,7 +223,7 @@ defineOptions({
 
 
 
-### - <span id="console">调试面板 eruda</span>
+### <span id="console">调试面板 eruda</span>
 
 ![](docs/assets/img/Snipaste_2023-05-04_21-58-28.png)
 
@@ -242,7 +238,7 @@ VITE_ENABLE_ERUDA = "true"
 
 
 
-### - <span id="page-title">动态设置页面标题</span>
+### <span id="page-title">动态设置页面标题</span>
 
 在路由全局前置守卫中：
 
@@ -261,13 +257,13 @@ router.beforeEach((to: toRouteType, from, next) => {
 
 
 
-### - <span id="mock">开发环境 Mock</span>
+### <span id="mock">开发环境 Mock</span>
 
 > 本项目开发环境支持 mock 请求数据，在 `mock` 目录中可配置接口和数据，具体见[文档](https://github.com/pengzhanbo/vite-plugin-mock-dev-server/blob/main/README.zh-CN.md)。
 
 
 
-### - <span id="viewport">vw 视口适配</span>
+### <span id="viewport">vw 视口适配</span>
 
 使用 `cnjm-postcss-px-to-viewport` 进行视口适配，相关配置见项目根目录下 `postcss.config.js`。
 
@@ -290,7 +286,7 @@ module.exports = {
 
 
 
-### - <span id="tailwindcss">Tailwindcss 原子类框架</span>
+### <span id="tailwindcss">Tailwindcss 原子类框架</span>
 
 Tailwindcss 从 3.0 版本开始默认使用 `JIT` 模式，打包代码不再臃肿，结合 `vite` 使用非常香~ 如果你还没使用过类似的框架，Tailwindcss 首页的[示例](https://tailwindcss.com/)非常直观。
 
@@ -298,7 +294,7 @@ Tailwindcss 从 3.0 版本开始默认使用 `JIT` 模式，打包代码不再�
 
 
 
-### - <span id="git">Git 提交信息规范</span>
+### <span id="git">Git 提交信息规范</span>
 
 项目使用 `husky` 规范 Git 提交信息，遵循社区主流的 [Angular](https://github.com/conventional-changelog/conventional-changelog/tree/master/packages/conventional-changelog-angular) 规范。
 
@@ -327,9 +323,15 @@ feat(layout): 布局完成
 
 
 
-### - <span id="CDN">CDN 生产环境依赖</span>
+### <span id="CDN">CDN 生产环境依赖</span>
 
 本模板生产环境默认不开启 CDN 加载依赖，如需开启生产环境加载 CDN 依赖，在根目录生产环境变量文件 `.env.production` 中修改 `VITE_CDN_DEPS` 的值为 `true` 重新打包即可。
+
+
+
+## 捐赠
+
+![](docs/assets/img/donate.png)
 
 
 
