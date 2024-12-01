@@ -2,6 +2,29 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [0.7.0](https://github.com/yulimchen/vue3-h5-template/compare/v0.6.1...v0.7.0) (2024-12-01)
+
+
+### 🐛 Bug Fixes | Bug 修复
+
+* 修复黑暗模式初始化缺失类名问题 ([831599e](https://github.com/yulimchen/vue3-h5-template/commit/831599e162b09dbf0b00379d06499eb6e21b4bdf))
+
+
+### ♻️ Code Refactoring | 代码重构
+
+* **demo:** 调整 demo 页面样式 ([6424739](https://github.com/yulimchen/vue3-h5-template/commit/64247395eaa840056678ca81059614e636ff5743))
+
+
+### 🚀 Chore | 构建/工程依赖/工具
+
+* `composables` 目录命名 ([15de708](https://github.com/yulimchen/vue3-h5-template/commit/15de70893d9387a121c169f5cd639247719deac8))
+* 文件命名调整 ([9aca455](https://github.com/yulimchen/vue3-h5-template/commit/9aca455cd184856bee05453100603c1bde27933b))
+
+
+### ✏️ Documentation | 文档
+
+* banner 图更换 ([f4e18e9](https://github.com/yulimchen/vue3-h5-template/commit/f4e18e90703dffd5d9fd879b4ce07baebde9da6f))
+
 ### [0.6.1](https://github.com/yulimchen/vue3-h5-template/compare/v0.6.0...v0.6.1) (2024-11-03)
 
 
