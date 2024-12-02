@@ -331,7 +331,11 @@ feat(layout): 布局完成
 
 ## 捐赠
 
-![](docs/assets/img/donate.png)
+如果本项目对你有所帮助，可以考虑赞赏一下作者 : D
+
+<div align="center">
+	<img src="docs/assets/img/donate.png" alt="donate" style="width:50%;" />
+</div>
 
 
 
