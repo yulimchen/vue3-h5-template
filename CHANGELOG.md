@@ -2,6 +2,19 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.7.1](https://github.com/yulimchen/vue3-h5-template/compare/v0.7.0...v0.7.1) (2025-11-09)
+
+
+### 🚀 Chore | 构建/工程依赖/工具
+
+* 删除 Tabbar ([0fdfb6c](https://github.com/yulimchen/vue3-h5-template/commit/0fdfb6c9f0d01425f10ae99cbf3e8ae38fd916c2))
+* 添加`tabbar` ([875b491](https://github.com/yulimchen/vue3-h5-template/commit/875b491a791b5eb8ed27c9c5472960791325584d))
+
+
+### ✏️ Documentation | 文档
+
+* 文档更新 ([82974f6](https://github.com/yulimchen/vue3-h5-template/commit/82974f64a252c1ce49fd37dbfa1238c562262348))
+
 ## [0.7.0](https://github.com/yulimchen/vue3-h5-template/compare/v0.6.1...v0.7.0) (2024-12-01)
 
 
