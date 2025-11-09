@@ -1,6 +1,11 @@
 export default {
   plugins: {
     tailwindcss: {},
+    // 解决tailwindcss默认的是rem，rem不会转换为vmin的问题
+    "postcss-rem-to-pixel": {
+      rootValue: 16, // 根元素字体大小（默认 16px）
+      propList: ["*"] // 转换所有属性的 rem 单位
+    },
     // 使用 cnjm-postcss-px-to-viewport 规避 postcss.plugin was deprecated 警告
     "cnjm-postcss-px-to-viewport": {
       viewportWidth: 375, // 根据设计稿设定
