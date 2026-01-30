@@ -1,28 +1,27 @@
 <script setup lang="ts">
-import { useId } from "@/composables/useId";
+import { useId } from '@/composables/useId'
 
 defineOptions({
-  name: "GridPattern"
-});
+  name: 'GridPattern',
+})
 
-interface GridPatternProps {
-  width?: number;
-  height?: number;
-  x?: number;
-  y?: number;
-  squares?: Array<[x: number, y: number]> | null;
-  strokeDasharray?: string;
-}
 const props = withDefaults(defineProps<GridPatternProps>(), {
   width: 40,
   height: 40,
   x: -1,
   y: -1,
   squares: null,
-  strokeDasharray: "0"
-});
-
-const id = `pattern-${useId()}`;
+  strokeDasharray: '0',
+})
+interface GridPatternProps {
+  width?: number
+  height?: number
+  x?: number
+  y?: number
+  squares?: Array<[x: number, y: number]> | null
+  strokeDasharray?: string
+}
+const id = `pattern-${useId()}`
 </script>
 
 <template>

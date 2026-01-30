@@ -1,10 +1,10 @@
 <script setup lang="ts">
-import { cn } from "@/utils/class-names";
-import GridPattern from "./index.vue";
+import { cn } from '@/utils/class-names'
+import GridPattern from './index.vue'
 
 defineOptions({
-  name: "GridPatternDashed"
-});
+  name: 'GridPatternDashed',
+})
 </script>
 
 <template>
@@ -19,7 +19,7 @@ defineOptions({
       stroke-dasharray="4 2"
       :class="
         cn(
-          '[mask-image:radial-gradient(260px_circle_at_top,white,transparent)]'
+          '[mask-image:radial-gradient(260px_circle_at_top,white,transparent)]',
         )
       "
     />

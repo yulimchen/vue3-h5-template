@@ -1,19 +1,19 @@
 <script setup lang="ts">
-import tabbar from "@/components/tabbar/index.vue";
-import NavBar from "@/components/nav-bar/index.vue";
-import { useCachedViewStoreHook } from "@/store/modules/cached-view";
-import { useDarkMode } from "@/composables/useToggleDarkMode";
-import { computed } from "vue";
+import { computed } from 'vue'
+import NavBar from '@/components/nav-bar/index.vue'
+import tabbar from '@/components/tabbar/index.vue'
+import { useDarkMode } from '@/composables/useToggleDarkMode'
+import { useCachedViewStoreHook } from '@/store/modules/cached-view'
 
 const cachedViews = computed(() => {
-  return useCachedViewStoreHook().cachedViewList;
-});
+  return useCachedViewStoreHook().cachedViewList
+})
 </script>
 
 <template>
   <div class="app-wrapper">
     <van-config-provider :theme="useDarkMode() ? 'dark' : 'light'">
-      <nav-bar />
+      <NavBar />
       <router-view v-slot="{ Component }">
         <keep-alive :include="cachedViews">
           <component :is="Component" />

@@ -16,7 +16,7 @@ plugins:
   #     param1: 1
   #     param2: 2
 
-- removeAttrs:
-    attrs:
-      - 'fill'
-      - 'fill-rule'
+  - removeAttrs:
+      attrs:
+        - fill
+        - fill-rule

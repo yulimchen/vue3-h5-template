@@ -1,20 +1,10 @@
 <script setup lang="ts">
-import { useId } from "@/composables/useId";
+import { useId } from '@/composables/useId'
 
 defineOptions({
-  name: "DotPattern"
-});
+  name: 'DotPattern',
+})
 
-interface DotPatternProps {
-  width?: number;
-  height?: number;
-  x?: number;
-  y?: number;
-  cx?: number;
-  cy?: number;
-  cr?: number;
-  userSpaceOnUse?: string;
-}
 const props = withDefaults(defineProps<DotPatternProps>(), {
   width: 16,
   height: 16,
@@ -23,9 +13,19 @@ const props = withDefaults(defineProps<DotPatternProps>(), {
   cx: 1,
   cy: 1,
   cr: 1,
-  userSpaceOnUse: "userSpaceOnUse"
-});
-const id = `pattern-${useId()}`;
+  userSpaceOnUse: 'userSpaceOnUse',
+})
+interface DotPatternProps {
+  width?: number
+  height?: number
+  x?: number
+  y?: number
+  cx?: number
+  cy?: number
+  cr?: number
+  userSpaceOnUse?: string
+}
+const id = `pattern-${useId()}`
 </script>
 
 <template>

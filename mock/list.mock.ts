@@ -1,29 +1,29 @@
-import { defineMock } from "vite-plugin-mock-dev-server";
-import Mock from "mockjs";
+import Mock from 'mockjs'
+import { defineMock } from 'vite-plugin-mock-dev-server'
 
 export default defineMock([
   {
-    url: "/dev-api/list/get",
+    url: '/dev-api/list/get',
     delay: 1000,
     body: {
       code: 0,
-      message: "OK",
+      message: 'OK',
       result: Mock.mock({
-        "list|10": [
+        'list|10': [
           {
-            "id|+1": 1
-          }
-        ]
-      })
-    }
+            'id|+1': 1,
+          },
+        ],
+      }),
+    },
   },
   {
-    url: "/dev-api/list/error",
+    url: '/dev-api/list/error',
     delay: 1000,
     body: {
       code: 1,
-      message: "ERROR",
-      result: null
-    }
-  }
-]);
+      message: 'ERROR',
+      result: null,
+    },
+  },
+])

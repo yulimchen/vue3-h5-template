@@ -1,10 +1,10 @@
 <script setup lang="ts">
-import { cn } from "@/utils/class-names";
-import GridPattern from "./index.vue";
+import { cn } from '@/utils/class-names'
+import GridPattern from './index.vue'
 
 defineOptions({
-  name: "GridPatternLinearGradient"
-});
+  name: 'GridPatternLinearGradient',
+})
 </script>
 
 <template>
@@ -18,7 +18,7 @@ defineOptions({
       :y="-1"
       :class="
         cn(
-          '[mask-image:linear-gradient(to_bottom_right,white,transparent,transparent)]'
+          '[mask-image:linear-gradient(to_bottom_right,white,transparent,transparent)]',
         )
       "
     />

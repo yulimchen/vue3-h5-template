@@ -1,28 +1,28 @@
 <script setup lang="ts">
-import { reactive } from "vue";
-import GridPatternDashed from "@/components/grid-pattern/grid-pattern-dashed.vue";
+import { reactive } from 'vue'
+import GridPatternDashed from '@/components/grid-pattern/grid-pattern-dashed.vue'
 
 defineOptions({
-  name: "Demo"
-});
+  name: 'Demo',
+})
 
 const contentList = reactive([
-  { text: "⚡ Vue3 + Vite5", fullWidth: false },
-  { text: "🍕 TypeScript", fullWidth: false },
-  { text: "✨ Vant4 组件库", fullWidth: false },
-  { text: "🍍 Pinia 状态管理", fullWidth: false },
-  { text: "🌀 Tailwindcss 原子类框架", fullWidth: true },
-  { text: "🗺️ Vue-router 4", fullWidth: false },
-  { text: "👏 集成多种图标方案", fullWidth: false },
-  { text: "🔧 集成 ESLint", fullWidth: false },
-  { text: "🌓 支持深色模式", fullWidth: false },
-  { text: "📏 vmin 视口适配", fullWidth: false },
-  { text: "📡 Axios 封装", fullWidth: false },
-  { text: "📦 打包资源 gzip 压缩", fullWidth: false },
-  { text: "🛠️ 开发 Mock 数据", fullWidth: false },
-  { text: "🚀 首屏加载动画", fullWidth: false },
-  { text: "🔍 开发环境调试面板", fullWidth: false }
-]);
+  { text: '⚡ Vue3 + Vite5', fullWidth: false },
+  { text: '🍕 TypeScript', fullWidth: false },
+  { text: '✨ Vant4 组件库', fullWidth: false },
+  { text: '🍍 Pinia 状态管理', fullWidth: false },
+  { text: '🌀 Tailwindcss 原子类框架', fullWidth: true },
+  { text: '🗺️ Vue-router 4', fullWidth: false },
+  { text: '👏 集成多种图标方案', fullWidth: false },
+  { text: '🔧 集成 ESLint', fullWidth: false },
+  { text: '🌓 支持深色模式', fullWidth: false },
+  { text: '📏 vmin 视口适配', fullWidth: false },
+  { text: '📡 Axios 封装', fullWidth: false },
+  { text: '📦 打包资源 gzip 压缩', fullWidth: false },
+  { text: '🛠️ 开发 Mock 数据', fullWidth: false },
+  { text: '🚀 首屏加载动画', fullWidth: false },
+  { text: '🔍 开发环境调试面板', fullWidth: false },
+])
 </script>
 
 <template>
@@ -32,7 +32,7 @@ const contentList = reactive([
       class="block w-[120px] mx-auto mb-[30px] pt-[40px]"
       alt="Vue logo"
       src="~@/assets/logo_melomini.png"
-    />
+    >
     <div
       class="text-[14px] py-[12px] px-[20px] rounded-[12px] bg-[var(--color-block-background)] mt-[14px]"
     >
@@ -59,9 +59,8 @@ const contentList = reactive([
       <div
         v-for="item in contentList"
         :key="item.text"
-        :class="[
-          'truncate p-[12px] rounded-[12px] border border-[var(--color-border)]',
-          item.fullWidth ? 'col-span-2' : ''
+        class="truncate p-[12px] rounded-[12px] border border-[var(--color-border)]" :class="[
+          item.fullWidth ? 'col-span-2' : '',
         ]"
       >
         {{ item.text }}

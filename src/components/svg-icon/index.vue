@@ -1,32 +1,33 @@
 <script setup lang="ts">
-import { isExternal } from "@/utils/validate";
-import { computed } from "vue";
+import { computed } from 'vue'
+import { isExternal } from '@/utils/validate'
 
 interface Props {
-  name: string;
-  className?: string;
+  name: string
+  className?: string
 }
 const props = withDefaults(defineProps<Props>(), {
-  name: "",
-  className: ""
-});
+  name: '',
+  className: '',
+})
 
-const isExternalIcon = computed(() => isExternal(props.name));
-const iconName = computed(() => `#icon-${props.name}`);
+const isExternalIcon = computed(() => isExternal(props.name))
+const iconName = computed(() => `#icon-${props.name}`)
 const svgClass = computed(() => {
   if (props.className) {
-    return "svg-icon " + props.className;
-  } else {
-    return "svg-icon";
+    return `svg-icon ${props.className}`
   }
-});
+  else {
+    return 'svg-icon'
+  }
+})
 // 外链 icon
 const styleExternalIcon = computed(() => {
   return {
-    mask: `url(${props.name}) no-repeat 50% 50%`,
-    "-webkit-mask": `url(${props.name}) no-repeat 50% 50%`
-  };
-});
+    'mask': `url(${props.name}) no-repeat 50% 50%`,
+    '-webkit-mask': `url(${props.name}) no-repeat 50% 50%`,
+  }
+})
 </script>
 
 <template>
