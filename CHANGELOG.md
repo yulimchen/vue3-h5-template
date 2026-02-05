@@ -2,6 +2,18 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.8.1](https://github.com/yulimchen/vue3-h5-template/compare/v0.8.0...v0.8.1) (2026-02-05)
+
+
+### 🚀 Chore | 构建/工程依赖/工具
+
+* 版本打印 ([9942def](https://github.com/yulimchen/vue3-h5-template/commit/9942def10dd7ff0715de01ecbbb70e049bb6e4a9))
+
+
+### ♻️ Code Refactoring | 代码重构
+
+* `store` 相关代码优化 ([6e830f2](https://github.com/yulimchen/vue3-h5-template/commit/6e830f2536d30886cda760e4ca6ef3aeff76c9a0))
+
 ## [0.8.0](https://github.com/yulimchen/vue3-h5-template/compare/v0.7.2...v0.8.0) (2026-02-05)
 
 
