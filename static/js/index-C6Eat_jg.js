@@ -1,0 +1,1 @@
+import{d as t,a3 as n,a4 as a,a6 as o,$ as r,aa as i,H as l,a0 as m}from"./index-SyWOAWPE.js";const p={class:"text-sm text-gray-500"},_=t({name:"About",__name:"index",setup(u){const s=i.version;return(c,e)=>(m(),n(l,null,[e[0]||(e[0]=a("div",null,"about",-1)),a("div",p," Version: "+o(r(s)),1)],64))}});export{_ as default};
