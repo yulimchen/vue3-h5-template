@@ -2,6 +2,25 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [0.8.0](https://github.com/yulimchen/vue3-h5-template/compare/v0.7.2...v0.8.0) (2026-02-05)
+
+
+### 🐛 Bug Fixes | Bug 修复
+
+* 去除 mock 插件警告 ([532388b](https://github.com/yulimchen/vue3-h5-template/commit/532388b1524eb99071e26b3a3c75d7a8c04045d2))
+
+
+### 🚀 Chore | 构建/工程依赖/工具
+
+* `eslint` 格式化代码 ([c82c74d](https://github.com/yulimchen/vue3-h5-template/commit/c82c74dd46dcfffada99fce2bd9ee0676d7ad04f))
+* `eslint` 规则改为 `@antfu/eslint-config` ([c31cb24](https://github.com/yulimchen/vue3-h5-template/commit/c31cb2452c8292bc13dc5cde8b08093f6b15586d))
+
+
+### ♻️ Code Refactoring | 代码重构
+
+* 代码优化 ([8a3b583](https://github.com/yulimchen/vue3-h5-template/commit/8a3b583b316e058be5f962393555638b150eb6f6))
+* 代码优化 ([02c3123](https://github.com/yulimchen/vue3-h5-template/commit/02c31236b88e43d503d2ba19f43eadb6c33ee095))
+
 ### [0.7.2](https://github.com/yulimchen/vue3-h5-template/compare/v0.7.1...v0.7.2) (2025-11-09)
 
 
