@@ -1,0 +1,1 @@
+import{d as a,Z as n,$ as s,a1 as o,W as r,a5 as i,F as l,X as m}from"./index-B_ih9iiB.js";const p={class:"text-sm text-gray-500"},_=a({name:"About",__name:"index",setup(u){const t=i.version;return(c,e)=>(m(),n(l,null,[e[0]||(e[0]=s("div",null,"about",-1)),s("div",p," Version: "+o(r(t)),1)],64))}});export{_ as default};
