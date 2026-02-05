@@ -8,6 +8,10 @@ export const useDarkModeStore = defineStore({
   state: () => ({
     darkMode: isDarkMode(),
   }),
+  getters: {
+    isDark: state => state.darkMode,
+    theme: state => state.darkMode ? 'dark' : 'light',
+  },
   actions: {
     toggleDarkMode(event?: TouchEvent | MouseEvent) {
       const isAppearanceTransition
