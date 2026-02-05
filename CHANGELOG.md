@@ -2,6 +2,24 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.8.2](https://github.com/yulimchen/vue3-h5-template/compare/v0.8.1...v0.8.2) (2026-02-05)
+
+
+### ⚡ Performance Improvements | 性能优化
+
+* `cached-view` 增加 `Set` 提升查找性能 ([ba751b6](https://github.com/yulimchen/vue3-h5-template/commit/ba751b69ca26641e4923c575eeb734db05e62248))
+
+
+### 🚀 Chore | 构建/工程依赖/工具
+
+* 类型调整 ([1135ebd](https://github.com/yulimchen/vue3-h5-template/commit/1135ebd828488ef3cf18deab1d90d296f77db598))
+* 添加 `@types/mockjs` ([9d4b2a9](https://github.com/yulimchen/vue3-h5-template/commit/9d4b2a9e94f26f32d14f227bb21d5ef3d2053bc1))
+
+
+### ✨ Features | 新功能
+
+* 增加 404 页面 ([4e04f01](https://github.com/yulimchen/vue3-h5-template/commit/4e04f018ba9d64323c7ed5595364f405126c9cac))
+
 ### [0.8.1](https://github.com/yulimchen/vue3-h5-template/compare/v0.8.0...v0.8.1) (2026-02-05)
 
 
