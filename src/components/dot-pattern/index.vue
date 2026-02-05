@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { useId } from '@/composables/useId'
+import { useId } from 'vue' // Vue 3.5+
 
 defineOptions({
   name: 'DotPattern',

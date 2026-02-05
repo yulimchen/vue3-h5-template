@@ -21,14 +21,16 @@ async function handleSuccessReq() {
   showSuccessToast('请求成功')
   showList.push(...list)
 }
-function handleErrorReq() {
-  getListApiError().then(
-    () => {},
-    (err) => {
-      console.log(err)
-      showFailToast('请求有误')
-    },
-  )
+async function handleErrorReq() {
+  try {
+    await getListApiError()
+  }
+  catch (err) {
+    if (import.meta.env.DEV) {
+      console.error('请求错误:', err)
+    }
+    showFailToast('请求有误')
+  }
 }
 
 const iconOnlineList = [
