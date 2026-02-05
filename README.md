@@ -223,9 +223,9 @@ VITE_ENABLE_ERUDA = "true"
 router.beforeEach((to: ToRouteType, from, next) => {
   // ...
   // 页面 title
-  setPageTitle(to.meta.title);
-  next();
-});
+  setPageTitle(to.meta.title)
+  next()
+})
 ```
 
 具体实现方法见文件 `src/utils/set-page-title.ts` 。

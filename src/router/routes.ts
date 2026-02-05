@@ -36,6 +36,16 @@ const routes: Array<RouteRecordRaw> = [
       },
     ],
   },
+  // 404 页面
+  {
+    path: '/:pathMatch(.*)*',
+    name: 'NotFound',
+    component: () => import('@/views/404.vue'),
+    meta: {
+      title: '页面未找到',
+      noCache: true,
+    },
+  },
 ]
 
 export default routes
