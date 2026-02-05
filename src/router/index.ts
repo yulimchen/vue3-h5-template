@@ -13,14 +13,14 @@ const router = createRouter({
   routes,
 })
 
-export interface toRouteType extends RouteLocationNormalized {
+export interface ToRouteType extends RouteLocationNormalized {
   meta: {
     title?: string
     noCache?: boolean
   }
 }
 
-router.beforeEach((to: toRouteType, from, next) => {
+router.beforeEach((to: ToRouteType, from, next) => {
   NProgress.start()
   // 路由缓存
   useCachedViewStore().addCachedView(to)

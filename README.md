@@ -217,10 +217,10 @@ VITE_ENABLE_ERUDA = "true"
 
 在路由全局前置守卫中：
 
-```js
+```ts
 // src/router/index.ts
 // ...
-router.beforeEach((to: toRouteType, from, next) => {
+router.beforeEach((to: ToRouteType, from, next) => {
   // ...
   // 页面 title
   setPageTitle(to.meta.title);
