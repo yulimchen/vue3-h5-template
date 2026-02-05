@@ -1,14 +1,12 @@
 <script setup lang="ts">
 import { storeToRefs } from 'pinia'
-import { computed } from 'vue'
 import NavBar from '@/components/nav-bar/index.vue'
 import tabbar from '@/components/tabbar/index.vue'
-import { useCachedViewStoreHook } from '@/store/modules/cached-view'
+import { useCachedViewStore } from '@/store/modules/cached-view'
 import { useDarkModeStore } from '@/store/modules/dark-mode'
 
-const cachedViews = computed(() => {
-  return useCachedViewStoreHook().cachedViewList
-})
+const cachedViewStore = useCachedViewStore()
+const { cachedViewList } = storeToRefs(cachedViewStore)
 
 const darkModeStore = useDarkModeStore()
 const { theme } = storeToRefs(darkModeStore)
@@ -19,7 +17,7 @@ const { theme } = storeToRefs(darkModeStore)
     <van-config-provider :theme="theme">
       <NavBar />
       <router-view v-slot="{ Component }">
-        <keep-alive :include="cachedViews">
+        <keep-alive :include="cachedViewList">
           <component :is="Component" />
         </keep-alive>
       </router-view>

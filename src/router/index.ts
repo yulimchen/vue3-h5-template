@@ -2,9 +2,8 @@ import type { RouteLocationNormalized } from 'vue-router'
 import {
   createRouter,
   createWebHashHistory,
-
 } from 'vue-router'
-import { useCachedViewStoreHook } from '@/store/modules/cached-view'
+import { useCachedViewStore } from '@/store/modules/cached-view'
 import NProgress from '@/utils/progress'
 import setPageTitle from '@/utils/set-page-title'
 import routes from './routes'
@@ -24,7 +23,7 @@ export interface toRouteType extends RouteLocationNormalized {
 router.beforeEach((to: toRouteType, from, next) => {
   NProgress.start()
   // 路由缓存
-  useCachedViewStoreHook().addCachedView(to)
+  useCachedViewStore().addCachedView(to)
   // 页面 title
   setPageTitle(to.meta.title)
   next()

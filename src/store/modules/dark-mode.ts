@@ -1,10 +1,8 @@
 import { defineStore } from 'pinia'
 import { nextTick } from 'vue'
-import { store } from '@/store'
 import { isDarkMode, updateDarkMode } from '@/utils/dark-mode'
 
-export const useDarkModeStore = defineStore({
-  id: 'dark-mode',
+export const useDarkModeStore = defineStore('dark-mode', {
   state: () => ({
     darkMode: isDarkMode(),
   }),
@@ -73,7 +71,3 @@ export const useDarkModeStore = defineStore({
     },
   },
 })
-
-export function useDarkModeStoreHook() {
-  return useDarkModeStore(store)
-}

@@ -1,9 +1,7 @@
 import type { toRouteType } from '@/router'
 import { defineStore } from 'pinia'
-import { store } from '@/store'
 
-export const useCachedViewStore = defineStore({
-  id: 'cached-view',
+export const useCachedViewStore = defineStore('cached-view', {
   state: () => ({
     // 缓存页面 keepAlive
     cachedViewList: [] as string[],
@@ -24,11 +22,7 @@ export const useCachedViewStore = defineStore({
       }
     },
     delAllCachedViews() {
-      this.cachedViewList = [] as string[]
+      this.cachedViewList = []
     },
   },
 })
-
-export function useCachedViewStoreHook() {
-  return useCachedViewStore(store)
-}
