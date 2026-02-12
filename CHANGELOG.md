@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.8.4](https://github.com/yulimchen/vue3-h5-template/compare/v0.8.3...v0.8.4) (2026-02-12)
+
+
+### 🐛 Bug Fixes | Bug 修复
+
+* 修复打包错误 ([1705812](https://github.com/yulimchen/vue3-h5-template/commit/1705812e61c29df2244cdc7daff8e60bc67c5bd2))
+
 ### [0.8.3](https://github.com/yulimchen/vue3-h5-template/compare/v0.8.2...v0.8.3) (2026-02-12)
 
 
