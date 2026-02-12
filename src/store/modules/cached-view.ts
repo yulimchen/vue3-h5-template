@@ -1,6 +1,4 @@
 import type { RouteLocationNormalized } from 'vue-router'
-import { defineStore } from 'pinia'
-import { ref } from 'vue'
 
 export const useCachedViewStore = defineStore('cached-view', () => {
   const cachedViewSet = ref(new Set<string>())

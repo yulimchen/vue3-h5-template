@@ -1,5 +1,4 @@
 <script setup lang="ts">
-import { storeToRefs } from 'pinia'
 import NavBar from '@/components/nav-bar/index.vue'
 import tabbar from '@/components/tabbar/index.vue'
 import { useCachedViewStore } from '@/store/modules/cached-view'

@@ -6,7 +6,6 @@ import Fa6SolidBasketball from '@iconify-icons/fa6-solid/basketball'
 import Fa6SolidBurger from '@iconify-icons/fa6-solid/burger'
 import Fa6SolidChessKnight from '@iconify-icons/fa6-solid/chess-knight'
 import { showFailToast, showSuccessToast } from 'vant'
-import { reactive } from 'vue'
 import { getListApi, getListApiError } from '@/api/mock'
 import 'vant/es/toast/style'
 

@@ -1,5 +1,4 @@
 <script setup lang="ts">
-import { reactive } from 'vue'
 import GridPatternDashed from '@/components/grid-pattern/grid-pattern-dashed.vue'
 
 defineOptions({

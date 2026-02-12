@@ -1,4 +1,3 @@
-import type { RouteLocationNormalized } from 'vue-router'
 import {
   createRouter,
   createWebHashHistory,
@@ -13,14 +12,7 @@ const router = createRouter({
   routes,
 })
 
-export interface ToRouteType extends RouteLocationNormalized {
-  meta: {
-    title?: string
-    noCache?: boolean
-  }
-}
-
-router.beforeEach((to: ToRouteType, from, next) => {
+router.beforeEach((to, _from, next) => {
   NProgress.start()
   // 路由缓存
   useCachedViewStore().addCachedView(to)

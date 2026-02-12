@@ -3,6 +3,7 @@ import process from 'node:process'
 import { fileURLToPath, URL } from 'node:url'
 import vue from '@vitejs/plugin-vue'
 import vueJsx from '@vitejs/plugin-vue-jsx'
+import AutoImport from 'unplugin-auto-import/vite'
 import { VantResolver } from 'unplugin-vue-components/resolvers'
 import Components from 'unplugin-vue-components/vite'
 import { defineConfig, loadEnv } from 'vite'
@@ -25,6 +26,11 @@ export default defineConfig(({ mode }) => {
       vue(),
       vueJsx(),
       mockDevServerPlugin(),
+      // 自动导入 Vue/Vue Router/Pinia API
+      AutoImport({
+        imports: ['vue', 'vue-router', 'pinia'],
+        dts: 'src/typings/auto-imports.d.ts',
+      }),
       // vant 组件自动按需引入
       Components({
         dts: 'src/typings/components.d.ts',
