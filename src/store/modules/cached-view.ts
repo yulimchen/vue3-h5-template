@@ -1,32 +1,40 @@
-import type { ToRouteType } from '@/router'
+import type { RouteLocationNormalized } from 'vue-router'
 import { defineStore } from 'pinia'
+import { ref } from 'vue'
 
-export const useCachedViewStore = defineStore('cached-view', {
-  state: () => ({
-    cachedViewSet: new Set<string>(),
-    cachedViewList: [] as string[],
-  }),
-  actions: {
-    addCachedView(view: ToRouteType) {
-      const name = view.name as string
-      if (this.cachedViewSet.has(name)) // O(1)
-        return
-      if (!view?.meta?.noCache) {
-        this.cachedViewSet.add(name)
-        this.cachedViewList.push(name)
-      }
-    },
-    delCachedView(view: ToRouteType) {
-      const name = view.name as string
-      this.cachedViewSet.delete(name)
-      const index = this.cachedViewList.indexOf(name)
-      if (index > -1) {
-        this.cachedViewList.splice(index, 1)
-      }
-    },
-    delAllCachedViews() {
-      this.cachedViewSet.clear()
-      this.cachedViewList = []
-    },
-  },
+export const useCachedViewStore = defineStore('cached-view', () => {
+  const cachedViewSet = ref(new Set<string>())
+  const cachedViewList = ref<string[]>([])
+
+  function addCachedView(view: RouteLocationNormalized) {
+    const name = view.name as string
+    if (cachedViewSet.value.has(name)) // O(1)
+      return
+    if (!view?.meta?.noCache) {
+      cachedViewSet.value.add(name)
+      cachedViewList.value.push(name)
+    }
+  }
+
+  function delCachedView(view: RouteLocationNormalized) {
+    const name = view.name as string
+    cachedViewSet.value.delete(name)
+    const index = cachedViewList.value.indexOf(name)
+    if (index > -1) {
+      cachedViewList.value.splice(index, 1)
+    }
+  }
+
+  function delAllCachedViews() {
+    cachedViewSet.value.clear()
+    cachedViewList.value = []
+  }
+
+  return {
+    cachedViewSet,
+    cachedViewList,
+    addCachedView,
+    delCachedView,
+    delAllCachedViews,
+  }
 })
