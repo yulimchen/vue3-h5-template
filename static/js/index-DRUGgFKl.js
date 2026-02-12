@@ -1,0 +1,1 @@
+import{d as a,c as n,a as t,t as o,f as r,a8 as i,F as l,o as c}from"./index-4kE0CPvj.js";const m={class:"text-sm text-gray-500"},_=a({name:"About",__name:"index",setup(p){const s=i.version;return(u,e)=>(c(),n(l,null,[e[0]||(e[0]=t("div",null,"about",-1)),t("div",m," Version: "+o(r(s)),1)],64))}});export{_ as default};
