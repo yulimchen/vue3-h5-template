@@ -3,7 +3,7 @@ import { http } from '@/utils/http'
 interface ListResult {
   code: number
   message: string
-  list: Array<any>
+  list: string[]
 }
 
 export function getListApi(params?: object): Promise<ListResult> {
