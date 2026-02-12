@@ -2,6 +2,19 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.8.3](https://github.com/yulimchen/vue3-h5-template/compare/v0.8.2...v0.8.3) (2026-02-12)
+
+
+### ♻️ Code Refactoring | 代码重构
+
+* `store` 代码重构为 Composition API ([e95d625](https://github.com/yulimchen/vue3-h5-template/commit/e95d62558e861275459de068d9efb3db685218b9))
+* 优化请求封装函数 ([2ee29bd](https://github.com/yulimchen/vue3-h5-template/commit/2ee29bd13624edf75e487538dd92804578bec4d3))
+
+
+### ✨ Features | 新功能
+
+* 自动引入 `Vue/Vue Router/Pinia` API ([bc93a52](https://github.com/yulimchen/vue3-h5-template/commit/bc93a52c1d0dce048276f1a654e4194ac1286a81))
+
 ### [0.8.2](https://github.com/yulimchen/vue3-h5-template/compare/v0.8.1...v0.8.2) (2026-02-05)
 
 
