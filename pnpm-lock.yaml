@@ -8,6 +8,9 @@ importers:
 
   .:
     dependencies:
+      '@vueuse/core':
+        specifier: ^14.2.1
+        version: 14.2.1(vue@3.5.24(typescript@5.6.3))
       axios:
         specifier: ^1.13.2
         version: 1.13.2
@@ -107,7 +110,7 @@ importers:
         version: 5.6.3
       unplugin-auto-import:
         specifier: ^21.0.0
-        version: 21.0.0
+        version: 21.0.0(@vueuse/core@14.2.1(vue@3.5.24(typescript@5.6.3)))
       unplugin-vue-components:
         specifier: ^0.27.5
         version: 0.27.5(@babel/parser@7.28.5)(rollup@4.53.1)(vue@3.5.24(typescript@5.6.3))
@@ -891,6 +894,9 @@ packages:
   '@types/unist@3.0.3':
     resolution: {integrity: sha512-ko/gIFJRv177XgZsZcBwnqJN5x/Gien8qNOn0D5bQU/zAzVf9Zt3BlcUiLqhV9y4ARk0GbT3tnUiPNgnTXzc/Q==}
 
+  '@types/web-bluetooth@0.0.21':
+    resolution: {integrity: sha512-oIQLCGWtcFZy2JW77j9k8nHzAOpqMHLQejDA48XXMWH6tjCQHz5RCFz1bzsmROyL6PUm+LLnUiI4BCn221inxA==}
+
   '@typescript-eslint/eslint-plugin@8.54.0':
     resolution: {integrity: sha512-hAAP5io/7csFStuOmR782YmTthKBJ9ND3WVL60hcOjvtGFb+HJxH4O5huAcmcZ9v9G8P+JETiZ/G1B8MALnWZQ==}
     engines: {node: ^18.18.0 || ^20.9.0 || >=21.1.0}
@@ -1055,6 +1061,19 @@ packages:
 
   '@vue/tsconfig@0.5.1':
     resolution: {integrity: sha512-VcZK7MvpjuTPx2w6blwnwZAu5/LgBUtejFOi3pPGQFXQN5Ela03FUtd2Qtg4yWGGissVL0dr6Ro1LfOFh+PCuQ==}
+
+  '@vueuse/core@14.2.1':
+    resolution: {integrity: sha512-3vwDzV+GDUNpdegRY6kzpLm4Igptq+GA0QkJ3W61Iv27YWwW/ufSlOfgQIpN6FZRMG0mkaz4gglJRtq5SeJyIQ==}
+    peerDependencies:
+      vue: ^3.5.0
+
+  '@vueuse/metadata@14.2.1':
+    resolution: {integrity: sha512-1ButlVtj5Sb/HDtIy1HFr1VqCP4G6Ypqt5MAo0lCgjokrk2mvQKsK2uuy0vqu/Ks+sHfuHo0B9Y9jn9xKdjZsw==}
+
+  '@vueuse/shared@14.2.1':
+    resolution: {integrity: sha512-shTJncjV9JTI4oVNyF1FQonetYAiTBd+Qj7cY89SWbXSkx7gyhrgtEdF2ZAVWS1S3SHlaROO6F2IesJxQEkZBw==}
+    peerDependencies:
+      vue: ^3.5.0
 
   '@xn-sakina/rml-darwin-arm64@2.6.0':
     resolution: {integrity: sha512-RuFHj6ro6Q24gPqNQGvH4uxpsvbgqBBy+ZUK+jbMuMaw4wyti7F6klQWuikBJAxhWpmRbhAB/jrq0PC82qlh5A==}
@@ -5323,6 +5342,8 @@ snapshots:
 
   '@types/unist@3.0.3': {}
 
+  '@types/web-bluetooth@0.0.21': {}
+
   '@typescript-eslint/eslint-plugin@8.54.0(@typescript-eslint/parser@8.54.0(eslint@9.39.1(jiti@1.21.7))(typescript@5.6.3))(eslint@9.39.1(jiti@1.21.7))(typescript@5.6.3)':
     dependencies:
       '@eslint-community/regexpp': 4.12.2
@@ -5562,6 +5583,19 @@ snapshots:
   '@vue/shared@3.5.24': {}
 
   '@vue/tsconfig@0.5.1': {}
+
+  '@vueuse/core@14.2.1(vue@3.5.24(typescript@5.6.3))':
+    dependencies:
+      '@types/web-bluetooth': 0.0.21
+      '@vueuse/metadata': 14.2.1
+      '@vueuse/shared': 14.2.1(vue@3.5.24(typescript@5.6.3))
+      vue: 3.5.24(typescript@5.6.3)
+
+  '@vueuse/metadata@14.2.1': {}
+
+  '@vueuse/shared@14.2.1(vue@3.5.24(typescript@5.6.3))':
+    dependencies:
+      vue: 3.5.24(typescript@5.6.3)
 
   '@xn-sakina/rml-darwin-arm64@2.6.0':
     optional: true
@@ -9271,7 +9305,7 @@ snapshots:
 
   unpipe@1.0.0: {}
 
-  unplugin-auto-import@21.0.0:
+  unplugin-auto-import@21.0.0(@vueuse/core@14.2.1(vue@3.5.24(typescript@5.6.3))):
     dependencies:
       local-pkg: 1.1.2
       magic-string: 0.30.21
@@ -9279,6 +9313,8 @@ snapshots:
       unimport: 5.6.0
       unplugin: 2.3.11
       unplugin-utils: 0.3.1
+    optionalDependencies:
+      '@vueuse/core': 14.2.1(vue@3.5.24(typescript@5.6.3))
 
   unplugin-utils@0.3.1:
     dependencies:

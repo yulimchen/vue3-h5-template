@@ -28,7 +28,7 @@ export default defineConfig(({ mode }) => {
       mockDevServerPlugin(),
       // 自动导入 Vue/Vue Router/Pinia API
       AutoImport({
-        imports: ['vue', 'vue-router', 'pinia'],
+        imports: ['vue', 'vue-router', 'pinia', '@vueuse/core'],
         dts: 'src/typings/auto-imports.d.ts',
       }),
       // vant 组件自动按需引入
