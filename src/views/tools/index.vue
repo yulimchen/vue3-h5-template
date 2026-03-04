@@ -1,4 +1,5 @@
 <script setup lang="ts">
+import type { UserItem } from '@/api/mock'
 import Fa6SolidAddressBook from '@iconify-icons/fa6-solid/address-book'
 import Fa6SolidAppleWhole from '@iconify-icons/fa6-solid/apple-whole'
 import Fa6SolidBaby from '@iconify-icons/fa6-solid/baby'
@@ -6,21 +7,53 @@ import Fa6SolidBasketball from '@iconify-icons/fa6-solid/basketball'
 import Fa6SolidBurger from '@iconify-icons/fa6-solid/burger'
 import Fa6SolidChessKnight from '@iconify-icons/fa6-solid/chess-knight'
 import { showFailToast, showSuccessToast } from 'vant'
-import { getListApi, getListApiError } from '@/api/mock'
+import { getListApi, getListApiError, submitFormApi } from '@/api/mock'
 import 'vant/es/toast/style'
 
 defineOptions({
   name: 'Tools',
 })
 
-const showList: string[] = reactive([])
+// ===== GET 请求示例 =====
+const userList = ref<UserItem[]>([])
+const getLoading = ref(false)
 
-async function handleSuccessReq() {
-  const { list } = await getListApi()
-  showSuccessToast('请求成功')
-  showList.push(...list)
+async function handleGetRequest() {
+  getLoading.value = true
+  try {
+    const { list } = await getListApi()
+    userList.value = list
+    showSuccessToast('GET 请求成功')
+  }
+  catch {
+    showFailToast('GET 请求失败')
+  }
+  finally {
+    getLoading.value = false
+  }
 }
-async function handleErrorReq() {
+
+// ===== POST 请求示例 =====
+const postResult = ref<{ id: string, createdAt: string } | null>(null)
+const postLoading = ref(false)
+
+async function handlePostRequest() {
+  postLoading.value = true
+  try {
+    const result = await submitFormApi({ name: 'Vue3 H5 Template', message: 'Hello from POST!' })
+    postResult.value = result
+    showSuccessToast('POST 提交成功')
+  }
+  catch {
+    showFailToast('POST 提交失败')
+  }
+  finally {
+    postLoading.value = false
+  }
+}
+
+// ===== 错误请求示例 =====
+async function handleErrorRequest() {
   try {
     await getListApiError()
   }
@@ -28,7 +61,7 @@ async function handleErrorReq() {
     if (import.meta.env.DEV) {
       console.error('请求错误:', err)
     }
-    showFailToast('请求有误')
+    showFailToast('请求有误\n（预期行为）')
   }
 }
 
@@ -57,27 +90,99 @@ const svgIconLocalList = Object.keys(modules).map(key =>
 
 <template>
   <div class="tools-content pt-[20px] px-[12px]">
-    <!-- Mock -->
+    <!-- HTTP 请求示例 -->
     <div class="pl-[12px] border-l-[3px] border-[color:#41b883] mb-[12px]">
       <h3 class="font-bold text-[18px] my-[4px]">
-        Mock
+        HTTP 请求示例
       </h3>
     </div>
-    <van-space>
-      <van-button type="success" @click="handleSuccessReq">
-        成功请求
-      </van-button>
-      <van-button type="danger" @click="handleErrorReq">
-        失败请求
-      </van-button>
-    </van-space>
-    <div
-      class="text-[14px] py-[2px] px-[10px] rounded-[4px] bg-[var(--color-block-background)] mt-[14px]"
+
+    <!-- GET -->
+    <p class="text-[13px] text-[var(--van-text-color-2)] mb-[6px]">
+      <van-tag
+        type="success"
+        class="mr-[4px]"
+        plain
+      >
+        GET
+      </van-tag>
+      获取用户列表
+    </p>
+    <van-button
+      type="success"
+      size="small"
+      :loading="getLoading"
+      loading-text="请求中..."
+      @click="handleGetRequest"
     >
-      <p class="my-[14px] leading-[24px]">
-        {{ showList }}
-      </p>
+      发起 GET 请求
+    </van-button>
+
+    <div
+      v-if="userList.length"
+      class="rounded-[8px] bg-[var(--color-block-background)] mt-[10px] p-[10px]"
+    >
+      <div
+        v-for="user in userList"
+        :key="user.id"
+        class="flex items-center py-[6px]"
+      >
+        <van-image
+          :src="user.avatar"
+          round
+          width="32"
+          height="32"
+          class="mr-[10px] shrink-0"
+        />
+        <span class="text-[14px]">{{ user.name }}</span>
+        <van-tag plain class="ml-auto">
+          {{ user.city }}
+        </van-tag>
+      </div>
     </div>
+
+    <!-- POST -->
+    <p class="text-[13px] text-[var(--van-text-color-2)] mt-[16px] mb-[6px]">
+      <van-tag
+        type="primary"
+        class="mr-[4px]"
+        plain
+      >
+        POST
+      </van-tag>
+      提交表单数据
+    </p>
+    <van-button
+      type="primary"
+      size="small"
+      :loading="postLoading"
+      loading-text="提交中..."
+      @click="handlePostRequest"
+    >
+      发起 POST 请求
+    </van-button>
+    <div
+      v-if="postResult"
+      class="rounded-[8px] bg-[var(--color-block-background)] mt-[10px] p-[10px] text-[13px] leading-[22px]"
+    >
+      <p>Response ID: <code>{{ postResult.id }}</code></p>
+      <p>Response Created Time: {{ postResult.createdAt }}</p>
+    </div>
+
+    <!-- 错误请求 -->
+    <p class="text-[13px] text-[var(--van-text-color-2)] mt-[16px] mb-[6px]">
+      <van-tag
+        type="danger"
+        class="mr-[4px]"
+        plain
+      >
+        ERROR
+      </van-tag>
+      模拟请求失败（拦截器自动处理）
+    </p>
+    <van-button type="danger" size="small" @click="handleErrorRequest">
+      发起失败请求
+    </van-button>
     <!-- Icon -->
     <div
       class="pl-[12px] border-l-[3px] border-[color:#41b883] mt-[24px] mb-[12px]"

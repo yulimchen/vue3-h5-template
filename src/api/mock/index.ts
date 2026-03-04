@@ -1,23 +1,32 @@
 import { http } from '@/utils/http'
 
+export interface UserItem {
+  id: number
+  name: string
+  avatar: string
+  city: string
+}
+
 interface ListResult {
-  code: number
-  message: string
-  list: string[]
+  list: UserItem[]
 }
 
-export function getListApi(params?: object): Promise<ListResult> {
-  return http.request({
-    url: '/list/get',
-    method: 'get',
-    params,
-  })
+interface FormSubmitResult {
+  id: string
+  createdAt: string
 }
 
-export function getListApiError(data?: object): Promise<ListResult> {
-  return http.request({
-    url: '/list/error',
-    method: 'post',
-    data,
-  })
+// 获取用户列表
+export function getListApi() {
+  return http.get<ListResult>('/list/get')
+}
+
+// 提交表单
+export function submitFormApi(data: { name: string, message: string }) {
+  return http.post<FormSubmitResult>('/form/submit', data)
+}
+
+// 模拟错误请求
+export function getListApiError() {
+  return http.get<ListResult>('/list/error')
 }
