@@ -2,6 +2,24 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.8.5](https://github.com/yulimchen/vue3-h5-template/compare/v0.8.4...v0.8.5) (2026-03-04)
+
+
+### ✨ Features | 新功能
+
+* **tools:** 调整 `mock` 数据 ([e5b87a0](https://github.com/yulimchen/vue3-h5-template/commit/e5b87a0506d5dfe6cd4992e2117a472f5e99e7c8))
+
+
+### 🚀 Chore | 构建/工程依赖/工具
+
+* 移除跳转路由 `NProgress` 动画 ([52d5406](https://github.com/yulimchen/vue3-h5-template/commit/52d5406a3d54b03e56ce7221680c8ad5265c7d90))
+
+
+### ♻️ Code Refactoring | 代码重构
+
+* 基于 `vueuse` 封装 `setPageTitle` ([fc0e34b](https://github.com/yulimchen/vue3-h5-template/commit/fc0e34b626d980c6e966692ad85a747364294a32))
+* **http:** 重构 `axios` 封装为函数式风格 ([f2293a6](https://github.com/yulimchen/vue3-h5-template/commit/f2293a6ec2c8ff6c7b2888015e1345a1dadaef7b))
+
 ### [0.8.4](https://github.com/yulimchen/vue3-h5-template/compare/v0.8.3...v0.8.4) (2026-02-12)
 
 
