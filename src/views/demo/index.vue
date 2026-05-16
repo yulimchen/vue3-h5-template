@@ -6,7 +6,7 @@ defineOptions({
 })
 
 const contentList = reactive([
-  { text: '⚡ Vue3 + Vite5', fullWidth: false },
+  { text: '⚡ Vue3 + Vite8', fullWidth: false },
   { text: '🍕 TypeScript', fullWidth: false },
   { text: '✨ Vant4 组件库', fullWidth: false },
   { text: '🍍 Pinia 状态管理', fullWidth: false },

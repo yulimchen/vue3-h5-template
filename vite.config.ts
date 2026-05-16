@@ -7,10 +7,9 @@ import AutoImport from 'unplugin-auto-import/vite'
 import { VantResolver } from 'unplugin-vue-components/resolvers'
 import Components from 'unplugin-vue-components/vite'
 import { defineConfig, loadEnv } from 'vite'
-import viteCompression from 'vite-plugin-compression'
-import { createHtmlPlugin } from 'vite-plugin-html'
+import { compression } from 'vite-plugin-compression2'
 import { mockDevServerPlugin } from 'vite-plugin-mock-dev-server'
-import { createSvgIconsPlugin } from 'vite-plugin-svg-icons'
+import { createSvgIconsPlugin } from 'vite-plugin-svg-icons-ng'
 import { enableCDN } from './build/cdn'
 
 // 当前工作目录路径
@@ -44,15 +43,7 @@ export default defineConfig(({ mode }) => {
         symbolId: 'icon-[dir]-[name]',
       }),
       // 生产环境 gzip 压缩资源
-      viteCompression(),
-      // 注入模板数据
-      createHtmlPlugin({
-        inject: {
-          data: {
-            ENABLE_ERUDA: env.VITE_ENABLE_ERUDA || 'false',
-          },
-        },
-      }),
+      compression(),
       // 生产环境默认不启用 CDN 加速
       enableCDN(env.VITE_CDN_DEPS),
     ],
@@ -72,7 +63,7 @@ export default defineConfig(({ mode }) => {
       },
     },
     build: {
-      rollupOptions: {
+      rolldownOptions: {
         output: {
           chunkFileNames: 'static/js/[name]-[hash].js',
           entryFileNames: 'static/js/[name]-[hash].js',

@@ -10,7 +10,15 @@ import './styles/index.less'
 // tailwindcss
 import './styles/tailwind.css'
 // svg icon
-import 'virtual:svg-icons-register'
+import 'virtual:svg-icons/register'
+
+// eruda 移动端调试工具（仅开发环境）
+if (import.meta.env.VITE_ENABLE_ERUDA === 'true') {
+  const script = document.createElement('script')
+  script.src = '//cdn.jsdelivr.net/npm/eruda'
+  script.onload = () => (window as any).eruda?.init()
+  document.head.appendChild(script)
+}
 
 initializeDarkMode()
 

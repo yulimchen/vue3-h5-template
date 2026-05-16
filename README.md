@@ -21,7 +21,7 @@
 
 **🌱 基于 Vue3 全家桶、TS/JS、Vite 构建工具，开箱即用的移动端项目基础模板**
 
-- [x] ⚡ Vue3 + Vite5
+- [x] ⚡ Vue3 + Vite8
 - [x] 🍕 TypeScript
 - [x] ✨ Vant4 组件库
 - [x] 🌀 Tailwindcss 原子类框架
@@ -49,7 +49,7 @@
 
 ## 运行项目
 
-注意：要求 Node 版本 18+，可使用 [nvm](https://github.com/nvm-sh/nvm#installing-and-updating) 进行本地 Node 版本管理，同时建议使用 [pnpm](https://pnpm.io/zh/installation) 包管理器。
+注意：要求 Node 版本 20+，可使用 [nvm](https://github.com/nvm-sh/nvm#installing-and-updating) 进行本地 Node 版本管理，同时建议使用 [pnpm](https://pnpm.io/zh/installation) 包管理器。
 
 ```shell
 # 克隆项目
@@ -204,7 +204,7 @@ defineOptions({
 
 ![](docs/assets/img/Snipaste_2023-05-04_21-58-28.png)
 
-为了方便移动端查看 log 信息和调试，开发环境引入了 eruda 调试面板的 cdn。如果你的开发环境不需要的话请在 `.env.development` 中修改值
+为了方便移动端查看 log 信息和调试，开发环境会动态加载 eruda 调试面板（通过 `src/main.ts` 按需注入 CDN 脚本）。如果你的开发环境不需要的话请在 `.env.development` 中修改值
 
 ```html
 # .env.development
