@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [0.9.0](https://github.com/yulimchen/vue3-h5-template/compare/v0.8.5...v0.9.0) (2026-05-16)
+
+
+### 🚀 Chore | 构建/工程依赖/工具
+
+* 升级基建至 Vite8 ([f8bd6ea](https://github.com/yulimchen/vue3-h5-template/commit/f8bd6ea48b0bf29d43322ebe3f7bfc8df7dc8366))
+
 ### [0.8.5](https://github.com/yulimchen/vue3-h5-template/compare/v0.8.4...v0.8.5) (2026-03-04)
 
 
