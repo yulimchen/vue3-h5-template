@@ -81,7 +81,7 @@ const iconOfflineList = [
   Fa6SolidBurger,
   Fa6SolidChessKnight,
 ]
-// 获取所有本地 svg 图标文件名称
+
 const modules = import.meta.glob('../../icons/svg/*.svg', { eager: true })
 const svgIconLocalList = Object.keys(modules).map(key =>
   key.replace('../../icons/svg/', '').replace('.svg', ''),
@@ -89,141 +89,145 @@ const svgIconLocalList = Object.keys(modules).map(key =>
 </script>
 
 <template>
-  <div class="tools-content pt-[20px] px-[12px]">
+  <div class="pt-[20px] px-[12px] pb-[32px]">
     <!-- HTTP 请求示例 -->
-    <div class="pl-[12px] border-l-[3px] border-[color:#41b883] mb-[12px]">
+    <div class="pl-[12px] border-l-[3px] border-[#41b883] mb-[12px]">
       <h3 class="font-bold text-[18px] my-[4px]">
         HTTP 请求示例
       </h3>
     </div>
 
-    <!-- GET -->
-    <p class="text-[13px] text-[var(--van-text-color-2)] mb-[6px]">
-      <van-tag
-        type="success"
-        class="mr-[4px]"
-        plain
-      >
-        GET
-      </van-tag>
-      获取用户列表
-    </p>
-    <van-button
-      type="success"
-      size="small"
-      :loading="getLoading"
-      loading-text="请求中..."
-      @click="handleGetRequest"
-    >
-      发起 GET 请求
-    </van-button>
+    <div class="rounded-[12px] bg-[var(--color-block-background)] overflow-hidden mb-[24px]">
+      <!-- GET -->
+      <div class="px-[14px] pt-[14px] pb-[12px] border-b border-[var(--color-border)]">
+        <div class="flex items-center justify-between mb-[10px]">
+          <div class="flex items-center gap-[6px] text-[13px] text-[var(--van-text-color-2)]">
+            <van-tag type="success" plain>
+              GET
+            </van-tag>
+            获取用户列表
+          </div>
+          <van-button
+            type="success"
+            size="small"
+            :loading="getLoading"
+            loading-text="请求中..."
+            @click="handleGetRequest"
+          >
+            发送
+          </van-button>
+        </div>
+        <div v-if="userList.length" class="space-y-[6px]">
+          <div
+            v-for="user in userList"
+            :key="user.id"
+            class="flex items-center"
+          >
+            <van-image
+              :src="user.avatar"
+              round
+              width="28"
+              height="28"
+              class="mr-[8px] shrink-0"
+            />
+            <span class="text-[13px]">{{ user.name }}</span>
+            <van-tag plain class="ml-auto text-[11px]">
+              {{ user.city }}
+            </van-tag>
+          </div>
+        </div>
+      </div>
 
-    <div
-      v-if="userList.length"
-      class="rounded-[8px] bg-[var(--color-block-background)] mt-[10px] p-[10px]"
-    >
-      <div
-        v-for="user in userList"
-        :key="user.id"
-        class="flex items-center py-[6px]"
-      >
-        <van-image
-          :src="user.avatar"
-          round
-          width="32"
-          height="32"
-          class="mr-[10px] shrink-0"
-        />
-        <span class="text-[14px]">{{ user.name }}</span>
-        <van-tag plain class="ml-auto">
-          {{ user.city }}
-        </van-tag>
+      <!-- POST -->
+      <div class="px-[14px] pt-[14px] pb-[12px] border-b border-[var(--color-border)]">
+        <div class="flex items-center justify-between mb-[10px]">
+          <div class="flex items-center gap-[6px] text-[13px] text-[var(--van-text-color-2)]">
+            <van-tag type="primary" plain>
+              POST
+            </van-tag>
+            提交表单数据
+          </div>
+          <van-button
+            type="primary"
+            size="small"
+            :loading="postLoading"
+            loading-text="提交中..."
+            @click="handlePostRequest"
+          >
+            发送
+          </van-button>
+        </div>
+        <div
+          v-if="postResult"
+          class="text-[12px] text-[var(--van-text-color-2)] leading-[20px] font-mono"
+        >
+          <p>id: {{ postResult.id }}</p>
+          <p>createdAt: {{ postResult.createdAt }}</p>
+        </div>
+      </div>
+
+      <!-- ERROR -->
+      <div class="px-[14px] py-[14px]">
+        <div class="flex items-center justify-between">
+          <div class="flex items-center gap-[6px] text-[13px] text-[var(--van-text-color-2)]">
+            <van-tag type="danger" plain>
+              ERROR
+            </van-tag>
+            拦截器处理错误响应
+          </div>
+          <van-button type="danger" size="small" @click="handleErrorRequest">
+            发送
+          </van-button>
+        </div>
       </div>
     </div>
 
-    <!-- POST -->
-    <p class="text-[13px] text-[var(--van-text-color-2)] mt-[16px] mb-[6px]">
-      <van-tag
-        type="primary"
-        class="mr-[4px]"
-        plain
-      >
-        POST
-      </van-tag>
-      提交表单数据
-    </p>
-    <van-button
-      type="primary"
-      size="small"
-      :loading="postLoading"
-      loading-text="提交中..."
-      @click="handlePostRequest"
-    >
-      发起 POST 请求
-    </van-button>
-    <div
-      v-if="postResult"
-      class="rounded-[8px] bg-[var(--color-block-background)] mt-[10px] p-[10px] text-[13px] leading-[22px]"
-    >
-      <p>Response ID: <code>{{ postResult.id }}</code></p>
-      <p>Response Created Time: {{ postResult.createdAt }}</p>
+    <!-- Iconify 图标 -->
+    <div class="pl-[12px] border-l-[3px] border-[#41b883] mb-[12px]">
+      <h3 class="font-bold text-[18px] my-[4px]">
+        Iconify 图标
+      </h3>
+    </div>
+    <div class="rounded-[12px] bg-[var(--color-block-background)] p-[14px] mb-[24px]">
+      <p class="text-[12px] text-[var(--van-text-color-2)] mb-[10px]">
+        在线图标
+      </p>
+      <div class="flex flex-wrap gap-[14px]">
+        <i-icon
+          v-for="item in iconOnlineList"
+          :key="item"
+          :icon="item"
+          class="text-[24px]"
+        />
+      </div>
+      <p class="text-[12px] text-[var(--van-text-color-2)] mt-[14px] mb-[10px]">
+        离线图标包
+      </p>
+      <div class="flex flex-wrap gap-[14px]">
+        <i-icon
+          v-for="(item, idx) in iconOfflineList"
+          :key="idx"
+          :icon="item"
+          class="text-[24px]"
+        />
+      </div>
     </div>
 
-    <!-- 错误请求 -->
-    <p class="text-[13px] text-[var(--van-text-color-2)] mt-[16px] mb-[6px]">
-      <van-tag
-        type="danger"
-        class="mr-[4px]"
-        plain
-      >
-        ERROR
-      </van-tag>
-      模拟请求失败（拦截器自动处理）
-    </p>
-    <van-button type="danger" size="small" @click="handleErrorRequest">
-      发起失败请求
-    </van-button>
-    <!-- Icon -->
-    <div
-      class="pl-[12px] border-l-[3px] border-[color:#41b883] mt-[24px] mb-[12px]"
-    >
+    <!-- 本地 SVG 图标 -->
+    <div class="pl-[12px] border-l-[3px] border-[#41b883] mb-[12px]">
       <h3 class="font-bold text-[18px] my-[4px]">
-        Iconify Icon
+        本地 SVG 图标
       </h3>
     </div>
-    <!-- online iconify icon -->
-    <div>
-      <i-icon
-        v-for="item in iconOnlineList"
-        :key="item"
-        :icon="item"
-        class="inline-block text-[24px] mr-3"
-      />
-    </div>
-    <!-- offline iconify icon -->
-    <div class="mt-2">
-      <i-icon
-        v-for="(item, idx) in iconOfflineList"
-        :key="idx"
-        :icon="item"
-        class="inline-block text-[24px] mr-3"
-      />
-    </div>
-    <div
-      class="pl-[12px] border-l-[3px] border-[color:#41b883] mt-[24px] mb-[12px]"
-    >
-      <h3 class="font-bold text-[18px] my-[4px]">
-        Svg Icon
-      </h3>
-    </div>
-    <!-- local svg file icon -->
-    <div>
-      <svg-icon
-        v-for="item in svgIconLocalList"
-        :key="item"
-        :name="item"
-        class="inline-block text-[24px] mr-3"
-      />
+    <div class="rounded-[12px] bg-[var(--color-block-background)] p-[14px]">
+      <div class="flex flex-wrap gap-[14px]">
+        <svg-icon
+          v-for="item in svgIconLocalList"
+          :key="item"
+          :name="item"
+          class="text-[24px]"
+        />
+      </div>
     </div>
   </div>
 </template>
