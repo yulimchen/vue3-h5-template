@@ -1,6 +1,6 @@
 export default {
   plugins: {
-    'tailwindcss': {},
+    '@tailwindcss/postcss': {},
     // 解决tailwindcss默认的是rem，rem不会转换为vmin的问题
     'postcss-rem-to-pixel': {
       rootValue: 16, // 根元素字体大小（默认 16px）
@@ -13,15 +13,8 @@ export default {
       viewportUnit: 'vmin', // 转换后的单位
       fontViewportUnit: 'vmin', // 字体单位
       unitToConvert: 'px', // 需要转换的单位
-    },
-    'autoprefixer': {
-      overrideBrowserslist: [
-        'Android >= 4.4',
-        'iOS >= 9',
-        'Chrome >= 60',
-        'Safari >= 9',
-        'not dead',
-      ],
+      // tailwindcss v4 将所有 CSS 包裹在 @layer 中，需开启此选项才能处理 @layer 内的规则
+      mediaQuery: true,
     },
   },
 }
