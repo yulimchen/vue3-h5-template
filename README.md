@@ -1,9 +1,9 @@
 <div align="center">
-	<img src="docs/assets/img/banner.jpg" alt="banner" />
+  <img src="docs/assets/img/banner.jpg" alt="banner" />
 </div>
 
 <div align="center">
-	<a href="https://github.com/yulimchen/vue3-h5-template/blob/master/LICENSE">
+  <a href="https://github.com/yulimchen/vue3-h5-template/blob/master/LICENSE">
     <img src="https://img.shields.io/github/license/yulimchen/vue3-h5-template.svg?style=flat-square" alt="license">
   </a>
   <a href="https://github.com/yulimchen/vue3-h5-template/releases">
@@ -297,7 +297,7 @@ feat(layout): 布局完成
 如果本项目对你有所帮助，可以考虑赞赏一下作者 : D
 
 <div align="center">
-	<img src="docs/assets/img/donate.png" alt="donate" style="width:50%;" />
+  <img src="docs/assets/img/donate.png" alt="donate" style="width:50%;" />
 </div>
 
 ## 鸣谢
