@@ -48,5 +48,8 @@
     "postcss"
   ],
 
-  "typescript.tsdk": "node_modules/typescript/lib"
+  "typescript.tsdk": "node_modules/typescript/lib",
+
+  // Required for ESLint flat config (eslint.config.js) support
+  "eslint.useFlatConfig": true
 }
